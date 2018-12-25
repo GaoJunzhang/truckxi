@@ -1,0 +1,14 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/forgotpwd/forgotpwd",
+    "pages/register/register"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Forgot",
+    "navigationBarTextStyle": "black",
+    "navigationStyle":"custom"
+  }
+}
