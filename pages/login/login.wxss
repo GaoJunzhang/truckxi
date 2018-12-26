@@ -62,7 +62,7 @@ page {
   width: 100%;
 }
 
-.register .content_log .inp_reg view.fg {
+.register .content_log .inp_reg navigator.fg {
   display: block;
   position: absolute;
   right: 0;
@@ -77,7 +77,7 @@ page {
   margin: 30px auto 0;
 }
 
-.register .content_log .btn_log view {
+.register .content_log .btn_log button {
   width: calc(100% - 20px);
   margin: 0 10px;
   color: #fff;

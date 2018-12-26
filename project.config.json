@@ -13,7 +13,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.2",
-	"appid": "wx4ff3eaccbe09016f",
+	"appid": "wx9afa8f6bc45a1f43",
 	"projectname": "truckxi",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -37,8 +37,8 @@
 			"list": []
 		},
 		"miniprogram": {
-      "current": -1,
-      "list": []
-    }
+			"current": -1,
+			"list": []
+		}
 	}
 }

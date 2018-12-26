@@ -7,81 +7,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lanuage: "中文"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    var lastLanuage = this.data.lanuage
-      this.getContent(lastLanuage)
+    var lastLanuage = app.globalData.lanuage
+    // this.getContent(lastLanuage)
+    app.getContent(this,lastLanuage)
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function() {
-
-  },
   changeLanuage: function() {
-    var version = this.data.lanuage;
-    if (version == "中文") {
+    var version = app.globalData.lanuage;
+    if (version == "zh_CN") {
+      app.globalData.lanuage = "en"
       this.setData({
-        lanuage: "英文"
+        lanuage: "en"
       })
     } else {
+      app.globalData.lanuage = "zh_CN"
       this.setData({
-        lanuage: "中文"
+        lanuage: "zh_CN"
       })
     }
     var lastLanuage = this.data.lanuage;
     this.getLanuage(lastLanuage)
   },
   getLanuage: function(lastLanuage) {
-    if (lastLanuage == "中文") {
+    if (lastLanuage == "zh_CN") {
       this.setData({
         content: chinese.content
       })
@@ -91,15 +45,35 @@ Page({
       })
     }
   },
-  getContent: function (lastLanuage) {
-    if (lastLanuage == "中文") {
-      this.setData({
-        content: chinese.content
+  formSubmit:function(e){
+    let that = this
+    var obj = e.detail.value
+    if (obj.username == "" || obj.username == null || obj.password == "" || obj.password==null){
+      wx.showModal({
+        content: that.data.content.loginError,
       })
-    } else {
-      this.setData({
-        content: english.content
-      })
+      return
     }
+    wx.request({
+      url: app.globalData.API_URL +'e/app/token/',
+      data:obj,
+      method:"POST",
+      success:function(res){
+        console.log("成功")
+        console.log(res)
+        if(res.data.token){
+          //成功
+          wx.setStorageSync("token", res.data.token)
+        }else{
+          wx.showModal({
+            content: that.data.content.loginError,
+          })
+        }
+      },
+      fail:function(e){
+        console.log("失败")
+        console.log(e)
+      }
+    })
   }
 })

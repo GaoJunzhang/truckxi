@@ -5,6 +5,8 @@ var utils = require('./lib/utils');
 var Session = require('./lib/session');
 let session = Session.get();
 var loginLib = require('./lib/login');
+var chinese = require('/utils/Chinese.js')
+var english = require('/utils/English.js')
 var loginFlag = true;
 App({
   globalData: {
@@ -22,8 +24,6 @@ App({
 
     updateManager.onCheckForUpdate(function(res) {
       // 请求完新版本信息的回调
-      console.log("==================")
-      console.log(res.hasUpdate)
     })
     updateManager.onUpdateReady(function() {
       wx.showModal({
@@ -54,21 +54,6 @@ App({
         })
       }
     })
-    wx.getSetting({
-      success(res) {
-        if (!res.authSetting['scope.userInfo']) {
-          wx.navigateTo({
-            url: '/pages/authon/authon',
-          })
-        } else {
-          wx.getUserInfo({
-            success: function(res) {
-              that.globalData.userInfo = res.rawData
-            }
-          })
-        }
-      }
-    })
     wx.getSystemInfo({
       success: function(res) {
         wx.setStorageSync('systemInfo', res)
@@ -76,6 +61,7 @@ App({
         var hh = res.windowHeight;
         that.globalData.ww = ww;
         that.globalData.hh = hh;
+        that.globalData.lanuage = res.language;
       }
     })
   },
@@ -94,10 +80,11 @@ App({
       return
     }
     wx.showNavigationBarLoading()
-    qcloud.setLoginUrl(this.globalData.API_URL + '/wxLogin');
-    if (url == "getCode") {
-      loginFlag = false;
-    }
+    // qcloud.setLoginUrl(this.globalData.API_URL + '/wxLogin');
+    // if (url == "getCode") {
+    //   loginFlag = false;
+    // }
+    loginFlag = false;
     qcloud.request({
       login: loginFlag,
       url: `${self.globalData.API_URL}${url}`,
@@ -123,55 +110,25 @@ App({
       }
     });
   },
-  bezier: function(pots, amount) {
-    var pot;
-    var lines;
-    var ret = [];
-    var points;
-    for (var i = 0; i <= amount; i++) {
-      points = pots.slice(0);
-      lines = [];
-      while (pot = points.shift()) {
-        if (points.length) {
-          lines.push(pointLine([pot, points[0]], i / amount));
-        } else if (lines.length > 1) {
-          points = lines;
-          lines = [];
-        } else {
-          break;
-        }
-      }
-      ret.push(lines[0]);
+  getContent: function (that,lastLanuage) {
+    if (lastLanuage == "zh_CN" || lastLanuage == "zh") {
+      that.setData({
+        content: chinese.content
+      })
+    } else {
+      that.setData({
+        content: english.content
+      })
     }
-
-    function pointLine(points, rate) {
-      var pointA, pointB, pointDistance, xDistance, yDistance, tan, radian, tmpPointDistance;
-      var ret = [];
-      pointA = points[0]; //点击
-      pointB = points[1]; //中间
-      xDistance = pointB.x - pointA.x;
-      yDistance = pointB.y - pointA.y;
-      pointDistance = Math.pow(Math.pow(xDistance, 2) + Math.pow(yDistance, 2), 1 / 2);
-      tan = yDistance / xDistance;
-      radian = Math.atan(tan);
-      tmpPointDistance = pointDistance * rate;
-      ret = {
-        x: pointA.x + tmpPointDistance * Math.cos(radian),
-        y: pointA.y + tmpPointDistance * Math.sin(radian)
-      };
-      return ret;
-    }
-    return {
-      'bezier_points': ret
-    };
   },
   globalData: {
     userInfo: null,
-    API_URL: 'https://wxapp.seeyoo-tech.cn/',
+    API_URL: 'https://stage-scm.truckxi.com:443/api/',
     IMG_URL: 'https://wxapp.seeyoo-tech.cn',
     carts: [],
     coupons: [],
     maps: [],
-    isConnected: true
+    isConnected: true,
+    lanuage:'en'
   }
 })

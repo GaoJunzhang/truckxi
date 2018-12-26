@@ -1,132 +1,37 @@
 <view class="register">
-<view class="content_fp" style="">
-        <!-- <view class="title">
-            <view href="javascript: void(0);" class="leftarrow">
-                <image mode='widthFix' src='http://bluablua.com/icon_return.png' style='width:52rpx;'></image>
-            </view>
-            Forgot Password?
-        </view> -->
-        <view class="cot">
-            <view class="t">LOGIN IMG</view>
-            <view class="inp_reg">
-                <view class="lef">
-                    <image mode='widthFix' src='http://bluablua.com/icon_email.png'></image>
-                </view>
-                <view class="rig">
-                    <label>EMAIL</label>
-                    <input type="text" placeholder="Enter your email" />
-                </view>
-                <view class="clr"></view>
-             </view>
-            <view class="btn_ca">
-                <button href="javasrcipt: void(0);" class="fg">
-                  Register
-                </button>
-             </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="content_log">
+      <view class="logo">
+        <image src='http://bluablua.com/logo.png' mode='widthFix'></image>
+      </view>
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
         </view>
-        <view class="pos_t">
-            <view class="am">
-                <view href="javasrcipt: void(0);" class="fg">
-                 Already Member ?
-                </view>
-            </view>
-            <view href="javasrcipt: void(0);" class="log">
-                Login
-            </view>  
-        </view>  
-    </view>
-    <view class="content_ca" style="display: none;">
-        <view class="title">
-            <view href="javascript: void(0);" class="leftarrow">
-                <image mode='widthFix' src='http://bluablua.com/icon_return.png'></image>
-            </view>
-            Create Account
+        <view class="rig">
+          <label>{{content.account}}</label>
+          <input name="username" type="text" placeholder="{{content.accountp}}" />
         </view>
-        <view class="inp_reg">
-            <view class="lef">
-                <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
-            </view>
-            <view class="rig">
-                <label>FULL NAME</label>
-                <input type="text" placeholder="Enter your fullname" />
-            </view>
-            <view class="clr"></view>
-         </view>
-         <view class="inp_reg">
-            <view class="lef">
-                <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
-            </view>
-            <view class="rig">
-                <label>USER NAME</label>
-                <input type="text" placeholder="Enter your username" />
-            </view>
-            <view class="clr"></view>
-         </view>
-         <view class="inp_reg">
-            <view class="lef">
-                <image mode='widthFix' src='http://bluablua.com/icon_email.png'></image>
-            </view>
-            <view class="rig">
-                <label>EMAIL</label>
-                <input type="text" placeholder="Enter your email" />
-            </view>
-            <view class="clr"></view>
-         </view>
-         <view class="inp_reg">
-            <view class="lef">
-                <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
-            </view>
-            <view class="rig">
-                <label>PASSWORD</label>
-                <input type="password" placeholder="Enter your password" />
-            </view>
-            <view class="clr"></view>
-         </view>
-        <view class="btn_ca">
-            <view href="javasrcipt: void(0);" class="fg">
-              Register
-            </view>
-         </view>
-          <view class="am">
-            <view href="javasrcipt: void(0);" class="fg">
-             Already Member ?
-            </view>
+        <view class="clr"></view>
+      </view>
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
         </view>
-        <view href="javasrcipt: void(0);" class="log">
-            Login
-        </view>    
+        <view class="rig">
+          <label>{{content.password}}</label>
+          <input name="password" type="password" placeholder="{{content.passwordp}}" />
+        </view>
+        <navigator class="fg" url='../forgotpwd/forgotpwd'>
+          {{content.fpwd}}?
+        </navigator>
+        <view class="clr"></view>
+      </view>
+      <view class="btn_log">
+        <button class="fg" form-type='submit'>
+          {{content.loginTitle}}
+        </button>
+      </view>
     </view>
-    <view class="content_log" style="display: none;">
-         <view class="logo">
-            <img src="http://bluablua.com/logo.png" />
-         </view>
-         <view class="inp_reg">
-            <view class="lef">
-                <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
-            </view>
-            <view class="rig">
-                <label>USER NAME</label>
-                <input type="text" placeholder="Enter your username" />
-            </view>
-            <view class="clr"></view>
-         </view>
-         <view class="inp_reg">
-            <view class="lef">
-                <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
-            </view>
-            <view class="rig">
-                <label>PASSWORD</label>
-                <input type="password" placeholder="Enter your password" />
-            </view>
-             <view href="javasrcipt: void(0);" class="fg">
-               Forgot Password?
-            </view>
-            <view class="clr"></view>
-         </view>
-         <view class="btn_log">
-            <view href="javasrcipt: void(0);" class="fg">
-              Login
-            </view>
-         </view>
-    </view>
+  </form>
 </view>
