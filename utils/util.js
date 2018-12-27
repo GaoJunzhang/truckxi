@@ -247,7 +247,14 @@ function dateformat(micro_second) {
   //   return "剩 " + day + " 天 " + hrStr + ":" + minStr + ":" + secStr;
   // }
 }
+function checkEmail(email){
+  var reg = new RegExp('^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$');
+  var emailVar = reg.test(email);
+  console.log(emailVar)
+  return emailVar;
+}
 module.exports = {
+  checkEmail: checkEmail,
   formatTime: formatTime,
   formatTimes: formatTimes,
   isMobile: isMobile,

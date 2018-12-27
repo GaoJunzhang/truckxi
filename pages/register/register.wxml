@@ -1,63 +1,75 @@
 <view class="register">
-  <view class="content_ca">
-    <view class="title">
-      <view class="leftarrow">
-        <image mode='widthFix' src='http://bluablua.com/icon_return.png' style='width:52rpx;'></image>
+  <form bindsubmit="formSubmit">
+    <view class="content_ca">
+      <view class="title">
+        <view class="leftarrow">
+          <image mode='widthFix' src='http://bluablua.com/icon_return.png' style='width:52rpx;'></image>
+        </view>
+        {{content.create_account}}
       </view>
-      {{content.create_account}}
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+        </view>
+        <view class="rig">
+          <label>{{content.first_name}}</label>
+          <input name="first_name" type="text" placeholder="{{content.first_name_tips}}" />
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+        </view>
+        <view class="rig">
+          <label>{{content.last_name}}</label>
+          <input name="last_name" type="text" placeholder="{{content.last_name_tips}}" />
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+        </view>
+        <view class="rig">
+          <label>{{content.account}}</label>
+          <input name="username" type="text" placeholder="{{content.accountp}}" />
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_email.png'></image>
+        </view>
+        <view class="rig">
+          <label>{{content.email}}</label>
+          <input name="email" type="text" placeholder="{{content.email_inpt}}" />
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="inp_reg">
+        <view class="lef">
+          <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
+        </view>
+        <view class="rig">
+          <label>{{content.password}}</label>
+          <input name="password" type="password" placeholder="{{content.passwordp}}" />
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="btn_ca">
+        <button class="fg" form-type='submit'>
+          {{content.register}}
+        </button>
+      </view>
+      <view class="am">
+        <view class="fg">
+          {{content.already_Member}} ?
+        </view>
+      </view>
+      <navigator class="log" url='../login/login'>
+        {{content.login}}
+      </navigator>
     </view>
-    <view class="inp_reg">
-      <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
-      </view>
-      <view class="rig">
-        <label>{{content.fullname}}</label>
-        <input type="text" placeholder="{{content.fullname_tips}}" />
-      </view>
-      <view class="clr"></view>
-    </view>
-    <view class="inp_reg">
-      <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
-      </view>
-      <view class="rig">
-        <label>{{content.account}}</label>
-        <input type="text" placeholder="{{content.accountp}}" />
-      </view>
-      <view class="clr"></view>
-    </view>
-    <view class="inp_reg">
-      <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_email.png'></image>
-      </view>
-      <view class="rig">
-        <label>{{content.email}}</label>
-        <input type="text" placeholder="{{content.email_inpt}}" />
-      </view>
-      <view class="clr"></view>
-    </view>
-    <view class="inp_reg">
-      <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
-      </view>
-      <view class="rig">
-        <label>{{content.password}}</label>
-        <input type="password" placeholder="{{content.passwordp}}" />
-      </view>
-      <view class="clr"></view>
-    </view>
-    <view class="btn_ca">
-      <view class="fg">
-        {{content.register}}
-      </view>
-    </view>
-    <view class="am">
-      <view class="fg">
-        {{content.already_Member}} ?
-      </view>
-    </view>
-    <navigator class="log" url='../login/login'>
-      {{content.login}}
-    </navigator>
-  </view>
+  </form>
 </view>

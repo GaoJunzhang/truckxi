@@ -19,6 +19,16 @@ var Chinese = {
   create_account: "创建账号",
   fullname: "全名",
   fullname_tips: "输入全名",
+  first_name: "名字",
+  first_name_tips: "输入您的名字",
+  last_name: "姓氏",
+  last_name_tips: "输入您的姓氏",
+  username_err:"账号不可用",
+  username_ck: "用户名只能包含字母、数字和@.+-_",
+  password_err:"密码不可用",
+  email_err:"邮箱不可用",
+  firstname_err:"名字不可用",
+  lastname_err:"姓氏不可用"
 }
 
 module.exports = {

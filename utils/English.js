@@ -19,6 +19,16 @@ var English = {　　
   create_account:"Create Account",
   fullname:"FULL NAME",
   fullname_tips:"Enter your fullname",
+  first_name:"FIRST NAME",
+  first_name_tips:"Enter your first name",
+  last_name:"LAST NAME",
+  last_name_tips:"Enter your last name",
+  username_err: "Account unavailable",
+  username_ck:"Enter a valid username. This value may contain only letters, numbers and @.+-_ characters.",
+  password_err: "Password unavailable",
+  email_err: "Email unavailable",
+  firstname_err: "FirstName unavailable",
+  lastname_err: "LastName unavailable",
 
   
 }

@@ -151,7 +151,7 @@ page {
   margin: 40px auto 0;
 }
 
-.register .content_ca .btn_ca view {
+.register .content_ca .btn_ca button {
   width: calc(100% - 20px);
   margin: 0 10px;
   color: #fff;
