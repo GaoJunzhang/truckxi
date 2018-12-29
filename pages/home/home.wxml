@@ -307,15 +307,15 @@
     <view class="image">
       <image src='http://bluablua.com/bg_setting.jpg' mode='widthFix'></image>
       <!-- <view class="lang"> -->
-        <view class='select_box' catchtap='selectTap'>
-          <view class='select' catchtap='selectTap'>
-            <text class='select_text'>{{selectData[index]}}</text>
-            <!-- <image class='select_img {{show&&"select_img_rotate"}}' src='/image/gobottom.png'></image> -->
-          </view>
-          <view class='option_box' style='height:{{show?(selectData.length>2?300:selectData.length*60):0}}rpx;'>
-            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
-          </view>
+      <view class='select_box' catchtap='selectTap'>
+        <view class='select' catchtap='selectTap'>
+          <text class='select_text'>{{selectData[index]}}</text>
+          <!-- <image class='select_img {{show&&"select_img_rotate"}}' src='/image/gobottom.png'></image> -->
         </view>
+        <view class='option_box' style='height:{{show?(selectData.length>2?300:selectData.length*60):0}}rpx;'>
+          <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+        </view>
+      </view>
       <!-- </view> -->
       <view class="head">
         <view>
@@ -380,7 +380,8 @@
   </view>
   <view style="height:100%;width:100%;" bindtap="hideleft"></view>
 </view>
-<view class="Choose_yl" hidden='{{!islocation}}'>
+<view class="Choose_yl" hidden='{{islocation}}'>
+  <view style='height:100%;width:100%;' bindtap='hideChoose'></view>
   <view class="box_c">
     <view class="tit">{{content.choose_location}}</view>
     <view class="y">{{content.location_des}}</view>
@@ -390,4 +391,5 @@
       {{content.continuew}}
     </view>
   </view>
+  <view style='height:100%;width:100%;' bindtap='hideChoose'></view>
 </view>

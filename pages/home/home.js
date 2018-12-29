@@ -99,5 +99,10 @@ Page({
     this.setData({
       showLeft:true
     })
+  },
+  hideChoose:function(){
+    this.setData({
+      islocation: true
+    })
   }
 })
