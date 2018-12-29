@@ -57,11 +57,8 @@ App({
     wx.getSystemInfo({
       success: function(res) {
         wx.setStorageSync('systemInfo', res)
-        var ww = res.windowWidth;
-        var hh = res.windowHeight;
-        that.globalData.ww = ww;
-        that.globalData.hh = hh;
         that.globalData.lanuage = res.language;
+        that.globalData.navHeight = res.statusBarHeight + 46;//全局导航高度
       }
     })
   },
@@ -124,11 +121,12 @@ App({
   globalData: {
     userInfo: null,
     API_URL: 'https://stage-scm.truckxi.com:443/api/',
-    IMG_URL: 'https://wxapp.seeyoo-tech.cn',
+    IMG_URL: 'http://bluablua.com/',
     carts: [],
     coupons: [],
     maps: [],
     isConnected: true,
-    lanuage:'en'
+    lanuage:'en',
+    navHeight: 0
   }
 })

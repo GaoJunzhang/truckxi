@@ -28,7 +28,36 @@ var Chinese = {
   password_err:"密码不可用",
   email_err:"邮箱不可用",
   firstname_err:"名字不可用",
-  lastname_err:"姓氏不可用"
+  lastname_err:"姓氏不可用",
+
+  //首页
+  my_rofile:"个人资料",
+  my_address:"我的地址",
+  my_order: "订单",
+  my_cart: "购物车",
+  other: "其他",
+  need_help: "帮助",
+  share: "分享好友",
+  about_us: "关于我们",
+  logout: "退出",
+  meat:"肉",
+  dairy: "奶制品",
+  dry_goods: "干货",
+  seafood: "海鲜",
+  new_arrivals: "新品推荐",
+  shop_now: "去看看",
+  great: "爆",
+  deals: "品",
+  left_in_stop: "剩余",
+  add: "购买",
+  box: "盒子",
+  meet_our: "即将",
+  newarrivals:"推出",
+  choose_location: "选择收货地址",
+  location_des: "您的位置方便向您展示商品的可用性和价格",
+  enter_zip: "输入邮编",
+  price_des: "价格可能因地点而异",
+  continuew: "继续",
 }
 
 module.exports = {

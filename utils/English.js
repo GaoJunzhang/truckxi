@@ -29,8 +29,34 @@ var English = {　　
   email_err: "Email unavailable",
   firstname_err: "FirstName unavailable",
   lastname_err: "LastName unavailable",
-
-  
+  //HOME
+  my_rofile:"My Profile",
+  my_address:"My Address",
+  my_order:"My Order",
+  my_cart:"My Cart",
+  other:"Other",
+  need_help:"Need Help",
+  share:"Share",
+  about_us:"About us",
+  logout:"Logout",
+  meat: "Meat",
+  dairy:"Dairy",
+  dry_goods:"Dry Goods",
+  seafood:"SeaFood",
+  new_arrivals:"New Arrivals",
+  shop_now:"Shop Now",
+  great:"Great",
+  deals:"deals",
+  left_in_stop:"Left in Stop",
+  add:"Add",
+  box:"Box",
+  meet_our:"Meet Our",
+  newarrivals: "New Arrivals",
+  choose_location:"Choose your location",
+  location_des:"Your location lets us show you item availability and prices.",
+  enter_zip:"Enter ZipCode",
+  price_des:"Prices may vary depending on location.",
+  continuew:"Prices may vary depending on location.",
 }
 
 module.exports = {

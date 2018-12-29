@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/home/home",
+    "pages/test/test",
     "pages/register/register",
-    "pages/login/login",
-    "pages/forgotpwd/forgotpwd"
+    "pages/forgotpwd/forgotpwd",
+    "pages/login/login"
   ],
   "window":{
     "backgroundTextStyle": "dark",
