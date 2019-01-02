@@ -11,7 +11,7 @@
       <view class="hook">
         <image src='http://bluablua.com/icon_pro_hook.png' mode='widthFix' style='width:36rpx'></image>
       </view>
-      <view class="clr" style='width:100%'></view>
+      <view class="clr"></view>
       <view class="down">
         <text class="l">Available Balance</text>
         <text class="r">$129.45</text>
