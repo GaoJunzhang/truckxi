@@ -1,8 +1,15 @@
 <view class="content">
   <view class="banner">
-    <view>
+    <!-- <view>
       <image src='http://bluablua.com/banner_01.jpg' mode='widthFix'></image>
-    </view>
+    </view> -->
+    <swiper style='height:225px' autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <block wx:for="{{imgs}}" wx:key="*this">
+        <swiper-item>
+          <image style='width:100%' src='{{item.img}}' mode='widthFix'></image>
+        </swiper-item>
+      </block>
+    </swiper>
     <view class="round">
       <view class="hover">
       </view>

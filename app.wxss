@@ -19,10 +19,27 @@ view, text, label {
   clear: both;
 }
 
-
 /*隐藏滚动条*/
+
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
   color: transparent;
 }
+
+input::-webkit-input-placeholder {
+  color: #8b8b8b;
+}
+
+input::-moz-input-placeholder {
+  color: #8b8b8b;
+}
+
+input::-ms-input-placeholder {
+  color: #8b8b8b;
+}
+
+.a, text,navigator{text-decoration: none;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;}

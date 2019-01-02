@@ -12,6 +12,22 @@ Page({
     selectData: ['中文', 'English'], //下拉列表的数据
     index: 0, //选择的下拉列表下标,
     showLeft:true,
+
+    autoplay: true,
+    circular: false,
+    interval: 5000,
+    duration: 500,
+    previousMargin: 0,
+    nextMargin: 0,
+
+    imgs: [
+      {
+        img: 'http://bluablua.com/banner_01.jpg',
+      },
+      {
+        img: 'http://bluablua.com/banner_01.jpg',
+      }
+    ],
   },
 
   /**

@@ -1,0 +1,159 @@
+page {
+  background: #f3f3f3;
+}
+
+.content {
+  width: 100%;
+}
+
+.content .a{display: block;}
+.edit_pro {
+  margin: 15px 12px;
+}
+
+.edit_pro .img_head {
+  width: 100%;
+  padding: 10px 12px 2px 12px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  height: 238rpx;
+}
+
+.edit_pro .img_head .a {
+  display: block;
+  width: 48px;
+  float: left;
+  text-align: center;
+}
+
+.edit_pro .img_head .a image {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 6px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.edit_pro .img_head .fn {
+  margin: 6px 0 0 10px;
+  float: left;
+}
+
+.edit_pro .img_head .fn label {
+  color: #b2b2b2;
+  display: block;
+}
+
+.edit_pro .img_head .fn input {
+  display: block;
+  margin: 5px 0 0;
+}
+
+.edit_pro .img_head .hook {
+  float: right;
+  margin: 16px 0 0;
+}
+
+.edit_pro .img_head .down {
+  margin: 10px 0;
+  border-top: 2px solid #e0e0e0;
+  padding: 10px 0 0;
+}
+
+.edit_pro .img_head .down text.l {
+  float: left;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.edit_pro .img_head .down text.r {
+  float: right;
+  font-size: 16px;
+  color: #f50000;
+}
+
+.edit_pro .p_cap {
+  width: 100%;
+  margin: 15px 0;
+  padding: 0 12px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.edit_pro .p_cap .li {
+  width: 100%;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.edit_pro .p_cap .li:last-child {
+  border: none;
+}
+
+.edit_pro .p_cap .li .a {
+  display: block;
+  position: relative;
+  padding: 12px 0;
+}
+
+.edit_pro .p_cap .li .a label {
+  color: #333;
+  display: block;
+}
+
+.edit_pro .p_cap .li .a text {
+  display: block;
+  margin: 2px 0 0;
+  width: 100%;
+  color: #757575;
+  font-size: 12px;
+}
+
+.edit_pro .p_cap .li .a .irr {
+  position: absolute;
+  right: 0;
+  top: 22px;
+}
+
+.edit_pro {
+  margin: 15px 12px;
+}
+
+.edit_pro .img_head {
+  width: 100%;
+  padding: 10px 12px 2px 12px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.edit_pro .img_head view {
+  display: block;
+  width: 48px;
+  float: left;
+  text-align: center;
+}
+
+.edit_pro .img_head view image {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  border: 6px solid #fff;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.edit_pro .img_head .fn {
+  margin: 6px 0 0 10px;
+  float: left;
+}
+
+.edit_pro .img_head .fn label {
+  color: #b2b2b2;
+  display: block;
+}
+
+.edit_pro .img_head .fn input {
+  display: block;
+  margin: 5px 0 0;
+}

@@ -1,0 +1,53 @@
+<view class="content">
+  <view class="edit_pro">
+    <view class="img_head">
+      <view class='a'>
+        <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
+      </view>
+      <view class="fn">
+        <label>Full Name</label>
+        <input type="text" placeholder="Aakash Sirdhana" />
+      </view>
+      <view class="hook">
+        <image src='http://bluablua.com/icon_pro_hook.png' mode='widthFix' style='width:36rpx'></image>
+      </view>
+      <view class="clr" style='width:100%'></view>
+      <view class="down">
+        <text class="l">Available Balance</text>
+        <text class="r">$129.45</text>
+        <view class="clr"></view>
+      </view>
+    </view>
+    <view>
+      <view class="p_cap">
+        <view class="li">
+          <view class='a'>
+            <label>Payment Cards</label>
+            <text>Add view credit or debit card</text>
+            <view class="irr">
+              <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
+            </view>
+          </view>
+        </view>
+        <view class="li">
+          <view class='a'>
+            <label>Address</label>
+            <text>Add or remove view delivery address</text>
+            <view class="irr">
+              <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
+            </view>
+          </view>
+        </view>
+        <view class="li">
+          <view class='a'>
+            <label>Phone Number</label>
+            <text>9968xxxxx99</text>
+            <view class="irr">
+              <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
