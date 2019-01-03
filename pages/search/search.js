@@ -15,6 +15,9 @@ Page({
     var lastLanuage = app.globalData.lanuage
     // this.getContent(lastLanuage)
     app.getContent(this, lastLanuage)
+    this.setData({
+      navH: app.globalData.navHeight
+    })
   },
 
   /**

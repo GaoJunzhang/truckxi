@@ -1,26 +1,32 @@
 <view class="content">
+  <view class='nav bg-white' style='height:{{navH}}px'>
+    <view class='nav-title'>
+      搜索
+      <!-- <image src='../../images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> -->
+    </view>
+  </view>
   <view class="search">
     <view class="rs">{{content.recent}}
       <view class='span'>{{content.search}}</view>
     </view>
     <view class="rs_li">
       <view class="li">
-        <view class='a' >
+        <view class='a'>
           Olive Oil
         </view>
       </view>
       <view class="li">
-        <view class='a' >
+        <view class='a'>
           Apple
         </view>
       </view>
       <view class="li">
-        <view class='a' >
+        <view class='a'>
           Mustard Oil
         </view>
       </view>
       <view class="li">
-        <view class='a' >
+        <view class='a'>
           Mango
         </view>
       </view>
@@ -30,7 +36,7 @@
     </view>
     <view class="goods_list">
       <view class="li">
-        <view class='a' >
+        <view class='a'>
           <view class="img_g">
             <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
           </view>
@@ -47,7 +53,7 @@
         </view>
       </view>
       <view class="li">
-        <view class='a' >
+        <view class='a'>
           <view class="img_g">
             <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
           </view>
