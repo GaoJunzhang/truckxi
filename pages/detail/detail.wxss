@@ -1,0 +1,109 @@
+.detail {
+  width: calc(100% - 24px);
+  margin: 20px 12px;
+}
+
+.detail .tit {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+}
+
+.detail p.intro {
+  font-size: 12px;
+}
+
+.detail .p_t {
+  margin: 15px 0 20px;
+}
+
+.detail .p_t .lef {
+  float: left;
+}
+
+.detail .p_t .lef .p {
+  font-size: 24px;
+  color: #ed0000;
+  display: block;
+}
+
+.detail .p_t .lef .s {
+  font-size: 12px;
+}
+
+.detail .p_t .rig {
+  float: right;
+  margin: 10px 0 0;
+}
+
+.detail .p_t .rig .reduce {
+  width: 32px;
+  height: 32px;
+  background: url(http://bluablua.com/icon_reduce.png) center center no-repeat;
+  display: inline-block;
+}
+
+.detail .p_t .rig .span {
+  width: 40px;
+  display: inline-block;
+  text-align: center;
+  line-height: 32px;
+  position: relative;
+  top: -6px;
+  font-size: 18px;
+}
+
+.detail .p_t .rig .add {
+  width: 32px;
+  height: 32px;
+  background: url(http://bluablua.com/icon_add.png) center center no-repeat;
+  display: inline-block;
+}
+
+.detail .btn_det {
+  width: 100%;
+  text-align: center;
+}
+
+.detail .btn_det .a {
+  display: inline-block;
+  color: #fff;
+  padding: 6px 18px;
+  border-radius: 40px;
+  margin: 0 5px;
+}
+
+.detail .btn_det .gre {
+  background: -webkit-linear-gradient(270deg, #37a000, #43c102);
+  background: -o-linear-gradient(270deg, #37a000, #43c102);
+  background: -moz-linear-gradient(270deg, #37a000, #43c102);
+  background: linear-gradient(270deg, #37a000, #43c102);
+}
+
+.detail .btn_det .gra {
+  background: -webkit-linear-gradient(270deg, #474747, #262626);
+  background: -o-linear-gradient(270deg, #474747, #262626);
+  background: -moz-linear-gradient(270deg, #474747, #262626);
+  background: linear-gradient(270deg, #474747, #262626);
+}
+
+.content .banner .ban {
+  width: 100%;
+  position: relative;
+}
+
+.content .banner .ban .tips {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  padding: 0 10px;
+  height: 24px;
+  line-height: 24px;
+  background: #ff8208;
+  border-radius: 0 5px 5px 0;
+  font-size: 12px;
+  color: #fff;
+}
+.content .banner image {
+  display: block;
+  width: 100%;
+}

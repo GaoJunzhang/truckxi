@@ -1,0 +1,34 @@
+<view class="content">
+    <view class="edit_pro">
+         <view class="img_head">
+            <view class='a'>
+                <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
+                <view class='span'>{{content.edit_s}}</view>           
+            </view>
+            <view class="fn">
+                <label>{{content.fullname}}</label>
+                <input type="text" placeholder="Aakash Sirdhana" />
+            </view>
+            <view class="clr"></view>
+         </view>
+         <view class="pro_cot">
+            <view class="list">
+                <label>{{content.fullname}}</label>
+                <input type="text" placeholder="AAKASH SIRDHANA" />
+            </view>
+            <view class="list">
+                <label>{{content.email}}</label>
+                <input type="text" placeholder="aakashsirdhana@gmail.com" />
+            </view>
+            <view class="list">
+                <label>{{content.phone}}</label>
+                <input type="text" placeholder="+91-99653445545" />
+            </view>
+         </view>
+    </view>
+</view>
+<view class="btn_save">
+    <view class='a'>
+        {{content.save}}        
+    </view>
+</view>

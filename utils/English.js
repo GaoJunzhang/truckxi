@@ -15,6 +15,8 @@ var English = {　　
   already_Member:"Already Member",
   login:"Login",
   submit: "Submit",
+  save: "SAVE",
+  edit_s:"edit",
   //create account
   create_account:"Create Account",
   fullname:"FULL NAME",
@@ -57,6 +59,21 @@ var English = {　　
   enter_zip:"Enter ZipCode",
   price_des:"Prices may vary depending on location.",
   continuew:"Prices may vary depending on location.",
+  //profile
+  available_balance:"Available Balance",
+  payment_cards: "Payment Cards",
+  address: "Address",
+  phone: "Phone Number",
+  payment_tips: "Add view credit or debit card",
+  address_tips: "Add or remove view delivery address",
+  //Search
+  recent: "Recent",
+  search: "Search",
+  similar: "Similar",
+  products: "Products",
+  //detail
+  add_to_cart:"Add to Cart",
+  add_and_checkout:"Add and Checkout",
 }
 
 module.exports = {

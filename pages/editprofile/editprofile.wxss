@@ -6,7 +6,6 @@ page {
   width: 100%;
 }
 
-.content .a{display: block;}
 .edit_pro {
   margin: 15px 12px;
 }
@@ -17,7 +16,6 @@ page {
   background: #fff;
   border-radius: 5px;
   border: 1px solid #e0e0e0;
-  /* height: 238rpx; */
 }
 
 .edit_pro .img_head .a {
@@ -50,72 +48,52 @@ page {
   margin: 5px 0 0;
 }
 
-.edit_pro .img_head .hook {
-  float: right;
-  margin: 16px 0 0;
-}
-
-.edit_pro .img_head .down {
-  margin: 10px 0;
-  border-top: 2px solid #e0e0e0;
-  padding: 10px 0 0;
-}
-
-.edit_pro .img_head .down .l {
-  float: left;
-  font-size: 12px;
-  line-height: 22px;
-}
-
-.edit_pro .img_head .down .r {
-  float: right;
-  font-size: 16px;
-  color: #f50000;
-}
-
-.edit_pro .p_cap {
+.edit_pro .pro_cot {
   width: 100%;
   margin: 15px 0;
   padding: 0 12px;
   background: #fff;
   border-radius: 5px;
   border: 1px solid #e0e0e0;
+  height: 320px;
 }
 
-.edit_pro .p_cap .li {
+.edit_pro .pro_cot .list {
+  margin: 15px 0 20px;
+}
+
+.edit_pro .pro_cot .list label {
+  color: #b2b2b2;
+  display: block;
+}
+
+.edit_pro .pro_cot .list input {
+  display: block;
+  margin: 5px 0 0;
+  border-bottom: 1px solid #aeaeae;
+  padding: 2px 0 5px 0;
   width: 100%;
-  border-bottom: 1px solid #e0e0e0;
 }
 
-.edit_pro .p_cap .li:last-child {
-  border: none;
-}
-
-.edit_pro .p_cap .li .a {
-  display: block;
-  position: relative;
-  padding: 12px 0;
-}
-
-.edit_pro .p_cap .li .a label {
-  color: #333;
-  display: block;
-}
-
-.edit_pro .p_cap .li .a .span {
-  display: block;
-  margin: 2px 0 0;
-  width: 100%;
-  color: #757575;
-  font-size: 12px;
-}
-
-.edit_pro .p_cap .li .a .irr {
-  position: absolute;
+.btn_save {
+  position: fixed;
+  left: 0;
   right: 0;
-  top: 22px;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
 }
 
-.edit_pro {
-  margin: 15px 12px;
+.btn_save .a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  background: -webkit-linear-gradient(270deg, #37a000, #43c102);
+  background: -o-linear-gradient(270deg, #37a000, #43c102);
+  background: -moz-linear-gradient(270deg, #37a000, #43c102);
+  background: linear-gradient(270deg, #37a000, #43c102);
 }

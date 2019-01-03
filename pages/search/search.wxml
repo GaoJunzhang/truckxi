@@ -1,0 +1,68 @@
+<view class="content">
+  <view class="search">
+    <view class="rs">{{content.recent}}
+      <view class='span'>{{content.search}}</view>
+    </view>
+    <view class="rs_li">
+      <view class="li">
+        <view class='a' >
+          Olive Oil
+        </view>
+      </view>
+      <view class="li">
+        <view class='a' >
+          Apple
+        </view>
+      </view>
+      <view class="li">
+        <view class='a' >
+          Mustard Oil
+        </view>
+      </view>
+      <view class="li">
+        <view class='a' >
+          Mango
+        </view>
+      </view>
+    </view>
+    <view class="rs">{{content.similar}}
+      <view class='span'>{{content.products}}</view>
+    </view>
+    <view class="goods_list">
+      <view class="li">
+        <view class='a' >
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='span'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+      <view class="li">
+        <view class='a' >
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='span'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

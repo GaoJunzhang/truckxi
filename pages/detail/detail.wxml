@@ -1,0 +1,48 @@
+<view class="content">
+  <view class="banner">
+    <view class="ban">
+      <image src='http://bluablua.com/banner_02.jpg' mode='widthFix'></image>
+      <view class="tips">12 Left in Stock</view>
+    </view>
+    <view class="round">
+      <view class='a hover'>
+      </view>
+      <view class='a'>
+      </view>
+      <view class='a'>
+      </view>
+    </view>
+  </view>
+  <view class="detail">
+    <view class="tit">
+      Grape Kyoho
+    </view>
+    <view class="intro">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+      survived not only five centuries.
+    </view>
+    <view class="p_t">
+      <view class="lef">
+        <view class="span p">$9.99 </view>
+        <view class="span s">1BAG*1-3LBS</view>
+      </view>
+      <view class="rig">
+        <view class='a reduce'>
+        </view>
+        <view class='span'>1</view>
+        <view class='a add'>
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="clr"></view>
+    </view>
+    <view class="btn_det">
+      <view class='a gre'>
+        {{content.add_to_cart}}
+      </view>
+      <view class='a gra'>
+        {{content.add_and_checkout}}
+      </view>
+    </view>
+  </view>
+</view>

@@ -15,6 +15,8 @@ var Chinese = {
   already_Member: "已有账号",
   login: "登录",
   submit:"确定",
+  save:"保存",
+  edit_s:"编辑",
   //创建账号
   create_account: "创建账号",
   fullname: "全名",
@@ -49,8 +51,8 @@ var Chinese = {
   great: "爆",
   deals: "品",
   left_in_stop: "剩余",
-  add: "购买",
-  box: "盒子",
+  add: "添加",
+  box: "盒",
   meet_our: "即将",
   newarrivals:"推出",
   choose_location: "选择收货地址",
@@ -58,6 +60,20 @@ var Chinese = {
   enter_zip: "输入邮编",
   price_des: "价格可能因地点而异",
   continuew: "继续",
+  //个人信息
+  available_balance:"可用余额",
+  payment_cards:"支付卡",
+  address:"地址",
+  phone:"电话",
+  payment_tips:"管理支付卡",
+  address_tips:"管理地址",
+  recent:"最近",
+  search:"搜索",
+  similar:"类似",
+  products:"产品",
+  //detail
+  add_to_cart: "加入购物车",
+  add_and_checkout: "立刻购买",
 }
 
 module.exports = {

@@ -5,7 +5,7 @@
         <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
       </view>
       <view class="fn">
-        <label>Full Name</label>
+        <label>{{content.fullname}}</label>
         <input type="text" placeholder="Aakash Sirdhana" />
       </view>
       <view class="hook">
@@ -13,8 +13,8 @@
       </view>
       <view class="clr"></view>
       <view class="down">
-        <text class="l">Available Balance</text>
-        <text class="r">$129.45</text>
+        <view class="l">{{content.available_balance}}</view>
+        <view class="r">$129.45</view>
         <view class="clr"></view>
       </view>
     </view>
@@ -22,8 +22,8 @@
       <view class="p_cap">
         <view class="li">
           <view class='a'>
-            <label>Payment Cards</label>
-            <text>Add view credit or debit card</text>
+            <label>{{content.payment_cards}}</label>
+            <view class='span'>{{content.payment_tips}}</view>
             <view class="irr">
               <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
@@ -31,8 +31,8 @@
         </view>
         <view class="li">
           <view class='a'>
-            <label>Address</label>
-            <text>Add or remove view delivery address</text>
+            <label>{{content.address}}</label>
+            <view class='span'>{{content.address_tips}}</view>
             <view class="irr">
               <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
@@ -40,8 +40,8 @@
         </view>
         <view class="li">
           <view class='a'>
-            <label>Phone Number</label>
-            <text>9968xxxxx99</text>
+            <label>{{content.phone}}</label>
+            <view class='span'>9968xxxxx99</view>
             <view class="irr">
               <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>

@@ -1,5 +1,8 @@
 {
   "pages":[
+    "pages/search/search",
+    "pages/editprofile/editprofile",
+    "pages/detail/detail",
     "pages/profile/profile",
     "pages/home/home",
     "pages/test/test",
