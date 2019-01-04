@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/produce/produce",
+    "pages/orderhistory/orderhistory",
+    "pages/orderfilter/orderfilter",
+    "pages/filter/filter",
     "pages/home/home",
     "pages/search/search",
     "pages/editprofile/editprofile",

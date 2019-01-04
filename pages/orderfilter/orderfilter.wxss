@@ -1,0 +1,62 @@
+.content {
+  width: 100%;
+}
+
+.search_by {
+  width: calc(100% - 24px);
+  margin: 25px 12px;
+}
+
+.search_by .tx_s {
+  margin: 10px 0;
+  display: block;
+}
+
+.search_by .inp {
+  display: flex;
+}
+
+.search_by input.s {
+  flex: 1;
+  border: 1px solid #bcbcbc;
+  font-size: 12px;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+  border-radius: 32px;
+  padding: 0 24px 0 12px;
+  background: url(http://bluablua.com/icon_search.png) center right no-repeat;
+}
+
+.search_by input.d {
+  flex: 1;
+  margin: 0 10px 0 0;
+  border: 1px solid #bcbcbc;
+  font-size: 12px;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  width: 70%;
+  border-radius: 32px;
+  padding: 0 24px 0 12px;
+  background: url(http://bluablua.com/icon_date.png) center right no-repeat;
+}
+
+.search_by input:last-child {
+  margin: 0;
+}
+
+.search_by .inp_r {
+  display: flex;
+}
+
+.search_by .inp_r .fle {
+  flex: 1;
+}
+
+.search_by .inp_r .fle input {
+  margin: 0 2px 0 0;
+  position: relative;
+  top: 2px;
+}

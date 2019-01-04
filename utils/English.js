@@ -74,6 +74,23 @@ var English = {　　
   //detail
   add_to_cart:"Add to Cart",
   add_and_checkout:"Add and Checkout",
+  //orderhistory
+  order_no: "Order No",
+  order_success: "Your order is successfully",
+  repeat: "Repeat",
+  //orderfilter
+  searchby:"Search by",
+  search_from_last:"Search from last",
+  searchby_date:"Search by Date",
+  searchby_tips:"Name, Order Number.....",
+  pfrom: "From",
+  pto: "To",
+  month:"Month",
+  //filter
+  reset: "Reset",
+  apply: "Apply",
+  //produce
+  total: "Total",
 }
 
 module.exports = {

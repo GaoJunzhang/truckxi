@@ -1,0 +1,111 @@
+<view class="content">
+  <view class="banner">
+    <view class="ban">
+      <image src='http://bluablua.com/banner_02.jpg' mode='widthFix'></image>
+      <view class="tx_pro">The Best Produce in our ecityfresh</view>
+    </view>
+  </view>
+  <view class="ca">
+    <view class='ca_li'>
+      <view class="a">Vegetable</view>
+    </view>
+    <view class='ca_li'>
+      <view class="a">Fruit</view>
+    </view>
+    <view class='ca_li'>
+      <view class="a">Flower</view>
+    </view>
+    <view class='ca_li'>
+      <view class="a">Refrigerated Prod</view>
+    </view>
+  </view>
+  <view class="gd_h">
+    <view class="tit sm">{{content.total}} 1245 {{content.products}}
+      <view class="more">
+        <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
+      </view>
+    </view>
+    <view class="good_p">
+      <view class='good_p_li'>
+        <view class="a">
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='view'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+        </view>
+      </view>
+      <view class='good_p_li'>
+        <view class="a">
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='span'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+        </view>
+      </view>
+      <view class='good_p_li'>
+        <view class="a">
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='span'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+        </view>
+      </view>
+      <view class='good_p_li'>
+        <view class="a">
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='span'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+        </view>
+      </view>
+      <view class='good_p_li'>
+        <view class="a">
+          <view class="img_g">
+            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='span'>Grape Kyoho</view>
+            <view class="pri">$9.99 </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            12 Left in Stock
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

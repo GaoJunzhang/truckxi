@@ -1,0 +1,83 @@
+page {
+  background: #f3f3f3;
+}
+
+.content {
+  width: 100%;
+}
+
+.oh {
+  width: calc(100% - 24px);
+  margin: 15px 12px;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.oh .li {
+  background: #fff;
+  border-radius: 5px;
+}
+
+.oh .li .a {
+  display: block;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.oh .li .top {
+  width: calc(100% - 24px);
+  margin: 12px 12px 0;
+  position: relative;
+}
+
+.oh .li .top .ts {
+  font-size: 12px;
+  color: #838282;
+  margin: 5px 0 0;
+}
+
+.oh .li .top .pri {
+  position: absolute;
+  right: 0;
+  color: #f30000;
+  top: 10px;
+  font-size: 16px;
+}
+
+.oh .li .bottom {
+  width: calc(100% - 24px);
+  margin: 10px 12px 0;
+}
+
+.oh .li .bottom .img {
+  width: 80px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.oh .li .bottom .img image {
+  width: 80px;
+  display: block;
+}
+
+.oh .li .bottom .ti {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+
+.oh .li .bottom .p {
+  font-size: 12px;
+  margin: 0 0 8px 0;
+}
+
+.oh .li .bottom .btn {
+  display: inline-block;
+  color: #fff;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 40px;
+  background: -webkit-linear-gradient(270deg, #37a000, #43c102);
+  background: -o-linear-gradient(270deg, #37a000, #43c102);
+  background: -moz-linear-gradient(270deg, #37a000, #43c102);
+  background: linear-gradient(270deg, #37a000, #43c102);
+}

@@ -74,6 +74,23 @@ var Chinese = {
   //detail
   add_to_cart: "加入购物车",
   add_and_checkout: "立刻购买",
+  //orderhistory
+  order_no:"订单号",
+  order_success:"订单成功",
+  repeat:"再次购买",
+  //orderfilter
+  searchby: "搜索",
+  search_from_last: "近期搜索",
+  searchby_date: "日期搜索",
+  searchby_tips: "姓名, 订单号.....",
+  pfrom:"开始",
+  pto:"结束",
+  month: "月",
+  //filter
+  reset:"重置",
+  apply:"应用",
+  //produce
+  total:"共",
 }
 
 module.exports = {

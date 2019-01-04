@@ -1,0 +1,149 @@
+<view class="content">
+  <view class="filter">
+    <view class="blo">Vegetable
+      <view class="iu"></view>
+    </view>
+    <view class="list">
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="a"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="a"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="a"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="a"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="a"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="li">
+        <view class="a">
+          <label class="a"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+  <view class="filter">
+    <view class="blo">Fruit
+      <view class="id"></view>
+    </view>
+    <view class="list" style="display: none;">
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+  <view class="filter">
+    <view class="blo">Flower
+      <view class="a" class="id"></view>
+    </view>
+    <view class="list" style="display: none;">
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+  <view class="filter">
+    <view class="blo">Refrigerated Produce
+      <view class="a" class="id"></view>
+    </view>
+    <view class="list" style="display: none;">
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+  <view class="filter">
+    <view class="blo">Pickled Produce
+      <view class="a" class="id"></view>
+    </view>
+    <view class="list" style="display: none;">
+      <view class="li">
+        <view class="a">
+          <label class="d"></label>
+          <view class="span">A Choi Sum</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+</view>
+<view class="btn_ra">
+  <view class="r">
+    <label></label>
+    {{content.reset}}
+  </view>
+  <view class="a">
+    {{content.apply}}
+    <label></label>
+  </view>
+  <view class="clr"></view>
+</view>

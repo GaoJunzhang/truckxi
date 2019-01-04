@@ -1,0 +1,106 @@
+<view class="content">
+  <view class="oh">
+    <view class="li">
+      <view class='a' href="javasrcipt: void(0);">
+        <view class="top">
+          <view>{{content.order_no}} 1244676745</view>
+          <view class="ts">06:15 PM 29 Sep 2018 </view>
+          <view class="pri">$9.99</view>
+        </view>
+        <view class="bottom">
+          <view class="img">
+            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+          </view>
+          <view class="tx_c">
+            <view class="ti">{{content.order_success}}</view>
+            <view class="p">$9.99</view>
+            <view class="btn">{{content.repeat}}</view>
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="oh">
+    <view class="li">
+      <view class='a' href="javasrcipt: void(0);">
+        <view class="top">
+          <view>{{content.order_no}} 1244676745</view>
+          <view class="ts">06:15 PM 29 Sep 2018 </view>
+          <view class="pri">$9.99</view>
+        </view>
+        <view class="bottom">
+          <view class="img">
+            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+          </view>
+          <view class="tx_c">
+            <view class="ti">{{content.order_success}}</view>
+            <view class="p">$9.99</view>
+            <view class="btn">{{content.repeat}}</view>
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+    </view>
+    <view class="li">
+      <view class='a' href="javasrcipt: void(0);">
+        <view class="top">
+          <view>{{content.order_no}} 1244676745</view>
+          <view class="ts">06:15 PM 29 Sep 2018 </view>
+          <view class="pri">$9.99</view>
+        </view>
+        <view class="bottom">
+          <view class="img">
+            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+          </view>
+          <view class="tx_c">
+            <view class="ti">{{content.order_success}}</view>
+            <view class="p">$9.99</view>
+            <view class="btn">{{content.repeat}}</view>
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+    </view>
+    <view class="li">
+      <view class='a' href="javasrcipt: void(0);">
+        <view class="top">
+          <view>{{content.order_no}} 1244676745</view>
+          <view class="ts">06:15 PM 29 Sep 2018 </view>
+          <view class="pri">$9.99</view>
+        </view>
+        <view class="bottom">
+          <view class="img">
+            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+          </view>
+          <view class="tx_c">
+            <view class="ti">{{content.order_success}}</view>
+            <view class="p">$9.99</view>
+            <view class="btn">{{content.repeat}}</view>
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+    </view>
+    <view class="li">
+      <view class='a' href="javasrcipt: void(0);">
+        <view class="top">
+          <view>{{content.order_no}} 1244676745</view>
+          <view class="ts">06:15 PM 29 Sep 2018 </view>
+          <view class="pri">$9.99</view>
+        </view>
+        <view class="bottom">
+          <view class="img">
+            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+          </view>
+          <view class="tx_c">
+            <view class="ti">{{content.order_success}}</view>
+            <view class="p">$9.99</view>
+            <view class="btn">{{content.repeat}}</view>
+          </view>
+          <view class="clr"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

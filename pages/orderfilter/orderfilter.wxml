@@ -1,0 +1,40 @@
+<view class="content">
+  <view class="search_by">
+    <view class="tx_s">{{content.searchby}}</view>
+    <view class="inp">
+      <input type="text" placeholder="{{content.searchby_tips}}" class="s"></input>
+    </view>
+  </view>
+  <view class="search_by">
+    <view class="tx_s">{{content.searchby_date}}</view>
+    <view class="inp">
+      <!-- <input type="text" placeholder="{{content.pfrom}} : 23-05-18" class="d"></input>
+      <input type="text" placeholder="{{content.pto}} : 23-07-18" class="d"></input> -->
+      <picker mode="date" value="{{startDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChangeStart">
+        <input type="text" placeholder="{{content.pfrom}} : 23-05-18" class="d" value='{{startDate}}'></input>
+      </picker>
+      <picker mode="date" value="{{endDate}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChangeEnd">
+         <input type="text" placeholder="{{content.pto}} : 23-07-18" class="d" value='{{endDate}}'></input>
+      </picker>
+    </view>
+  </view>
+  <view class="search_by">
+    <view class="tx_s">{{content.search_from_last}}</view>
+    <!-- <view class="inp_r">
+      <view class="fle">
+        <input type="radio">2 {{content.month}}</input>
+      </view>
+      <view class="fle">
+        <input type="radio">3 {{content.month}}</input>
+      </view>
+      <view class="fle">
+        <input type="radio">6 {{content.month}}</input>
+      </view>
+    </view> -->
+    <radio-group class="inp_r" bindchange="radioChange">
+      <label class="fle" wx:for="{{items}}" wx:key="*this">
+        <radio value="{{item.name}}" checked="{{item.checked}}" /> {{item.value}}{{content.month}}
+      </label>
+    </radio-group>
+  </view>
+</view>
