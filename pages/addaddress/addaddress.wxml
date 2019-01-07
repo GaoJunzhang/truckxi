@@ -1,0 +1,28 @@
+<view class="content">
+    <view class="edit_pro">
+         <view class="pro_cot">
+            <view class="list">
+                <input type="text" placeholder="{{content.address_line1}}" />
+            </view>
+            <view class="list">
+                <input type="text" placeholder="{{content.address_line2}}" class="a" />
+                <label class='i'></label>
+            </view>
+            <view class="list">
+                <label>{{content.city}}</label>
+                <input type="text" placeholder="{{content.address_example}}" />
+            </view>
+            <view class="list">
+                <input type="text" placeholder="{{content.address_tips}}" />
+            </view>
+            <view class="list">
+                <input type="text" placeholder="{{content.zip_code}}" />
+            </view>
+         </view>
+    </view>
+</view>
+<view class="btn_save">
+    <view class='a'>
+        {{content.add_address}} 
+    </view>
+</view>

@@ -91,6 +91,14 @@ var Chinese = {
   apply:"应用",
   //produce
   total:"共",
+  //addaddress
+  add_address: "添加地址",
+  zip_code: "邮政编码",
+  city: "城市",
+  address_tips:"省/市/区",
+  address_line1: "地址行1",
+  address_line2: "地址行2",
+  address_example: "北京",
 }
 
 module.exports = {

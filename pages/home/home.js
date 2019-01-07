@@ -35,8 +35,9 @@ Page({
    */
   onLoad: function(options) {
     var lastLanuage = app.globalData.lanuage
-   
-    app.getContent(this, lastLanuage)
+    let that = this
+    getProduct(that,null)
+    app.getContent(that, lastLanuage)
   },
 
   /**
@@ -122,3 +123,19 @@ Page({
     })
   }
 })
+var getProduct = function(that,param){
+  wx.request({
+    url: app.globalData.API_URL +'e/product/',
+    data: param,
+    success:function(res){
+      if (res.statusCode==200){
+        console.log(res.data)
+      }else{
+        wx.showModal({
+          content: '服务器异常，请稍后再试',
+          showCancel:false
+        })
+      }
+    }
+  })
+}

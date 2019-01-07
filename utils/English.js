@@ -91,6 +91,14 @@ var English = {　　
   apply: "Apply",
   //produce
   total: "Total",
+  //addaddress
+  add_address:"Add New Address", 
+  zip_code:"Zip Code",
+  city:"City",
+  address_tips:"State / Provision / Region",
+  address_line1:"Address Line No 1",
+  address_line2:"Address Line No 2",
+  address_example:"Delhi",
 }
 
 module.exports = {
