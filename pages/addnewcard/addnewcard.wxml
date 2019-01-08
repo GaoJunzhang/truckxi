@@ -2,30 +2,30 @@
   <view class="edit_pro">
     <view class="pro_cot">
       <view class="list">
-        <input type="text" placeholder="Name on card"></input>
+        <input type="text" placeholder="{{content.name_card}}"></input>
       </view>
       <view class="list">
-        <input type="text" placeholder="Card Type" class="a"></input>
+        <input type="text" placeholder="{{content.card_type}}" class="a"></input>
         <label class='i'></label>
       </view>
       <view class="list">
-        <label>Card number</label>
+        <label>{{content.card_num}}</label>
         <input type="text" placeholder="1234-1234-1234-1234"></input>
       </view>
       <view class="list">
-        <input type="text" placeholder="Expiry date (MM/YY)" class="one"></input>
+        <input type="text" placeholder="{{content.expiry_date}} (MM/YY)" class="one"></input>
         <input type="text" placeholder="cvv" class="two"></input>
         <view class="clr"></view>
       </view>
       <view class="list">
         <checkbox class='a'></checkbox>
-        <view class='span'>Save your card details securely</view>
+        <view class='span'>{{content.save_checkbox}}</view>
       </view>
     </view>
   </view>
 </view>
 <view class="btn_save">
   <view class='a'>
-    Add card
+    {{content.add_card}}
   </view>
 </view>

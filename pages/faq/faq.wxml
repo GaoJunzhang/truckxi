@@ -1,2 +1,26 @@
-<!--pages/faq/faq.wxml-->
-<text>pages/faq/faq.wxml</text>
+<view class="content">
+    <view class="filter">
+        <view class="blo">Question 1 
+          <view class="iu"></view>
+          <view class='span'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</view>
+        </view>
+    </view>
+    <view class="filter">
+        <view class="blo">Question 2 <view class="id"></view></view>
+    </view>
+    <view class="filter">
+        <view class="blo">Question 3 <view class="id"></view></view>
+    </view>
+    <view class="filter">
+        <view class="blo">Question 4<view class="id"></view></view>
+    </view>
+    <view class="filter">
+        <view class="blo">Question 5 <view class="id"></view></view>
+    </view>
+     <view class="filter">
+        <view class="blo">Question 6 <view class="id"></view></view>
+    </view>
+     <view class="filter">
+        <view class="blo">Question 7 <view class="id"></view></view>
+    </view>
+</view>

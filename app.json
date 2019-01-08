@@ -1,10 +1,10 @@
 {
   "pages":[
+    "pages/faq/faq",
     "pages/addnewcard/addnewcard",
     "pages/allcategory/allcategory",
     "pages/addaddress/addaddress",
     "pages/creditcard/creditcard",
-    "pages/faq/faq",
     "pages/home/home",
     "pages/produce/produce",
     "pages/orderhistory/orderhistory",

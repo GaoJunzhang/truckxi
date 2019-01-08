@@ -1,1 +1,38 @@
-/* pages/faq/faq.wxss */
+.filter .blo .span {
+  display: block;
+  font-size: 12px;
+  color: #7b7b7b;
+  margin: 10px 0;
+}
+
+.filter {
+  width: 100%;
+  margin: 25px 0;
+}
+
+.filter .blo {
+  margin: 0 0 5px 0;
+  border-bottom: 1px solid #393939;
+  padding: 0 12px 10px;
+  position: relative;
+}
+
+.filter .blo .id {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  background: url(http://bluablua.com/icon_arrowdown.png) center center no-repeat;
+}
+
+.filter .blo .iu {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 2px;
+  right: 12px;
+  background: url(http://bluablua.com/icon_arrowup.png) center center no-repeat;
+}

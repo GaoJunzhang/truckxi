@@ -99,6 +99,13 @@ var Chinese = {
   address_line1: "地址行1",
   address_line2: "地址行2",
   address_example: "北京",
+  //add new card
+  name_card: "卡主姓名",
+  card_type: "卡片类型",
+  card_num: "卡号",
+  expiry_date: "有效期",
+  save_checkbox: "安全保存您的卡详细信息",
+  add_card: "添加卡片",
 }
 
 module.exports = {

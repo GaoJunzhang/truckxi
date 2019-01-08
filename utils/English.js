@@ -99,6 +99,13 @@ var English = {　　
   address_line1:"Address Line No 1",
   address_line2:"Address Line No 2",
   address_example:"Delhi",
+  //add new card
+  name_card:"Name on card",
+  card_type:"Card Type",
+  card_num:"Card number",
+  expiry_date:"Expiry date",
+  save_checkbox:"Save your card details securely",
+  add_card:"Add card",
 }
 
 module.exports = {
