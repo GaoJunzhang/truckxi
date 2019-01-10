@@ -108,7 +108,7 @@ App({
     });
   },
   getContent: function (that,lastLanuage) {
-    if (lastLanuage == "zh_CN" || lastLanuage == "zh") {
+    if (lastLanuage == "zh_CNd" || lastLanuage == "zhd") {
       that.setData({
         content: chinese.content
       })

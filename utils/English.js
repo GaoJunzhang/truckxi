@@ -49,7 +49,7 @@ var English = {　　
   shop_now:"Shop Now",
   great:"Great",
   deals:"deals",
-  left_in_stop:"Left in Stop",
+  left_in_stop:"Left in Shop",
   add:"Add",
   box:"Box",
   meet_our:"Meet Our",

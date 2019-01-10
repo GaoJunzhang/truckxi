@@ -11,7 +11,7 @@ Page({
     show: false, //控制下拉列表的显示隐藏，false隐藏、true显示
     selectData: ['中文', 'English'], //下拉列表的数据
     index: 0, //选择的下拉列表下标,
-    showLeft:true,
+    showLeft: true,
 
     autoplay: true,
     circular: false,
@@ -20,14 +20,15 @@ Page({
     previousMargin: 0,
     nextMargin: 0,
 
-    imgs: [
-      {
+    imgs: [{
         img: 'http://bluablua.com/banner_01.jpg',
       },
       {
         img: 'http://bluablua.com/banner_01.jpg',
-      }
+      },
     ],
+    grateGoods: [{}],
+    categorys: [],
   },
 
   /**
@@ -36,8 +37,9 @@ Page({
   onLoad: function(options) {
     var lastLanuage = app.globalData.lanuage
     let that = this
-    getProduct(that,null)
     app.getContent(that, lastLanuage)
+    getProduct(that, null)
+    getCategory(that, null)
   },
 
   /**
@@ -84,7 +86,7 @@ Page({
     });
   },
 
-  changeLanuage: function () {
+  changeLanuage: function() {
     var version = app.globalData.lanuage;
     if (version == "zh_CN") {
       app.globalData.lanuage = "en"
@@ -100,8 +102,7 @@ Page({
     var lastLanuage = this.data.lanuage;
     this.getLanuage(lastLanuage)
   },
-  getLanuage: function (lastLanuage) {
-    console.log(lastLanuage)
+  getLanuage: function(lastLanuage) {
     if (lastLanuage == "zh_CN") {
       this.setData({
         content: chinese.content
@@ -112,30 +113,105 @@ Page({
       })
     }
   },
-  hideleft:function(e){
+  hideleft: function(e) {
     this.setData({
-      showLeft:true
+      showLeft: true
     })
   },
-  hideChoose:function(){
+  hideChoose: function() {
     this.setData({
       islocation: true
     })
+  },
+  categoryInfo: function(e) {
+    var cId = e.currentTarget.dataset.id
+  },
+  productInfo:function(e){
+    console.log(e.currentTarget.dataset.pid)
   }
 })
-var getProduct = function(that,param){
+var getProduct = function(that, param) {
   wx.request({
-    url: app.globalData.API_URL +'e/product/',
+    url: app.globalData.API_URL + 'e/product/',
     data: param,
-    success:function(res){
-      if (res.statusCode==200){
-        console.log(res.data)
-      }else{
+    success: function(res) {
+      if (res.statusCode == 200) {
+        var data = res.data.products
+      } else {
         wx.showModal({
           content: '服务器异常，请稍后再试',
-          showCancel:false
+          showCancel: false
         })
       }
     }
   })
+}
+var getCategory = function(that, param) {
+  wx.request({
+    url: app.globalData.API_URL + 'e/category/custom',
+    // data:param,
+    success: function(res) {
+      if (res.statusCode == 200) {
+        var categorys = res.data
+        var isListCateGorys = []
+        categorys.forEach(function(v, k) {
+          if (v.IsListView) {
+            var obj = {}
+            obj.id = v.ProductCategory2_id
+            if (app.globalData.lanuage == "zh_CN" || app.globalData.lastLanuage == "zh") {
+              obj.categoryName = v.Description
+            } else {
+              obj.categoryName = v.Name
+            }
+            // console.log(getCustomProductByPk(that, v.ProductCategory2_id))
+            wx.request({
+              url: app.globalData.API_URL + 'e/category/custom/' + v.ProductCategory2_id + '/product',
+              success: function(res) {
+                if (res.statusCode == 200) {
+                  obj.products = res.data;
+                } else {
+                  wx.showModal({
+                    content: '服务器异常，请稍后再试',
+                    showCancel: false
+                  })
+                }
+              }
+            })
+            isListCateGorys.push(obj)
+          }
+        })
+        console.log("=========isListCateGorys=============")
+        console.log(isListCateGorys)
+        that.setData({
+          isListCateGorys: isListCateGorys,
+          categorys: categorys
+        })
+      } else {
+        wx.showModal({
+          content: '服务器异常，请稍后再试',
+          showCancel: false
+        })
+      }
+    }
+  })
+}
+
+function getCustomProductByPk(that, pk) {
+  var products = []
+  wx.request({
+    url: app.globalData.API_URL + 'e/category/custom/' + pk + '/product',
+    success: function(res) {
+      if (res.statusCode == 200) {
+        console.log("res.data=========")
+        console.log(res.data)
+        products = res.data
+      } else {
+        wx.showModal({
+          content: '服务器异常，请稍后再试',
+          showCancel: false
+        })
+      }
+    }
+  })
+  return products
 }

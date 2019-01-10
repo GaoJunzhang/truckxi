@@ -20,28 +20,10 @@
     </view>
   </view>
   <view class="category">
-    <view class='category_li'>
+    <view class='category_li' wx:for="{{categorys}}" wx:key="*this" bindtap='category' data-id='{{item.ProductCategory2_id}}' bindtap='categoryInfo'>
       <view>
-        <image src='http://bluablua.com/img_001.png' mode='widthFix'></image>
-        <text>{{content.meat}}</text>
-      </view>
-    </view>
-    <view class='category_li'>
-      <view>
-        <image src='http://bluablua.com/img_002.png' mode='widthFix'></image>
-        <text>{{content.dairy}}</text>
-      </view>
-    </view>
-    <view class='category_li'>
-      <view>
-        <image src='http://bluablua.com/img_003.png' mode='widthFix'></image>
-        <text>{{content.dry_goods}}</text>
-      </view>
-    </view>
-    <view class='category_li'>
-      <view>
-        <image src='http://bluablua.com/img_004.png' mode='widthFix'></image>
-        <text>{{content.seafood}}</text>
+        <image src='{{item.Image}}' mode='widthFix'></image>
+        <text>{{item.Name}}</text>
       </view>
     </view>
   </view>
@@ -53,14 +35,33 @@
     </view>
   </view>
   <view class="gd_h">
-    <view class="tit">{{content.great}}
-      <text>{{content.deals}}</text>
-      <view class="more">
-        <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
+    <block wx:for="{{isListCateGorys}}" wx:key="*this">
+      <view class="tit">{{item.categoryName}}
+        <text>{{content.deals}}{{item.products.length}}</text>
+        <view class="more">
+          <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
+        </view>
       </view>
-    </view>
-    <view class="goods_infeed">
-      <view class='goods_infeed_li'>
+      <view class="goods_infeed">
+        <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="*this" bindtap='productInfo' data-pid='{{itemp.Product_id}}'>
+          <view class='goods_infeed_li'>
+            <view>
+              <view class="img_g">
+                <image src='{{itemp.Thumbnail}}' mode='widthFix'></image>
+              </view>
+              <view class="txt_g">
+                <text>{{itemp.Description}}</text>
+                <text class="pri">${{itemp.price}} </text>
+                <text class="sma">{{content.box}}</text>
+                <text class="btn_ad">{{content.add}}</text>
+              </view>
+              <view class="tip_g">
+                {{itemp.StockLevel}} {{content.left_in_stop}}
+              </view>
+            </view>
+          </view>
+        </block>
+        <!-- <view class='goods_infeed_li'>
         <view>
           <view class="img_g">
             <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
@@ -123,25 +124,10 @@
             12 {{content.left_in_stop}}
           </view>
         </view>
+      </view> -->
       </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class="tit">{{content.meet_our}}
+    </block>
+    <!-- <view class="tit">{{content.meet_our}}
       <text>{{content.newarrivals}}</text>
       <view class="more">
         <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
@@ -228,10 +214,10 @@
           </view>
         </view>
       </view>
-    </view>
+    </view> -->
   </view>
-  <view class="gd_s">
-    <view class="tit">{{content.great}}
+  <!-- <view class="gd_s">
+    <view class="tit">{{content.great}}11
       <text>{{content.deals}}</text>
       <view class="more">
         <image src='http://bluablua.com/icon_more.png' mode='widthFix'></image>
@@ -239,7 +225,7 @@
     </view>
     <view class="goods_list">
       <view class='goods_list_li'>
-        <view>
+        <view wx:for="{{grateGoods}}" wx:key="*this" bindtap='detail' data-id='{{}}'>
           <view class="img_g">
             <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
           </view>
@@ -307,7 +293,7 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
 </view>
 <view class="left_sider" hidden='{{showLeft}}'>
   <view class="cont_ls">
