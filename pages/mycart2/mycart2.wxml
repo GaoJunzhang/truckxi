@@ -1,0 +1,114 @@
+<view class="content">
+  <view class="btn_round">
+    <view class="ch_d">DELIVERY</view>
+    <view class="ch_d">WILL CALL</view>
+    <view class="clr"></view>
+  </view>
+  <view class="box_gt">
+    <view class="he_t">
+      <view class="l">{{content.sub_total}}</view>
+      <view class="r">$120</view>
+      <view class="clr"></view>
+    </view>
+    <view class="b_l">
+      <view class="li">
+        <view class='a'>
+          5% - $2.21
+        </view>
+      </view>
+      <view class="li">
+        <view class='a'>
+          10% - $4.43
+        </view>
+      </view>
+      <view class="li">
+        <view class='a'>
+          15% - $6.64
+        </view>
+      </view>
+      <view class="li">
+        <view class='a'>
+          {{content.no_tip}}
+        </view>
+      </view>
+    </view>
+    <view class="gt">
+      <view class="l">{{content.grand_total}}</view>
+      <view class="r">$122.21</view>
+    </view>
+  </view>
+  <view class="search">
+    <view class="go_li">
+      <view class="li">
+        <view class="img_g">
+          <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+        </view>
+        <view class="txt_g">
+          <view class="span">Grape Kyoho</view>
+          <view class="span pri">$9.99 </view>
+          <view class="span sma">{{content.box}}</view>
+        </view>
+        <view class="rig">
+          <view class="reduce">
+          </view>
+          <view class="span">1</view>
+          <view class="add">
+          </view>
+          <view class="clr"></view>
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="li">
+        <view class="img_g">
+          <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+        </view>
+        <view class="txt_g">
+          <view class="span">Grape Kyoho</view>
+          <view class="pri">$9.99 </view>
+          <view class="sma">{{content.box}}</view>
+        </view>
+        <view class="rig">
+          <view class="reduce">
+          </view>
+          <view class="span">1</view>
+          <view class="add">
+          </view>
+          <view class="clr"></view>
+        </view>
+        <view class="clr"></view>
+      </view>
+    </view>
+    <view class="inp_ent">
+      <input type="" placeholder="{{content.coupon_tips}}"></input>
+      <view class='a'>{{content.apply_code}}</view>
+    </view>
+    <view class="payo_list w_p">
+      <view class="li">
+        <view class='a'>
+          {{content.sub_total}}
+          <view class="p">$1,220</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="pay_i">
+    <view class="img">
+      <image src='http://bluablua.com/icon_visa.png' mode='widthFix'></image>
+    </view>
+    <view class="tx_con">
+      <view class="span">Pay via Credit card</view>
+      <view class="span s">4566xxxxxxxxx1234</view>
+    </view>
+    <view class="ch">{{content.change}}</view>
+    <view class="clr"></view>
+  </view>
+</view>
+<view class="btn_save">
+  <view class='a'>
+    <view class="span l c">{{content.checkout}}</view>
+    <view class="span r">
+      {{content.apply}}
+      <label></label>
+    </view>
+  </view>
+</view>

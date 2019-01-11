@@ -35,23 +35,23 @@
     </view>
   </view>
   <view class="gd_h">
-    <block wx:for="{{isListCateGorys}}" wx:key="*this">
+    <block wx:for="{{isListCateGorys}}" wx:key="{{item.id}}">
       <view class="tit">{{item.categoryName}}
-        <text>{{content.deals}}{{item.products.length}}</text>
+        <text>{{content.deals}}</text>
         <view class="more">
           <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
         </view>
       </view>
       <view class="goods_infeed">
-        <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="*this" bindtap='productInfo' data-pid='{{itemp.Product_id}}'>
+        <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}" bindtap='productInfo' data-pid='{{itemp.Product_id}}'>
           <view class='goods_infeed_li'>
             <view>
               <view class="img_g">
-                <image src='{{itemp.Thumbnail}}' mode='widthFix'></image>
+                <image src='{{itemp.Thumbnail}}' style='width:368rpx;height:368rpx'></image>
               </view>
               <view class="txt_g">
                 <text>{{itemp.Description}}</text>
-                <text class="pri">${{itemp.price}} </text>
+                <text class="pri">${{itemp.Price}} </text>
                 <text class="sma">{{content.box}}</text>
                 <text class="btn_ad">{{content.add}}</text>
               </view>

@@ -1,0 +1,70 @@
+page {
+  background: #f3f3f3;
+}
+
+/* payment_options */
+
+.payo_list {
+  width: calc(100% - 24px);
+  margin: 12px 12px 0;
+}
+
+.payo_list .li {
+  height: 48px;
+  margin: 0 0 12px 0;
+}
+
+.payo_list .li .a {
+  display: block;
+  padding: 0 12px;
+  height: 48px;
+  line-height: 48px;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 5px;
+  color: #333;
+  position: relative;
+}
+
+.payo_list .li .a .s {
+  color: #818181;
+  font-size: 12px;
+}
+
+.payo_list .li .a image {
+  width: 26rpx;
+  position: absolute;
+  right: 12px;
+  top: 16px;
+}
+
+.payo_list .li .a .p {
+  margin-right: 0;
+}
+
+.payo_list .li .a label.c {
+  display: block;
+  float: left;
+  width: 23px;
+  height: 17px;
+  background: url(http://bluablua.com/icon_card.png) no-repeat;
+  margin: 15px 5px 15px 0;
+}
+
+.payo_list .li .a label.n {
+  display: block;
+  float: left;
+  width: 23px;
+  height: 17px;
+  background: url(http://bluablua.com/icon_net_b.png) no-repeat;
+  margin: 15px 5px 15px 0;
+}
+
+.payo_list .li .a label.p {
+  display: block;
+  float: left;
+  width: 23px;
+  height: 18px;
+  background: url(http://bluablua.com/icon_pod.png) no-repeat;
+  margin: 14px 5px 15px 0;
+}

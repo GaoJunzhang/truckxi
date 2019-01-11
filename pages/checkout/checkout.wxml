@@ -1,0 +1,14 @@
+<view class="content">
+    <view class="ck">
+         <view class="i">
+            <image src='http://bluablua.com/icon_success.png' mode='widthFix'></image>
+         </view>
+         <view class="c">{{content.check_word1}}</view>
+         <view class="y">{{content.chekc_word2}}</view>
+    </view>
+</view>
+<view class="btn_save">
+    <view class='a'>
+        {{content.track_order}}
+    </view>
+</view>

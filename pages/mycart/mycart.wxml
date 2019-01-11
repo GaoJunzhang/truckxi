@@ -1,0 +1,94 @@
+<view class="content">
+  <view class="search">
+    <view class="rs_li">
+      <view class="li my">
+        <view class="span">{{content.personal_detail}}</view>
+        <view class="span g">Aakash, 987-223-1224</view>
+        <view class="cha">
+          {{content.change}}
+        </view>
+      </view>
+      <view class="li my">
+        <view class="span">{{content.delivery_address}}</view>
+        <view class="g">Work (NSEZ, Noida)</view>
+        <view class="cha">
+          {{content.change}}
+        </view>
+      </view>
+    </view>
+    <view class="go_li">
+      <view class="li">
+        <view class="img_g">
+          <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+        </view>
+        <view class="txt_g">
+          <view class="span">Grape Kyoho</view>
+          <view class="span pri">$9.99 </view>
+          <view class="span sma">{{content.box}}</view>
+        </view>
+        <view class="rig">
+          <view class="reduce">
+          </view>
+          <view class="span">1</view>
+          <view class="add">
+          </view>
+          <view class="clr"></view>
+        </view>
+        <view class="clr"></view>
+      </view>
+      <view class="li">
+        <view class="img_g">
+          <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+        </view>
+        <view class="txt_g">
+          <view class="span">Grape Kyoho</view>
+          <view class="pri">$9.99 </view>
+          <view class="sma">{{content.box}}</view>
+        </view>
+        <view class="rig">
+          <view class="reduce">
+          </view>
+          <view class="span">1</view>
+          <view class="add">
+          </view>
+          <view class="clr"></view>
+        </view>
+        <view class="clr"></view>
+      </view>
+    </view>
+    <view class="inp_ent">
+      <input type="" placeholder="{{content.coupon_tips}}"></input>
+      <view class='a'>{{content.apply_code}}</view>
+    </view>
+    <view class="payo_list w_p">
+      <view class="li">
+        <view class='a'>
+          {{content.sub_total}}
+          <view class="p">$1,220</view>
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class="pay_i">
+    <view class="img">
+      <image src='http://bluablua.com/icon_visa.png' mode='widthFix'></image>
+    </view>
+    <view class="tx_con">
+      <view class="span">Pay via Credit card</view>
+      <view class="span s">4566xxxxxxxxx1234</view>
+    </view>
+    <view class="ch">{{content.change}}</view>
+    <view class="clr"></view>
+  </view>
+</view>
+
+<view class="btn_save">
+  <view class='a'>
+    <view class="span l">{{content.place_order}}</view>
+    <view class="span l">{{content.cvv}}</view>
+    <view class="span r">
+      {{content.apply}}
+      <label></label>
+    </view>
+  </view>
+</view>

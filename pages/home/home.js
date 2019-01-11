@@ -125,8 +125,9 @@ Page({
   },
   categoryInfo: function(e) {
     var cId = e.currentTarget.dataset.id
+    console.log(cId)
   },
-  productInfo:function(e){
+  productInfo: function(e) {
     console.log(e.currentTarget.dataset.pid)
   }
 })
@@ -169,6 +170,11 @@ var getCategory = function(that, param) {
               success: function(res) {
                 if (res.statusCode == 200) {
                   obj.products = res.data;
+                  isListCateGorys.push(obj)
+                  that.setData({
+                    isListCateGorys: isListCateGorys,
+                    categorys: categorys
+                  })
                 } else {
                   wx.showModal({
                     content: '服务器异常，请稍后再试',
@@ -177,15 +183,9 @@ var getCategory = function(that, param) {
                 }
               }
             })
-            isListCateGorys.push(obj)
           }
         })
-        console.log("=========isListCateGorys=============")
-        console.log(isListCateGorys)
-        that.setData({
-          isListCateGorys: isListCateGorys,
-          categorys: categorys
-        })
+      
       } else {
         wx.showModal({
           content: '服务器异常，请稍后再试',

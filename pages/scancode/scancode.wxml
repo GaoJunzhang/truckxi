@@ -1,0 +1,13 @@
+<view class="content">
+  <view class="au">
+    <view class='h4'>Product Heading</view>
+    <view class='p'>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+      industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s Lorem Ipsum is simply dummy text of the printing
+      and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+    </view>
+    <view class="qr_code">
+      <image src='http://bluablua.com/icon_qr_code.jpg'></image>
+    </view>
+  </view>
+</view>

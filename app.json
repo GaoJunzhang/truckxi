@@ -1,5 +1,13 @@
 {
   "pages":[
+    "pages/about/about",
+    "pages/checkout/checkout",
+    "pages/mycart/mycart",
+    "pages/mycart2/mycart2",
+    "pages/paymentoptions/paymentoptions",
+    "pages/savecard/savecard",
+    "pages/scancode/scancode",
+    "pages/selectaddress/selectaddress",
     "pages/home/home",
     "pages/faq/faq",
     "pages/addnewcard/addnewcard",

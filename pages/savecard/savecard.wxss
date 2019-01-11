@@ -1,0 +1,139 @@
+page {
+  background: #f3f3f3;
+}
+
+.sc_li {
+  width: calc(100% - 24px);
+  margin: 12px 12px 0;
+}
+
+.sc_li .li {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-radius: 5px;
+  padding: 12px;
+}
+
+.sc_li .li .ch_d {
+  width: 42px;
+  height: 42px;
+  background: url(http://bluablua.com/icon_white_ch.png) no-repeat;
+  display: block;
+  float: left;
+  position: relative;
+  top: -5px;
+}
+
+.sc_li .li .ch_d:hover, .sc_li .li .ch_d.hover {
+  background: url(http://bluablua.com/icon_green_ch.png) no-repeat;
+}
+
+.sc_li .li .cont_t {
+  float: left;
+  margin: 0 0 0 5px;
+}
+
+.sc_li .li .cont_t .tt {
+  margin: 0 0 5px;
+}
+
+.sc_li .li .cont_t .ti input {
+  background: #fff;
+  width: 100px;
+  height: 32px;
+  line-height: 32px;
+  border: 1px solid #e0e0e0;
+  margin: 0 0 0 5px;
+  border-radius: 32px;
+  padding: 0 12px;
+}
+
+.sc_li .li .r_a {
+  float: right;
+  position: relative;
+}
+
+.sc_li .li .r_a .det {
+  width: 30px;
+  height: 30px;
+  display: block;
+  text-align: center;
+}
+
+.sc_li .li .r_a .det image {
+  width: 28rpx;
+  display: block;
+  margin: auto;
+  padding: 6px 0;
+}
+
+.sc_li .li .r_a .pn {
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  border-radius: 30px;
+  background: -webkit-linear-gradient(270deg, #37a000, #43c102);
+  background: -o-linear-gradient(270deg, #37a000, #43c102);
+  background: -moz-linear-gradient(270deg, #37a000, #43c102);
+  background: linear-gradient(270deg, #37a000, #43c102);
+}
+
+.btn_ra .d {
+  display: block;
+  width: 50%;
+  float: left;
+  color: #37a000;
+  font-size: 14px;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  background: #fff;
+  border-top: 1px solid #37a000;
+}
+
+.btn_ra .d label {
+  display: inline-block;
+  width: 14px;
+  height: 16px;
+  background: url(http://bluablua.com/icon_add_s.png) no-repeat;
+  position: relative;
+  top: 3px;
+}
+
+.btn_ra {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+}
+
+.btn_ra .a {
+  display: block;
+  width: 50%;
+  float: left;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  background: -webkit-linear-gradient(270deg, #37a000, #43c102);
+  background: -o-linear-gradient(270deg, #37a000, #43c102);
+  background: -moz-linear-gradient(270deg, #37a000, #43c102);
+  background: linear-gradient(270deg, #37a000, #43c102);
+}
+
+.btn_ra .a label {
+  display: inline-block;
+  width: 18px;
+  height: 13px;
+  background: url(http://bluablua.com/icon_apply.png);
+  position: relative;
+  top: 2px;
+}

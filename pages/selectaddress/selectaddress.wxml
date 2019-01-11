@@ -1,0 +1,43 @@
+<view class="content">
+  <view class="sc_li">
+    <view class='li'>
+      <view class="a" class="ch_d"></view>
+      <view class="cont_t">
+        <view class="tt">Aakash Sirdhana</view>
+        <view class="tt">A - Block,</view>
+        <view class="tt">Near Mother Dairy</view>
+        <view class="tt">Sector 15, Noida</view>
+        <view class="tt">+91 123 123 1234</view>
+        <view class="ti">
+          <view class="a">{{content.edit_s}}</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+    <view class='li'>
+      <view class="a" class="ch_d"></view>
+      <view class="cont_t">
+        <view class="tt">Aakash Sirdhana</view>
+        <view class="tt">A - Block,</view>
+        <view class="tt">Near Mother Dairy</view>
+        <view class="tt">Sector 15, Noida</view>
+        <view class="tt">+91 123 123 1234</view>
+        <view class="ti">
+          <view class="a">{{content.edit_s}}</view>
+        </view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+</view>
+<view class="btn_ra">
+  <view class="d">
+    <label></label>
+    {{content.add_new_address}}
+  </view>
+  <view class="a">
+    {{content.proceed_payment}}
+    <label></label>
+  </view>
+  <view class="clr"></view>
+</view>

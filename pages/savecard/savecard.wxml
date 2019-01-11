@@ -1,0 +1,51 @@
+<view class="content">
+  <view class="sc_li">
+    <view class='li'>
+      <view  class="ch_d"></view>
+      <view class="cont_t">
+        <view class="tt">HDFC Bank</view>
+        <view class="tt">5434 XXXX XXXX 5433</view>
+        <view class="ti">
+          <view class="span">cvv</view>
+          <input type="" name=""></input>
+        </view>
+      </view>
+      <view class="r_a">
+        <view  class="det">
+          <image src='http://bluablua.com/icon_delete.png' mode='widthFix'></image>
+        </view>
+        <view  class="pn">Pay Now</view>
+      </view>
+      <view class="clr"></view>
+    </view>
+    <view class='li'>
+      <view  class="ch_d"></view>
+      <view class="cont_t">
+        <view class="tt">HDFC Bank</view>
+        <view class="tt">5434 XXXX XXXX 5433</view>
+        <view class="ti">
+          <view class="span">cvv</view>
+          <input type="" name=""></input>
+        </view>
+      </view>
+      <view class="r_a">
+        <view  class="det">
+          <image src='http://bluablua.com/icon_delete.png' mode='widthFix'></image>
+        </view>
+        <view  class="pn">Pay Now</view>
+      </view>
+      <view class="clr"></view>
+    </view>
+  </view>
+</view>
+<view class="btn_ra">
+  <view class="d">
+    <label></label>
+    {{content.add_new_card}}
+  </view>
+  <view class="a">
+    {{content.proceed_payment}}
+    <label></label>
+  </view>
+  <view class="clr"></view>
+</view>
