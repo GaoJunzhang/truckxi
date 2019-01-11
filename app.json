@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/about/about",
     "pages/checkout/checkout",
     "pages/mycart/mycart",
@@ -8,7 +9,6 @@
     "pages/savecard/savecard",
     "pages/scancode/scancode",
     "pages/selectaddress/selectaddress",
-    "pages/home/home",
     "pages/faq/faq",
     "pages/addnewcard/addnewcard",
     "pages/allcategory/allcategory",
