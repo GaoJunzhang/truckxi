@@ -126,6 +126,9 @@ Page({
   categoryInfo: function(e) {
     var cId = e.currentTarget.dataset.id
     console.log(cId)
+    wx.navigateTo({
+      url: '../produce/produce?pk='+cId,
+    })
   },
   productInfo: function(e) {
     console.log(e.currentTarget.dataset.pid)

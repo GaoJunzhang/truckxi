@@ -2,7 +2,7 @@
   <view class="banner">
     <view class="ban">
       <image src='http://bluablua.com/banner_02.jpg' mode='widthFix'></image>
-      <view class="tips">12 Left in Stock</view>
+      <view class="tips">12 {{content.left_in_stop}}</view>
     </view>
     <view class="round">
       <view class='a hover'>

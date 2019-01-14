@@ -223,44 +223,44 @@
   overflow-x: auto;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view {
+.content .gd_h .goods_infeed .goods_infeed_li navigator {
   display: block;
   position: relative;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .img_g {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .img_g {
   width: 100%;
   padding: 12px;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .img_g image {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .img_g image {
   width: 100%;
   display: block;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .txt_g {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g {
   width: 100%;
   padding: 0 12px;
   position: relative;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .txt_g text {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g text {
   display: block;
   color: #333;
   margin: 2px 0;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .txt_g text.pri {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g text.pri {
   font-size: 16px;
   color: #ed0000;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .txt_g text.sma {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g text.sma {
   font-size: 12px;
   margin: 0 0 12px 0;
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .txt_g text.btn_ad {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g text.btn_ad {
   position: absolute;
   right: 12px;
   bottom: 20px;
@@ -277,7 +277,7 @@
   background: linear-gradient(270deg, #37a000, #43c102);
 }
 
-.content .gd_h .goods_infeed .goods_infeed_li view .tip_g {
+.content .gd_h .goods_infeed .goods_infeed_li navigator .tip_g {
   width: 77px;
   height: 22px;
   color: #fff;

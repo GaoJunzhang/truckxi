@@ -20,7 +20,7 @@
     </view>
   </view>
   <view class="category">
-    <view class='category_li' wx:for="{{categorys}}" wx:key="*this" bindtap='category' data-id='{{item.ProductCategory2_id}}' bindtap='categoryInfo'>
+    <view class='category_li' wx:for="{{categorys}}" wx:key="*this" data-id='{{item.ProductCategory2_id}}' bindtap='categoryInfo'>
       <view>
         <image src='{{item.Image}}' mode='widthFix'></image>
         <text>{{item.Name}}</text>
@@ -43,14 +43,14 @@
         </view>
       </view>
       <view class="goods_infeed">
-        <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}" bindtap='productInfo' data-pid='{{itemp.Product_id}}'>
+        <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}">
           <view class='goods_infeed_li'>
-            <view>
+            <navigator  bindtap='productInfo' url='../detail/detail'>
               <view class="img_g">
                 <image src='{{itemp.Thumbnail}}' style='width:368rpx;height:368rpx'></image>
               </view>
               <view class="txt_g">
-                <text>{{itemp.Description}}</text>
+                <text>{{content.login=='Login'?itemp.Name:itemp.Description}}</text>
                 <text class="pri">${{itemp.Price}} </text>
                 <text class="sma">{{content.box}}</text>
                 <text class="btn_ad">{{content.add}}</text>
@@ -58,7 +58,7 @@
               <view class="tip_g">
                 {{itemp.StockLevel}} {{content.left_in_stop}}
               </view>
-            </view>
+            </navigator>
           </view>
         </block>
         <!-- <view class='goods_infeed_li'>
