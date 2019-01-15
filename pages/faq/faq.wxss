@@ -1,3 +1,4 @@
+@import "../../wxParse/wxParse.wxss";
 .filter .blo .span {
   display: block;
   font-size: 12px;

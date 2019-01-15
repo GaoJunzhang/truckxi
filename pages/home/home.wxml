@@ -4,9 +4,9 @@
       <image src='http://bluablua.com/banner_01.jpg' mode='widthFix'></image>
     </view> -->
     <swiper style='height:225px' autoplay="{{autoplay}}" indicator-dots="true" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
-      <block wx:for="{{imgs}}" wx:key="*this">
+      <block wx:for="{{billbords}}" wx:key="*this">
         <swiper-item>
-          <image style='width:100%' src='{{item.img}}' mode='widthFix'></image>
+          <image style='width:100%' src='{{item.image}}' mode='widthFix'></image>
         </swiper-item>
       </block>
     </swiper>
@@ -28,7 +28,7 @@
     </view>
   </view>
   <view class="bi">
-    <view class="ban_img">
+    <view class="ban_img" bindtap='showleft'>
       <image src='http://bluablua.com/banner_s_01.png' mode='widthFix'></image>
       <text class="tl">{{content.new_arrivals}}</text>
       <text class="tr">{{content.shop_now}}</text>
@@ -45,7 +45,7 @@
       <view class="goods_infeed">
         <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}">
           <view class='goods_infeed_li'>
-            <navigator  bindtap='productInfo' url='../detail/detail'>
+            <navigator url='../detail/detail?pk={{itemp.Product_id}}'>
               <view class="img_g">
                 <image src='{{itemp.Thumbnail}}' style='width:368rpx;height:368rpx'></image>
               </view>
@@ -61,313 +61,81 @@
             </navigator>
           </view>
         </block>
-        <!-- <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view> -->
       </view>
     </block>
-    <!-- <view class="tit">{{content.meet_our}}
-      <text>{{content.newarrivals}}</text>
-      <view class="more">
-        <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
-      </view>
-    </view>
-    <view class="goods_infeed">
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-      <view class='goods_infeed_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-        </view>
-      </view>
-    </view> -->
   </view>
-  <!-- <view class="gd_s">
-    <view class="tit">{{content.great}}11
-      <text>{{content.deals}}</text>
-      <view class="more">
-        <image src='http://bluablua.com/icon_more.png' mode='widthFix'></image>
-      </view>
-    </view>
-    <view class="goods_list">
-      <view class='goods_list_li'>
-        <view wx:for="{{grateGoods}}" wx:key="*this" bindtap='detail' data-id='{{}}'>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-          <view class="clr"></view>
-        </view>
-      </view>
-      <view class='goods_list_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-          <view class="clr"></view>
-        </view>
-      </view>
-      <view class='goods_list_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-          <view class="clr"></view>
-        </view>
-      </view>
-      <view class='goods_list_li'>
-        <view>
-          <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <text>Grape Kyoho</text>
-            <text class="pri">$9.99 </text>
-            <text class="sma">{{content.box}}</text>
-            <text class="btn_ad">{{content.add}}</text>
-          </view>
-          <view class="tip_g">
-            12 {{content.left_in_stop}}
-          </view>
-          <view class="clr"></view>
-        </view>
-      </view>
-    </view>
-  </view> -->
 </view>
 <view class="left_sider" hidden='{{showLeft}}'>
   <view class="cont_ls">
     <view class="image">
       <image src='http://bluablua.com/bg_setting.jpg' mode='widthFix'></image>
-      <!-- <view class="lang"> -->
       <view class='select_box' catchtap='selectTap'>
         <view class='select' catchtap='selectTap'>
           <text class='select_text'>{{selectData[index]}}</text>
-          <!-- <image class='select_img {{show&&"select_img_rotate"}}' src='/image/gobottom.png'></image> -->
         </view>
         <view class='option_box' style='height:{{show?(selectData.length>2?300:selectData.length*60):0}}rpx;'>
           <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
         </view>
       </view>
-      <!-- </view> -->
       <view class="head">
         <view>
-          <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
+          <image src='{{userImg}}' mode='widthFix'></image>
+          <!-- <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image> -->
         </view>
-        <text>Aakash sirdhana</text>
+        <text>{{username}}</text>
       </view>
     </view>
     <view class="link_of">
       <view class='link_of_li'>
-        <view>
+        <navigator url='../profile/profile'>
           <image src='http://bluablua.com/icon_my_profile.png' mode='widthFix'></image>
           <text>{{content.my_rofile}}</text>
-        </view>
+        </navigator>
       </view>
       <view class='link_of_li'>
-        <view>
+        <navigator url='../addaddress/addaddress'>
           <image src='http://bluablua.com/icon_my_address.png' mode='widthFix'></image>
           <text>{{content.my_address}}</text>
-        </view>
+        </navigator>
       </view>
       <view class='link_of_li'>
-        <view>
+        <navigator url='../orderhistory/orderhistory'>
           <image src='http://bluablua.com/icon_my_order.png' mode='widthFix'></image>
           <text>{{content.my_order}}</text>
-        </view>
+        </navigator>
       </view>
       <view class='link_of_li'>
-        <view>
+        <navigator url='../mycart2/mycart2'>
           <image src='http://bluablua.com/icon_my_cart.png' mode='widthFix'></image>
           <text>{{content.my_cart}}</text>
-        </view>
+        </navigator>
       </view>
     </view>
     <view class="link_tf">
       <view class="oth">{{content.other}}</view>
       <view class='link_of_li'>
-        <view>
+        <navigator url='../faq/faq'>
           <image src='http://bluablua.com/icon_need_help.png' mode='widthFix'></image>
           <text>{{content.need_help}}</text>
-        </view>
+        </navigator>
       </view>
       <view class='link_of_li'>
-        <view>
+        <navigator url='../scancode/scancode'>
           <image src='http://bluablua.com/icon_share.png' mode='widthFix'></image>
           <text>{{content.share}}</text>
-        </view>
+        </navigator>
       </view>
       <view class='link_of_li'>
-        <view>
+        <navigator url='../about/about'>
           <image src='http://bluablua.com/icon_about_us.png' mode='widthFix'></image>
           <text>{{content.about_us}}</text>
-        </view>
+        </navigator>
       </view>
       <view class='link_of_li'>
-        <view>
+        <navigator>
           <image src='http://bluablua.com/icon_logout.png' mode='widthFix'></image>
           <text>{{content.logout}}</text>
-        </view>
+        </navigator>
       </view>
     </view>
   </view>

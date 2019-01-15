@@ -70,14 +70,14 @@ App({
     let self = this;
     if (!self.globalData.isConnected) {
       wx.showModal({
-        content: '请检查您的网络状态',
+        content: 'Please check your network status',
         showCancel: false
       })
       wx.stopPullDownRefresh();
       return
     }
     wx.showNavigationBarLoading()
-    // qcloud.setLoginUrl(this.globalData.API_URL + '/wxLogin');
+    qcloud.setLoginUrl(this.globalData.API_URL + 'e/app/session');
     // if (url == "getCode") {
     //   loginFlag = false;
     // }

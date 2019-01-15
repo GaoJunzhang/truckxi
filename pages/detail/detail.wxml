@@ -1,8 +1,8 @@
 <view class="content">
   <view class="banner">
     <view class="ban">
-      <image src='http://bluablua.com/banner_02.jpg' mode='widthFix'></image>
-      <view class="tips">12 {{content.left_in_stop}}</view>
+      <image src='{{product.image_url}}' mode='widthFix'></image>
+      <view class="tips">{{product.stock_quantity}} {{content.left_in_stop}}</view>
     </view>
     <view class="round">
       <view class='a hover'>
@@ -15,29 +15,28 @@
   </view>
   <view class="detail">
     <view class="tit">
-      Grape Kyoho
+      {{content.login=='Login'?product.name:product.description}}
     </view>
     <view class="intro">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
-      survived not only five centuries.
+      {{product.rich_text_description}}
     </view>
     <view class="p_t">
       <view class="lef">
-        <view class="span p">$9.99 </view>
-        <view class="span s">1BAG*1-3LBS</view>
+        <view class="span p">${{product.unit_price}}</view>
+        <view class="span s">{{product.package_size}}</view>
       </view>
       <view class="rig">
-        <view class='a reduce'>
+        <view class='a reduce' bindtap='reduce'>
         </view>
-        <view class='span'>1</view>
-        <view class='a add'>
+        <view class='span'>{{pcount}}</view>
+        <view class='a add'  bindtap='add'>
         </view>
         <view class="clr"></view>
       </view>
       <view class="clr"></view>
     </view>
     <view class="btn_det">
-      <view class='a gre'>
+      <view class='a gre' bindtap='addCar'>
         {{content.add_to_cart}}
       </view>
       <view class='a gra'>

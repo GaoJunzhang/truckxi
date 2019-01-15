@@ -1,6 +1,7 @@
 var app = getApp()
 var chinese = require('../../utils/Chinese.js')
 var english = require('../../utils/English.js')
+var Session = require('../../lib/session.js')
 Page({
 
   /**
@@ -20,13 +21,13 @@ Page({
     previousMargin: 0,
     nextMargin: 0,
 
-    imgs: [{
-        img: 'http://bluablua.com/banner_01.jpg',
-      },
-      {
-        img: 'http://bluablua.com/banner_01.jpg',
-      },
-    ],
+    // billbords: [{
+    //     image: 'http://bluablua.com/banner_01.jpg',
+    //   },
+    //   {
+    //     image: 'http://bluablua.com/banner_01.jpg',
+    //   },
+    // ],
     grateGoods: [{}],
     categorys: [],
   },
@@ -40,6 +41,40 @@ Page({
     app.getContent(that, lastLanuage)
     getProduct(that, null)
     getCategory(that, null)
+    billbord(that)
+    // wx.login({
+    //   success(res){
+    //     console.log("res.code==========")
+    //     console.log(res.code)
+    //     if(res.code){
+    //       wx.request({
+    //         url: app.globalData.API_URL + 'e/app/session',
+    //         method:'POST',
+    //         header:{
+    //           "content-type":"application/x-www-form-urlencoded"
+    //         },
+    //         data:{
+    //           js_code:res.code,
+    //           username:'zgj',
+    //           password:"zgj1234"
+    //         },
+    //         success: function (res) {
+    //             console.log("res.data=========")
+    //             console.log(res)
+    //           if (res.statusCode == 200) {
+    //           } else {
+    //             wx.showModal({
+    //               content: res.data.message,
+    //               showCancel: false
+    //             })
+    //           }
+    //         }
+    //       })
+    //     }else{
+    //       console.log("微信登录")
+    //     }
+    //   }
+    // })
   },
 
   /**
@@ -118,6 +153,26 @@ Page({
       showLeft: true
     })
   },
+  showleft: function(e) {
+    this.setData({
+      showLeft: false
+    })
+    // wx.request({
+    //   url: app.globalData.API_URL + 'e/account/',
+    //   success: function (res) {
+    //     if (res.statusCode == 200) {
+    //       this.setData({
+    //         showLeft: false
+    //       })
+    //     } else {
+    //       wx.navigateTo({
+    //         url: '../register/register',
+    //       })
+    //     }
+    //   }
+    // })
+
+  },
   hideChoose: function() {
     this.setData({
       islocation: true
@@ -125,14 +180,11 @@ Page({
   },
   categoryInfo: function(e) {
     var cId = e.currentTarget.dataset.id
-    console.log(cId)
     wx.navigateTo({
-      url: '../produce/produce?pk='+cId,
+      url: '../produce/produce?pk=' + cId,
     })
   },
-  productInfo: function(e) {
-    console.log(e.currentTarget.dataset.pid)
-  }
+
 })
 var getProduct = function(that, param) {
   wx.request({
@@ -188,7 +240,7 @@ var getCategory = function(that, param) {
             })
           }
         })
-      
+
       } else {
         wx.showModal({
           content: '服务器异常，请稍后再试',
@@ -205,8 +257,6 @@ function getCustomProductByPk(that, pk) {
     url: app.globalData.API_URL + 'e/category/custom/' + pk + '/product',
     success: function(res) {
       if (res.statusCode == 200) {
-        console.log("res.data=========")
-        console.log(res.data)
         products = res.data
       } else {
         wx.showModal({
@@ -217,4 +267,23 @@ function getCustomProductByPk(that, pk) {
     }
   })
   return products
+}
+var billbord = function(that) {
+  wx.request({
+    url: app.globalData.API_URL + 'e/app/billboard',
+    success: function(res) {
+      console.log("广告牌")
+      console.log(res)
+      if (res.statusCode == 200) {
+        that.setData({
+          billbords: res.data.billboards
+        })
+      } else {
+        wx.showModal({
+          content: '服务器异常，请稍后再试',
+          showCancel: false
+        })
+      }
+    }
+  })
 }

@@ -3,7 +3,7 @@
     <view class="content_ca">
       <view class="title">
         <view class="leftarrow">
-          <image mode='widthFix' src='http://bluablua.com/icon_return.png'></image>
+          <image mode='widthFix' src='http://bluablua.com/icon_return.png' style='width:32rpx' bindtap='goback'></image>
         </view>
         {{content.create_account}}
       </view>

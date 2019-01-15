@@ -375,13 +375,13 @@
   padding: 0 20px;
 }
 
-.left_sider .cont_ls .link_of .link_of_li view, .left_sider .cont_ls .link_tf .link_of_li view {
+.left_sider .cont_ls .link_of .link_of_li navigator, .left_sider .cont_ls .link_tf .link_of_li navigator {
   display: block;
   padding: 12px;
 }
 
-.left_sider .cont_ls .link_of .link_of_li view image,
-.left_sider .cont_ls .link_tf .link_of_li view image {
+.left_sider .cont_ls .link_of .link_of_li navigator image,
+.left_sider .cont_ls .link_tf .link_of_li navigator image {
   width: 16px;
   display: block;
   margin: 0 8px 0 0;
@@ -390,8 +390,8 @@
   top: 2px;
 }
 
-.left_sider .cont_ls .link_of .link_of_li view text,
-.left_sider .cont_ls .link_tf .link_of_li view text {
+.left_sider .cont_ls .link_of .link_of_li navigator text,
+.left_sider .cont_ls .link_tf .link_of_li navigator text {
   font-size: 14px;
 }
 

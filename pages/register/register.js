@@ -1,5 +1,6 @@
 var app = getApp()
 var util = require('../../utils/util.js')
+var Session = require('../../lib/utils.js');
 Page({
 
   /**
@@ -30,7 +31,6 @@ Page({
     })
   },
   formSubmit: function(e) {
-    util.checkEmail('1228671674@m')
     let that = this
     var userObj = e.detail.value
     if (userObj.first_name == "" || userObj.first_name == null) {
@@ -113,30 +113,55 @@ Page({
       data: userObj,
       success: function(res) {
         console.log(res)
-        if (res.statusCode == 200) {
-          //get token and back to parent page
-          wx.request({
-            url: app.globalData.API_URL + 'e/app/token/',
-            data: {
-              username: userObj.username,
-              password: userObj.password
-            },
-            method: "POST",
-            success: function(result) {
-              if (result.data.token) {
-                wx.setStorageSync("token", result.data.token)
-                //back to parent page
-                wx.navigateBack({
-                  detail: 1
+        if (res.statusCode == 201) {
+          wx.login({
+            success(res) {
+              if (res.code) {
+                wx.request({
+                  url: app.globalData.API_URL + 'e/app/session',
+                  data: {
+                    js_code: res.code,
+                    username: userObj.username,
+                    password: userObj.password
+                  },
+                  header: {
+                    'content-type': 'application/x-www-form-urlencoded'
+                  },
+                  method: "POST",
+                  success: function(result) {
+                    console.log(result)
+                    let data = {
+                      js_code: res.code,
+                      username: userObj.username,
+                      password: userObj.password
+                    }
+                    console.log(data)
+                    if (result.data.token) {
+                      let session = {
+                        token: result.data.token,
+                        isRegister: true
+                      }
+                      Session.set(session)
+                      //back to parent page
+                      wx.navigateTo({
+                        url: '../home/home',
+                      })
+                    } else {
+                      wx.showModal({
+                        content: that.data.content.loginError,
+                      })
+                    }
+                  },
+                  fail: function(e) {
+                    console.log("失败")
+                  }
                 })
               } else {
                 wx.showModal({
-                  content: that.data.content.loginError,
+                  content: '微信登录失败',
+                  showCancel: false
                 })
               }
-            },
-            fail: function(e) {
-              console.log("失败")
             }
           })
         } else {
@@ -146,7 +171,11 @@ Page({
         }
       }
     })
+  },
+  goback: function() {
+    wx.navigateBack({
+      detail: 1
+    })
   }
-
 
 })
