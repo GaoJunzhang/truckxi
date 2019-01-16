@@ -154,14 +154,21 @@ Page({
     })
   },
   showleft: function(e) {
-    this.setData({
-      showLeft: false
-    })
+    // this.setData({
+    //   showLeft: false
+    // })
+    let that = this
+    const session = Session.get()
+    console.log(session)
     // wx.request({
     //   url: app.globalData.API_URL + 'e/account/',
-    //   success: function (res) {
+    //   header: {
+    //     'Authorization': 'jwt ' + session.token
+    //   },
+    //   success: function(res) {
     //     if (res.statusCode == 200) {
-    //       this.setData({
+    //       console.log(res)
+    //       that.setData({
     //         showLeft: false
     //       })
     //     } else {
@@ -171,7 +178,22 @@ Page({
     //     }
     //   }
     // })
-
+    wx.login({
+      success(result) {
+        wx.request({
+          url: app.globalData.API_URL + 'e/app/session',
+          data: {
+            js_code: result.code
+          },
+          success: function(res) {
+            console.log(res)
+          }
+        })
+      }
+    })
+    // app.fetchApis(that, 'e/account/', {}, 'GET', function(resc) {
+    //   console.log(resc)
+    // })
   },
   hideChoose: function() {
     this.setData({

@@ -1,6 +1,6 @@
 var app = getApp()
 var util = require('../../utils/util.js')
-var Session = require('../../lib/utils.js');
+var Session = require('../../lib/session.js');
 Page({
 
   /**

@@ -77,7 +77,7 @@ App({
       return
     }
     wx.showNavigationBarLoading()
-    qcloud.setLoginUrl(this.globalData.API_URL + 'e/app/session');
+    qcloud.setLoginUrl(self.globalData.API_URL + 'e/app/session');
     // if (url == "getCode") {
     //   loginFlag = false;
     // }
