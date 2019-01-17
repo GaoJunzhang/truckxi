@@ -18,6 +18,9 @@ Page({
     app.getContent(that, lastLanuage)
     console.log("options")
     console.log(options)
+    that.setData({
+      pk:options.pk
+    })
     wx.request({
       url: app.globalData.API_URL + 'e/product/' + options.pk,
       success: function(res) {
@@ -60,19 +63,26 @@ Page({
     }
   },
   addCar: function(e) {
-    wx.request({
-      url: app.globalData.API_URL + 'e/order/cart',
-      method:'POST',
-      success: function(res) {
-        if (res.statusCode == 200) {
-         //调整到购物车
-        } else {
-          wx.showModal({
-            content: '服务器异常，请稍后再试',
-            showCancel: false
-          })
-        }
-      }
+    // wx.request({
+    //   url: app.globalData.API_URL + 'e/order/cart',
+    //   method:'POST',
+    //   success: function(res) {
+    //     if (res.statusCode == 200) {
+    //      //调整到购物车
+    //     } else {
+    //       wx.showModal({
+    //         content: '服务器异常，请稍后再试',
+    //         showCancel: false
+    //       })
+    //     }
+    //   }
+    // })
+    let that = this
+    // app.fetchApis(that, 'e/order/cart', { product_id: that.data.pk, quantity: that.data.pcount}, 'POST', function(res) {
+    //   console.log(res)
+    // })
+    app.fetchApis(that, 'e/order/cart', null, 'GET', function (res) {
+      console.log(res)
     })
   }
 })

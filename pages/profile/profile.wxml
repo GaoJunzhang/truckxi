@@ -1,12 +1,12 @@
 <view class="content">
   <view class="edit_pro">
-    <view class="img_head">
+    <navigator class="img_head" url='../editprofile/editprofile'>
       <view class='a'>
         <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
       </view>
       <view class="fn">
         <label>{{content.fullname}}</label>
-        <input type="text" placeholder="Aakash Sirdhana" />
+        <input type="text" placeholder="{{username}}" disabled/>
       </view>
       <view class="hook">
         <image src='http://bluablua.com/icon_pro_hook.png' mode='widthFix' style='width:36rpx'></image>
@@ -17,7 +17,7 @@
         <view class="r">$129.45</view>
         <view class="clr"></view>
       </view>
-    </view>
+    </navigator>
     <view>
       <view class="p_cap">
         <view class="li">

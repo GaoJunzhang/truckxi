@@ -92,6 +92,7 @@ var English = {　　
   //produce
   total: "Total",
   //addaddress
+  address_name: "Address Remark",
   add_address: "Add New Address",
   zip_code: "Zip Code",
   city: "City",
@@ -99,6 +100,12 @@ var English = {　　
   address_line1: "Address Line No 1",
   address_line2: "Address Line No 2",
   address_example: "Delhi",
+  street:"Street",
+  is_defalut:"Dealut",
+  city_err: "City no be blank",
+  state_err: "State no be blank",
+  street_err: "Street no be blank",
+  zipcode_err: "Zip code no be blank",
   //add new card
   name_card: "Name on card",
   card_type: "Card Type",

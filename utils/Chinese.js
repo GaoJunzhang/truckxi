@@ -92,6 +92,7 @@ var Chinese = {
   //produce
   total: "共",
   //addaddress
+  address_name: "地址名称",
   add_address: "添加地址",
   zip_code: "邮政编码",
   city: "城市",
@@ -99,6 +100,12 @@ var Chinese = {
   address_line1: "地址行1",
   address_line2: "地址行2",
   address_example: "北京",
+  street: "街道",
+  is_defalut: "是否默认",
+  city_err:"城市不能为空",
+  state_err:"地区不能为空",
+  street_err:"街道不能为空",
+  zipcode_err:"邮编不能为空",
   //add new card
   name_card: "卡主姓名",
   card_type: "卡片类型",

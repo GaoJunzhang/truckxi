@@ -154,46 +154,16 @@ Page({
     })
   },
   showleft: function(e) {
-    // this.setData({
-    //   showLeft: false
-    // })
     let that = this
     const session = Session.get()
-    console.log(session)
-    // wx.request({
-    //   url: app.globalData.API_URL + 'e/account/',
-    //   header: {
-    //     'Authorization': 'jwt ' + session.token
-    //   },
-    //   success: function(res) {
-    //     if (res.statusCode == 200) {
-    //       console.log(res)
-    //       that.setData({
-    //         showLeft: false
-    //       })
-    //     } else {
-    //       wx.navigateTo({
-    //         url: '../register/register',
-    //       })
-    //     }
-    //   }
-    // })
-    wx.login({
-      success(result) {
-        wx.request({
-          url: app.globalData.API_URL + 'e/app/session',
-          data: {
-            js_code: result.code
-          },
-          success: function(res) {
-            console.log(res)
-          }
-        })
-      }
-    })
-    // app.fetchApis(that, 'e/account/', {}, 'GET', function(resc) {
-    //   console.log(resc)
-    // })
+    if (session && session.token) {
+      getAccount(that)
+    } else {
+      that.setData({
+        showLeft: false,
+        username: "TRUCKXI"
+      })
+    }
   },
   hideChoose: function() {
     this.setData({
@@ -307,5 +277,13 @@ var billbord = function(that) {
         })
       }
     }
+  })
+}
+var getAccount = function(that){
+  app.fetchApis(that, 'e/account/', {}, 'GET', function (res) {
+    that.setData({
+      showLeft: false,
+      username: res.data.first_name + " " + res.data.last_name
+    })
   })
 }

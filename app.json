@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/editprofile/editprofile",
+    "pages/addaddress/addaddress",
     "pages/faq/faq",
     "pages/about/about",
     "pages/checkout/checkout",
@@ -12,14 +14,12 @@
     "pages/selectaddress/selectaddress",
     "pages/addnewcard/addnewcard",
     "pages/allcategory/allcategory",
-    "pages/addaddress/addaddress",
     "pages/creditcard/creditcard",
     "pages/produce/produce",
     "pages/orderhistory/orderhistory",
     "pages/orderfilter/orderfilter",
     "pages/filter/filter",
     "pages/search/search",
-    "pages/editprofile/editprofile",
     "pages/detail/detail",
     "pages/profile/profile",
     "pages/test/test",

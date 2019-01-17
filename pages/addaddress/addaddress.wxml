@@ -1,28 +1,82 @@
 <view class="content">
-    <view class="edit_pro">
-         <view class="pro_cot">
-            <view class="list">
-                <input type="text" placeholder="{{content.address_line1}}" />
-            </view>
-            <view class="list">
-                <input type="text" placeholder="{{content.address_line2}}" class="a" />
-                <label class='i'></label>
-            </view>
-            <view class="list">
-                <label>{{content.city}}</label>
-                <input type="text" placeholder="{{content.address_example}}" />
-            </view>
-            <view class="list">
-                <input type="text" placeholder="{{content.address_tips}}" />
-            </view>
-            <view class="list">
-                <input type="text" placeholder="{{content.zip_code}}" />
-            </view>
-         </view>
+
+  <view class="edit_pro">
+    <view class="pro_cot">
+      <block wx:for="{{addresses}}" wx:key="*this">
+        <view class="list" bindtap='getmore' data-id='{{item.id}}'>
+          <input type="text" placeholder="{{content.name}}" value="{{item.name!=''?item.name:'地址'+(index+1)}}" disabled/>
+          <label class='i'></label>
+        </view>
+        <view wx:if="{{item.id==targetId&&showmore}}">
+          <view class="list">
+            <input type="text" placeholder="{{content.address_name}}" value='{{item.name}}' disabled/>
+          </view>
+          <view class="list">
+            <label>{{content.city}}</label>
+            <input type="text" placeholder="{{content.address_example}}" value='{{item.city}}' disabled/>
+          </view>
+          <view class="list">
+            <input type="text" placeholder="{{content.address_tips}}" value='{{item.state}}' disabled/>
+          </view>
+          <view class="list">
+            <input type="text" placeholder="{{content.street}}" value='{{item.street}}' disabled/>
+          </view>
+          <view class="list">
+            <input type="text" placeholder="{{content.zip_code}}" value='{{item.zipcode}}' disabled/>
+          </view>
+          <view class="list">
+            <input type="text" placeholder="{{content.phone}}" value='{{item.telephone}}' disabled/>
+          </view>
+          <view class="list">
+            <input type="text" placeholder="{{content.email}}" value='{{item.email}}' disabled/>
+          </view>
+          <view class="list">
+            <label>{{content.is_defalut}}</label>
+            <switch checked="{{item.is_default}}" bindchange="switch1Change" />
+            <!-- <input name="is_default" type="text" placeholder="{{content.email}}"></input> -->
+          </view>
+        </view>
+      </block>
+      <form bindsubmit="formSubmit">
+        <view wx:if="{{!showmore&&isAdd}}">
+          <view class="list">
+            <input name="Name" type="text" placeholder="{{content.address_name}}" value='{{item.name}}' />
+          </view>
+          <view class="list">
+            <label>{{content.city}}</label>
+            <input name="City" type="text" placeholder="{{content.address_example}}" value='{{item.city}}' />
+          </view>
+          <view class="list">
+            <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{item.state}}' />
+          </view>
+          <view class="list">
+            <input name="Street" type="text" placeholder="{{content.street}}" value='{{item.street}}' />
+          </view>
+          <view class="list">
+            <input name="Zip" type="text" placeholder="{{content.zip_code}}" value='{{item.zipcode}}' />
+          </view>
+          <view class="list">
+            <input name="telephone" type="text" placeholder="{{content.phone}}" value='{{item.telephone}}' />
+          </view>
+          <view class="list">
+            <input name="email" type="text" placeholder="{{content.email}}" value='{{item.email}}' />
+          </view>
+          <view class="list">
+            <label>{{content.is_defalut}}</label>
+            <switch checked="{{item.is_default}}" bindchange="switch1Change" />
+            <!-- <input name="is_default" type="text" placeholder="{{content.email}}"></input> -->
+          </view>
+        </view>
+        <view class="btn_save">
+          <button class='a' bindtap='showAddAddress' wx:if="{{!isAdd}}">
+            {{content.add_address}}
+          </button>
+          <button class='a' form-type='submit' wx:else>
+            {{content.submit}}
+          </button>
+        </view>
+      </form>
     </view>
-</view>
-<view class="btn_save">
-    <view class='a'>
-        {{content.add_address}} 
-    </view>
+  </view>
+
 </view>

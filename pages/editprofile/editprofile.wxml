@@ -1,34 +1,40 @@
 <view class="content">
-    <view class="edit_pro">
-         <view class="img_head">
-            <view class='a'>
-                <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
-                <view class='span'>{{content.edit_s}}</view>           
-            </view>
-            <view class="fn">
-                <label>{{content.fullname}}</label>
-                <input type="text" placeholder="Aakash Sirdhana" />
-            </view>
-            <view class="clr"></view>
-         </view>
-         <view class="pro_cot">
-            <view class="list">
-                <label>{{content.fullname}}</label>
-                <input type="text" placeholder="AAKASH SIRDHANA" />
-            </view>
-            <view class="list">
-                <label>{{content.email}}</label>
-                <input type="text" placeholder="aakashsirdhana@gmail.com" />
-            </view>
-            <view class="list">
-                <label>{{content.phone}}</label>
-                <input type="text" placeholder="+91-99653445545" />
-            </view>
-         </view>
+  <view class="edit_pro">
+    <view class="img_head">
+      <view class='a'>
+        <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
+        <view class='span'>{{content.edit_s}}</view>
+      </view>
+      <view class="fn">
+        <label>{{content.fullname}}</label>
+        <input type="text" placeholder="Aakash Sirdhana" value='{{first_name}} {{last_name}}' disabled/>
+      </view>
+      <view class="clr"></view>
     </view>
-</view>
-<view class="btn_save">
-    <view class='a'>
-        {{content.save}}        
-    </view>
+    <form bindsubmit="formSubmit">
+      <view class="pro_cot">
+        <view class="list">
+          <label>{{content.first_name}}</label>
+          <input name="first_name" type="text" placeholder="{{content.first_name}}" value='{{first_name}}' />
+        </view>
+        <view class="list">
+          <label>{{content.last_name}}</label>
+          <input name="last_name" type="text" placeholder="{{content.last_name}}" value='{{last_name}}'/>
+        </view>
+        <view class="list">
+          <label>{{content.email}}</label>
+          <input name="email" type="text" placeholder="{{content.email}}" value='{{email}}'/>
+        </view>
+        <view class="list">
+          <label>{{content.phone}}</label>
+          <input name="phone" type="text" placeholder="{{content.phone}}" value='{{telephone}}'/>
+        </view>
+      </view>
+      <view class="btn_save">
+        <button class='a' form-type='submit'>
+          {{content.save}}
+        </button>
+      </view>
+    </form>
+  </view>
 </view>
