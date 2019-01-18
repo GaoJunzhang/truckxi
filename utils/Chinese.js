@@ -1,4 +1,5 @@
 var Chinese = {
+  loading: "加载中···",
   loginTitle: "登录",
   button: "中文",
   account: "账号",
@@ -88,7 +89,7 @@ var Chinese = {
   month: "月",
   //filter
   reset: "重置",
-  apply: "应用",
+  apply: "继续",
   //produce
   total: "共",
   //addaddress
@@ -131,7 +132,7 @@ var Chinese = {
   sub_total: "小计",
   grand_total: "总计",
   coupon_tips:"输入可用优惠码",
-  apply_code: "申请优惠码",
+  apply_code: "优惠码",
   change:"修改",
   no_tip:"无小费",
   //my cart

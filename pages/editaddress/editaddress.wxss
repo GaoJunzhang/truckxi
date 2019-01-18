@@ -1,0 +1,72 @@
+page {
+  background: #f3f3f3;
+}
+
+.edit_pro {
+  margin: 15px 12px;
+}
+
+.edit_pro .pro_cot {
+  width: 100%;
+  margin: 15px 0;
+  padding: 0 12px;
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid #e0e0e0;
+  height: 100%;
+}
+
+.edit_pro .pro_cot .list {
+  margin: 15px 0 20px;
+  position: relative;
+}
+
+.edit_pro .pro_cot .list label {
+  color: #b2b2b2;
+  display: block;
+}
+
+.edit_pro .pro_cot .list input {
+  display: block;
+  margin: 5px 0 0;
+  border-bottom: 1px solid #aeaeae;
+  padding: 2px 0 5px 0;
+  width: 100%;
+}
+
+.btn_save {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: auto;
+  bottom: 0;
+}
+
+.btn_save .a {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  height: 48px;
+  line-height: 48px;
+  background: -webkit-linear-gradient(270deg, #37a000, #43c102);
+  background: -o-linear-gradient(270deg, #37a000, #43c102);
+  background: -moz-linear-gradient(270deg, #37a000, #43c102);
+  background: linear-gradient(270deg, #37a000, #43c102);
+}
+
+.edit_pro .pro_cot .list input.a {
+  padding: 2px 25px 5px 0;
+}
+
+.edit_pro .pro_cot .list .i {
+  display: block;
+  background: url(http://bluablua.com/icon_arrowdown.png) center center no-repeat;
+  width: 14px;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}

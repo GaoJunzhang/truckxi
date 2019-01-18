@@ -1,20 +1,22 @@
 <view class="content">
   <view class="ac">
-    <view class='li'>
-      <view class='a'>
-        <view class="prod_li">
-          <view class="img">
-            <image src='http://bluablua.com/img_pro_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt">
-            <view class='span'>Produce</view>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</view>
-          <view class="b_a">
-            <image src='http://bluablua.com/icon_g_arrowd.png' mode='widthFix'></image>
+    <block wx:for="{{categorys}}" wx:key="*this">
+      <view class='li'>
+        <view class='a'>
+          <view class="prod_li">
+            <view class="img">
+              <image src='{{item.Image}}' mode='widthFix'></image>
+            </view>
+            <view class="txt">
+              <view class='span'>{{item.Name}}</view>{{item.Description}}</view>
+            <view class="b_a">
+              <image src='http://bluablua.com/icon_g_arrowd.png' mode='widthFix'></image>
+            </view>
           </view>
         </view>
       </view>
-    </view>
-    <view class='li'>
+    </block>
+    <!-- <view class='li'>
       <view class='a'>
         <view class="prod_li">
           <view class="img">
@@ -82,6 +84,6 @@
           </view>
         </view>
       </view>
-    </view>
+    </view> -->
   </view>
 </view>

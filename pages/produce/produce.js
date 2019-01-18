@@ -13,39 +13,49 @@ Page({
    */
   onLoad: function (options) {
     let that = this
-    getProduce(that,options.pk)
     var lastLanuage = app.globalData.lanuage
-    // this.getContent(lastLanuage)
     app.getContent(that, lastLanuage)
+    getProduce(that,options.pk)
+    getCategory(that)
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  categoryInfo:function(e){
+    let pk = e.currentTarget.dataset.pk
+    let that = this
+    getProduce(that,pk)
   }
 })
 var getProduce = function(that,pk){
+  wx.showLoading({
+    title: that.data.content.loading,
+  })
   wx.request({
     url: app.globalData.API_URL + 'e/category/custom/' + pk + '/product',
     success: function (res) {
       if (res.statusCode == 200) {
         console.log(res.data)
         that.setData({
-          prodeces:res.data
+          prodeces:res.data,
+          selectId:pk
         })
       } else {
         wx.showModal({
           content: '服务器异常，请稍后再试',
           showCancel: false
+        })
+      }
+    }
+  })
+  wx.hideLoading();
+}
+var getCategory = function (that) {
+  wx.request({
+    url: app.globalData.API_URL + 'e/category/custom',
+    // data:param,
+    success: function (res) {
+      if (res.statusCode == 200) {
+        console.log(res.data)
+        that.setData({
+          categorys:res.data
         })
       }
     }

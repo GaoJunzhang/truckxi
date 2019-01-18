@@ -1,4 +1,5 @@
-var English = {　　
+var English = {
+  loading: "Loading···",
   loginTitle: "Login",
   button: "English",
   account: "USER NAME",
@@ -100,8 +101,8 @@ var English = {　　
   address_line1: "Address Line No 1",
   address_line2: "Address Line No 2",
   address_example: "Delhi",
-  street:"Street",
-  is_defalut:"Dealut",
+  street: "Street",
+  is_defalut: "Dealut",
   city_err: "City no be blank",
   state_err: "State no be blank",
   street_err: "Street no be blank",
@@ -140,9 +141,9 @@ var English = {　　
   place_order: "Place order",
   cvv: "ENTER CVV ON NEXT STEP",
   //checkout
-  track_order:"Track your order",
-  check_word1:"Congratulations. Your order is accpeted !",
-  chekc_word2:"Your items are on the way and should arrive shortly.",
+  track_order: "Track your order",
+  check_word1: "Congratulations. Your order is accpeted !",
+  chekc_word2: "Your items are on the way and should arrive shortly.",
 }
 
 module.exports = {

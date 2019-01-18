@@ -78,11 +78,27 @@ Page({
     //   }
     // })
     let that = this
-    // app.fetchApis(that, 'e/order/cart', { product_id: that.data.pk, quantity: that.data.pcount}, 'POST', function(res) {
+    app.fetchApis(that, 'e/order/cart', { product_id: that.data.pk, quantity: that.data.pcount}, 'POST', function(res) {
+      console.log(res)
+      if(res.statusCode==200){
+        wx.showModal({
+          content: '加入购物车成功',
+          confirmText:"去结算",
+          cancelText:"再逛逛",
+          success(res){
+            if (res.confirm) {
+              wx.navigateTo({
+                url: '../mycart2/mycart2',
+              })
+            } else if (res.cancel) {
+              console.log('用户点击取消')
+            }
+          }
+        })
+      }
+    })
+    // app.fetchApis(that, 'e/order/cart', null, 'GET', function (res) {
     //   console.log(res)
     // })
-    app.fetchApis(that, 'e/order/cart', null, 'GET', function (res) {
-      console.log(res)
-    })
   }
 })

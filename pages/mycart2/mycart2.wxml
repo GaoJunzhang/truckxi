@@ -34,49 +34,32 @@
     </view>
     <view class="gt">
       <view class="l">{{content.grand_total}}</view>
-      <view class="r">$122.21</view>
+      <view class="r">${{total_price}}</view>
     </view>
   </view>
   <view class="search">
     <view class="go_li">
-      <view class="li">
-        <view class="img_g">
-          <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-        </view>
-        <view class="txt_g">
-          <view class="span">Grape Kyoho</view>
-          <view class="span pri">$9.99 </view>
-          <view class="span sma">{{content.box}}</view>
-        </view>
-        <view class="rig">
-          <view class="reduce">
+      <block wx:for="{{cart}}" wx:key="*this">
+        <view class="li">
+          <view class="img_g">
+            <image src='{{item.image_url}}' mode='widthFix'></image>
           </view>
-          <view class="span">1</view>
-          <view class="add">
+          <view class="txt_g">
+            <view class="span">{{content.login=='Login'?item.name:item.description}}</view>
+            <view class="span pri">${{item.total_price}}</view>
+            <view class="span sma">{{content.box}}</view>
           </view>
-          <view class="clr"></view>
-        </view>
-        <view class="clr"></view>
-      </view>
-      <view class="li">
-        <view class="img_g">
-          <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
-        </view>
-        <view class="txt_g">
-          <view class="span">Grape Kyoho</view>
-          <view class="pri">$9.99 </view>
-          <view class="sma">{{content.box}}</view>
-        </view>
-        <view class="rig">
-          <view class="reduce">
-          </view>
-          <view class="span">1</view>
-          <view class="add">
+          <view class="rig">
+            <view class="reduce" bindtap='reduceGood' data-id='{{item.id}}'>
+            </view>
+            <view class="span">{{item.quantity}}</view>
+            <view class="add" bindtap='addGood' data-id='{{item.id}}'>
+            </view>
+            <view class="clr"></view>
           </view>
           <view class="clr"></view>
         </view>
-        <view class="clr"></view>
-      </view>
+      </block>
     </view>
     <view class="inp_ent">
       <input type="" placeholder="{{content.coupon_tips}}"></input>
@@ -86,7 +69,7 @@
       <view class="li">
         <view class='a'>
           {{content.sub_total}}
-          <view class="p">$1,220</view>
+          <view class="p">${{total_price}}</view>
         </view>
       </view>
     </view>
@@ -104,11 +87,11 @@
   </view>
 </view>
 <view class="btn_save">
-  <view class='a'>
+  <navigator class='a' url='../mycart/mycart'>
     <view class="span l c">{{content.checkout}}</view>
     <view class="span r">
       {{content.apply}}
       <label></label>
     </view>
-  </view>
+  </navigator>
 </view>

@@ -1,43 +1,31 @@
 <view class="content">
   <view class="sc_li">
-    <view class='li'>
-      <view class="a" class="ch_d"></view>
-      <view class="cont_t">
-        <view class="tt">Aakash Sirdhana</view>
-        <view class="tt">A - Block,</view>
-        <view class="tt">Near Mother Dairy</view>
-        <view class="tt">Sector 15, Noida</view>
-        <view class="tt">+91 123 123 1234</view>
-        <view class="ti">
-          <view class="a">{{content.edit_s}}</view>
+    <block wx:for="{{addresses}}" wx:key="*this">
+      <view class='li'>
+        <view class="a" class="{{selectId==item.id?'ch_d1':'ch_d'}}" bindtap='selectAdd' data-addid='{{item.id}}'></view>
+        <view class="cont_t">
+          <view class="tt">{{item.name}}</view>
+          <view class="tt">{{item.city}}</view>
+          <view class="tt">{{item.state}}</view>
+          <view class="tt">{{item.street}}</view>
+          <view class="tt">{{item.telephone}}</view>
+          <view class="ti" bindtap='editAddress' data-addobj='{{item}}'>
+            <view class="a">{{content.edit_s}}</view>
+          </view>
         </view>
+        <view class="clr"></view>
       </view>
-      <view class="clr"></view>
-    </view>
-    <view class='li'>
-      <view class="a" class="ch_d"></view>
-      <view class="cont_t">
-        <view class="tt">Aakash Sirdhana</view>
-        <view class="tt">A - Block,</view>
-        <view class="tt">Near Mother Dairy</view>
-        <view class="tt">Sector 15, Noida</view>
-        <view class="tt">+91 123 123 1234</view>
-        <view class="ti">
-          <view class="a">{{content.edit_s}}</view>
-        </view>
-      </view>
-      <view class="clr"></view>
-    </view>
+    </block>
   </view>
 </view>
 <view class="btn_ra">
-  <view class="d">
+  <navigator class="d" url='../addaddress/addaddress'>
     <label></label>
     {{content.add_new_address}}
-  </view>
-  <view class="a">
+  </navigator>
+  <navigator class="a" url='../mycart/mycart?addid={{selectId}}'>
     {{content.proceed_payment}}
     <label></label>
-  </view>
+  </navigator>
   <view class="clr"></view>
 </view>

@@ -1,0 +1,45 @@
+<view class="content">
+
+  <view class="edit_pro">
+    <view class="pro_cot">
+      <form bindsubmit="formSubmit">
+        <view>
+          <view class="list">
+            <input name="Name" type="text" placeholder="{{content.address_name}}" value='{{addObj.name}}' />
+          </view>
+          <view class="list">
+            <label>{{content.city}}</label>
+            <input name="City" type="text" placeholder="{{content.address_example}}" value='{{addObj.city}}' />
+          </view>
+          <view class="list">
+            <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{addObj.state}}' />
+          </view>
+          <view class="list">
+            <input name="Street" type="text" placeholder="{{content.street}}" value='{{addObj.street}}' />
+          </view>
+          <view class="list">
+            <input name="Zip" type="text" placeholder="{{content.zip_code}}" value='{{addObj.zipcode}}' />
+          </view>
+          <view class="list">
+            <input name="telephone" type="text" placeholder="{{content.phone}}" value='{{addObj.telephone}}' />
+          </view>
+          <view class="list">
+            <input name="email" type="text" placeholder="{{content.email}}" value='{{addObj.email}}' />
+          </view>
+          <view class="list">
+            <label>{{content.is_defalut}}</label>
+            <switch checked="{{addObj.is_default}}" bindchange="switch1Change" />
+            <!-- <input name="is_default" type="text" placeholder="{{content.email}}"></input> -->
+          </view>
+        </view>
+        <view class="btn_save">
+        
+          <button class='a' form-type='submit'>
+            {{content.submit}}
+          </button>
+        </view>
+      </form>
+    </view>
+  </view>
+
+</view>

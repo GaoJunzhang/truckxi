@@ -7,39 +7,39 @@
       </view>
     </view>
     <view class='li'>
-      <view class='a'>
+      <navigator class='a' url='../addnewcard/addnewcard'>
         <label class="c"></label>
         {{content.save_card}}
         <image src="http://bluablua.com/icon_rightreturn.png" mode='widthFix'></image>
-      </view>
+      </navigator>
     </view>
     <view class='li'>
-      <view class='a'>
+      <navigator class='a' url='../addnewcard/addnewcard'>
         <label class="c"></label>
         {{content.credit_card}}
         <image src="http://bluablua.com/icon_rightreturn.png" mode='widthFix'></image>
-      </view>
+      </navigator>
     </view>
     <view class='li'>
-      <view class='a'>
+      <navigator class='a' url='../addnewcard/addnewcard'>
         <label class="c"></label>
         {{content.debit_card}}
         <image src="http://bluablua.com/icon_rightreturn.png" mode='widthFix'></image>
-      </view>
+      </navigator>
     </view>
     <view class='li'>
-      <view class='a'>
+      <navigator class='a' url='../addnewcard/addnewcard'>
         <label class="n"></label>
         {{content.net_banking}}
         <image src="http://bluablua.com/icon_rightreturn.png" mode='widthFix'></image>
-      </view>
+      </navigator>
     </view>
     <view class='li'>
-      <view class='a'>
+      <navigator class='a' url='../addnewcard/addnewcard'>
         <label class="p"></label>
         {{content.pay_on_delivery}} (POD)
         <image src="http://bluablua.com/icon_rightreturn.png" mode='widthFix'></image>
-      </view>
+      </navigator>
     </view>
   </view>
 </view>

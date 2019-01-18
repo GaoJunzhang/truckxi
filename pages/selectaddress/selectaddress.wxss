@@ -27,6 +27,15 @@ page {
   position: relative;
   top: -5px;
 }
+.sc_li .li .ch_d1 {
+  width: 42px;
+  height: 42px;
+  background: url(http://bluablua.com/icon_green_ch.png) no-repeat;
+  display: block;
+  float: left;
+  position: relative;
+  top: -5px;
+}
 
 .sc_li .li .ch_d:hover, .sc_li .li .ch_d.hover {
   background: url(http://bluablua.com/icon_green_ch.png) no-repeat;
