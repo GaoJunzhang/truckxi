@@ -10,7 +10,7 @@
             <view class="txt">
               <view class='span'>{{item.Name}}</view>{{item.Description}}</view>
             <view class="b_a" >
-              <image src='{{dUimg}}' mode='widthFix'></image>
+              <image src="{{item.id==selectId&&isDown?uimg:dimg}}" mode='widthFix'></image>
             </view>
           </view>
           <view class="s_pr" wx:if='{{item.id==selectId&&isDown}}'>

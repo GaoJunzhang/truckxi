@@ -1,12 +1,14 @@
 var app = getApp()
+var selectId = ''
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dUimg: "http://bluablua.com/icon_g_arrowd.png",
-    isDown:false
+    dimg: "http://bluablua.com/icon_g_arrowd.png",
+    uimg: "http://bluablua.com/icon_g_arrowu.png",
+    isDown: false
   },
 
   /**
@@ -22,9 +24,13 @@ Page({
   changeMenu: function(e) {
     let that = this
     var isdown = !that.data.isDown
-    console.log(isdown)
+    var cid = e.currentTarget.dataset.id
+    if (cid != selectId) {
+      selectId = cid
+      isdown = true
+    }
     that.setData({
-      selectId: e.currentTarget.dataset.id,
+      selectId: selectId,
       isDown: isdown
     })
   }
