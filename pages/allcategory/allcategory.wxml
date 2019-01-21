@@ -1,7 +1,7 @@
 <view class="content">
   <view class="ac">
-    <block wx:for="{{categorys}}" wx:key="*this">
-      <view class='li'>
+    <block wx:for="{{isListCateGorys}}" wx:key="*this" >
+      <view class='li' bindtap='changeMenu' data-id='{{item.id}}'>
         <view class='a'>
           <view class="prod_li">
             <view class="img">
@@ -9,81 +9,21 @@
             </view>
             <view class="txt">
               <view class='span'>{{item.Name}}</view>{{item.Description}}</view>
-            <view class="b_a">
-              <image src='http://bluablua.com/icon_g_arrowd.png' mode='widthFix'></image>
+            <view class="b_a" >
+              <image src='{{dUimg}}' mode='widthFix'></image>
             </view>
+          </view>
+          <view class="s_pr" wx:if='{{item.id==selectId&&isDown}}'>
+            <view class='li' wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}">
+              <navigator url='../detail/detail?pk={{itemp.Product_id}}'>
+                <image src='{{itemp.Thumbnail}}' mode='widthFix'></image>
+                <view class='span'>{{content.login=='Login'?itemp.Name:itemp.Description}}</view>
+              </navigator>
+            </view>
+            <view class="clr"></view>
           </view>
         </view>
       </view>
     </block>
-    <!-- <view class='li'>
-      <view class='a'>
-        <view class="prod_li">
-          <view class="img">
-            <image src='http://bluablua.com/img_pro_002.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt">
-            <view class='span'>Meat</view>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</view>
-          <view class="b_a">
-            <image src='http://bluablua.com/icon_g_arrowu.png' mode='widthFix'></image>
-          </view>
-        </view>
-        <view class="s_pr">
-          <view class='li'>
-            <image src='http://bluablua.com/img_pro_011.jpg' mode='widthFix'></image>
-            <view class='span'>Poultry</view>
-          </view>
-          <view class='li'>
-            <image src='http://bluablua.com/img_pro_012.jpg' mode='widthFix'></image>
-            <view class='span'>Processed Meat</view>
-          </view>
-          <view class='li'>
-            <image src='http://bluablua.com/img_pro_013.jpg' mode='widthFix'></image>
-            <view class='span'>Beef</view>
-          </view>
-          <view class='li'>
-            <image src='http://bluablua.com/img_pro_014.jpg' mode='widthFix'></image>
-            <view class='span'>Pork</view>
-          </view>
-          <view class='li'>
-            <image src='http://bluablua.com/img_pro_015.jpg' mode='widthFix'></image>
-            <view class='span'>Goose/Rabbit</view>
-          </view>
-          <view class='li'>
-            <image src='http://bluablua.com/img_pro_015.jpg' mode='widthFix'></image>
-            <view class='span'>Lamb/Goat</view>
-          </view>
-          <view class="clr"></view>
-        </view>
-      </view>
-    </view>
-    <view class='li'>
-      <view class='a'>
-        <view class="prod_li">
-          <view class="img">
-            <image src='http://bluablua.com/img_pro_003.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt">
-            <view class='span'>Produce</view>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</view>
-          <view class="b_a">
-            <image src='http://bluablua.com/icon_g_arrowd.png' mode='widthFix'></image>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class='li'>
-      <view class='a'>
-        <view class="prod_li">
-          <view class="img">
-            <image src='http://bluablua.com/img_pro_004.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt">
-            <view class='span'>Produce</view>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</view>
-          <view class="b_a">
-            <image src='http://bluablua.com/icon_g_arrowd.png' mode='widthFix'></image>
-          </view>
-        </view>
-      </view>
-    </view> -->
   </view>
 </view>

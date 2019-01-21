@@ -19,19 +19,6 @@ Page({
     app.getContent(that, lastLanuage)
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-    
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-    
-  }
 })
 var getAccount = function (that) {
   app.fetchApis(that, 'e/account/', {}, 'GET', function (res) {

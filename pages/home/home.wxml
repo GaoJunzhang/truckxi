@@ -20,12 +20,12 @@
     </view>
   </view>
   <view class="category">
-    <view class='category_li' wx:for="{{categorys}}" wx:key="*this" data-id='{{item.ProductCategory2_id}}' bindtap='categoryInfo'>
+    <navigator url='../produce/produce?pk={{item.ProductCategory2_id}}' class='category_li' wx:for="{{categorys}}" wx:key="*this">
       <view>
         <image src='{{item.Image}}' mode='widthFix'></image>
         <text>{{item.Name}}</text>
       </view>
-    </view>
+    </navigator>
   </view>
   <view class="bi">
     <view class="ban_img" bindtap='showleft'>
@@ -38,9 +38,9 @@
     <block wx:for="{{isListCateGorys}}" wx:key="{{item.id}}">
       <view class="tit">{{item.categoryName}}
         <text>{{content.deals}}</text>
-        <view class="more">
+        <navigator class="more" url='../allcategory/allcategory'>
           <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
-        </view>
+        </navigator>
       </view>
       <view class="goods_infeed">
         <block wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}">

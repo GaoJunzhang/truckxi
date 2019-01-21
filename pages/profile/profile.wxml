@@ -21,31 +21,31 @@
     <view>
       <view class="p_cap">
         <view class="li">
-          <view class='a'>
+          <navigator class='a' url='../paymentoptions/paymentoptions'>
             <label>{{content.payment_cards}}</label>
             <view class='span'>{{content.payment_tips}}</view>
             <view class="irr">
               <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
-          </view>
+          </navigator>
         </view>
         <view class="li">
-          <view class='a'>
+          <navigator class='a' url='../addaddress/addaddress'>
             <label>{{content.address}}</label>
             <view class='span'>{{content.address_tips}}</view>
             <view class="irr">
               <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
-          </view>
+          </navigator>
         </view>
         <view class="li">
-          <view class='a'>
+          <navigator class='a'>
             <label>{{content.phone}}</label>
             <view class='span'>9968xxxxx99</view>
             <view class="irr">
               <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
-          </view>
+          </navigator>
         </view>
       </view>
     </view>

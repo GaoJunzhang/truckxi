@@ -76,6 +76,7 @@ page {
   flex: 1;
   margin: 0 10px 10px;
   background: #fff;
+  height: 240rpx;
 }
 
 .ac .li .a .s_pr .li image {
