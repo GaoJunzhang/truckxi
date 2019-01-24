@@ -70,6 +70,7 @@ Page({
 })
 var getCart = function(that) {
   app.fetchApis(that, 'e/order/cart', null, 'GET', function(res) {
+    console.log('购物车信息===============')
     console.log(res)
     if (res.statusCode == 200) {
       that.setData({

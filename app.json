@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/mycart2/mycart2",
     "pages/home/home",
     "pages/search/search",
     "pages/allcategory/allcategory",
@@ -7,7 +8,6 @@
     "pages/mycart/mycart",
     "pages/selectaddress/selectaddress",
     "pages/editaddress/editaddress",
-    "pages/mycart2/mycart2",
     "pages/editprofile/editprofile",
     "pages/addaddress/addaddress",
     "pages/faq/faq",
