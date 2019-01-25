@@ -1,7 +1,8 @@
 {
   "pages":[
-    "pages/mycart2/mycart2",
     "pages/home/home",
+    "pages/mycart2/mycart2",
+    "pages/addaddress/addaddress",
     "pages/search/search",
     "pages/allcategory/allcategory",
     "pages/paymentoptions/paymentoptions",
@@ -9,7 +10,6 @@
     "pages/selectaddress/selectaddress",
     "pages/editaddress/editaddress",
     "pages/editprofile/editprofile",
-    "pages/addaddress/addaddress",
     "pages/faq/faq",
     "pages/about/about",
     "pages/checkout/checkout",
@@ -32,7 +32,6 @@
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Forgot",
-    "navigationBarTextStyle": "black",
-    "navigationStyle":"custom"
+    "navigationBarTextStyle": "black"
   }
 }

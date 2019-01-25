@@ -9,6 +9,19 @@ Page({
     is_default: false,
     showmore: false,
     isAdd: false,
+    array: [
+      '(AL)Alabama', '(AK)Alaska', '(AZ)Arizona', '(AR)Arkansas', '(CA)California',
+      '(CO)Colorado', '(CT)Connecticut', '(DE)Delaware', '(FL)Florida', '(GA)Georgia',
+      '(HI)Hawaii', '(ID)Idaho', '(IL)Illinois', '(IN)Indiana', '(IA)Iowa',
+      '(KS)Kansas', '(KY)Kentucky', '(LA)Louisiana', '(ME)Maine', '(MD)Maryland',
+      '(MA)Massachusetts', '(MI)Michigan', '(MN)Minnesota', '(MS)Mississippi', '(MO)Missouri',
+      '(MT)Montana', '(NE)Nebraska', '(NV)Nevada', '(NH)New Hampshire', '(NJ)New Jersey',
+      '(NM)New Mexico', '(NY)New York', '(NC)North Carolina', '(ND)North Dakota', '(OH)Ohio',
+      '(OK)Oklahoma', '(OR)Oregon', '(PA)Pennsylvania', '(RI)Rhode Island', '(SC)South Carolina',
+      '(SD)South Dakota', '(TN)Tennessee', '(TX)Texas', '(UT)Utah', '(VT)Vermont',
+      '(VA)Virginia', '(WA)Washington', '(WV)West Virginia', '(WI)Wisconsin', '(WY)Wyoming'
+    ],
+    index: 0,
   },
 
   /**
@@ -25,7 +38,7 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  showAddAddress:function(){
+  showAddAddress: function() {
     let that = this
     that.setData({
       showmore: false,
@@ -35,26 +48,21 @@ Page({
   formSubmit: function(e) {
     let that = this
     var addressObj = e.detail.value
-    console.log(addressObj)
-    if(addressObj.City==''){
+    var State = that.data.array[that.data.index]
+    addressObj.State = State
+    if (addressObj.City == '') {
       wx.showModal({
         content: that.data.content.city_err,
       })
       return
     }
-    if(addressObj.State==''){
-      wx.showModal({
-        content: that.data.content.state_err,
-      })
-      return
-    }
-    if(addressObj.Street==''){
+    if (addressObj.Street == '') {
       wx.showModal({
         content: that.data.content.street_err,
       })
       return
     }
-    if(addressObj.Zip==''){
+    if (addressObj.Zip == '') {
       wx.showModal({
         content: that.data.content.zipcode_err,
       })
@@ -78,7 +86,13 @@ Page({
       showmore: !that.data.showmore,
       targetId: e.currentTarget.dataset.id
     })
-  }
+  },
+  bindPickerChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
 })
 var getAddress = function(that) {
   app.fetchApis(that, 'e/account/address', {}, 'GET', function(res) {

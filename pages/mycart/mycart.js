@@ -5,11 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    addressName:"address",
-    city:"city",
-    state:"state",
-    accountName:'Aakash',
-    accountPhone:"987-223-1224"
+    addressName: "address",
+    city: "city",
+    state: "state",
+    accountName: 'Aakash',
+    accountPhone: "987-223-1224"
   },
 
   /**
@@ -18,11 +18,14 @@ Page({
   onLoad: function(options) {
     let that = this
     var lastLanuage = app.globalData.lanuage
-    // this.getContent(lastLanuage)
     app.getContent(that, lastLanuage)
+    that.setData({
+      tips: wx.getStorageSync("tips").tip_percentage
+    })
     if (options.addid) {
-      console.log(options)
-
+      that.setData({
+        addid: options.addid
+      })
     }
     getCart(that)
     getAddress(that)
@@ -75,10 +78,17 @@ Page({
     })
 
   },
-  checkout:function(e){
-    console.log("dddddddddd")
-    wx.navigateTo({
-      url: '../checkout/checkout',
+  checkout: function(e) {
+    let that = this
+    let param = {
+
+    }
+    app.fetchApis(that, 'e/order', param, 'POST', function (res) {
+        if(res.statusCode==200||res.statusCode==201){
+          wx.navigateTo({
+            url: '../checkout/checkout',
+          })
+        }
     })
   }
 })
@@ -93,7 +103,7 @@ var getCart = function(that) {
         crv: res.data.crv,
         id: res.data.id,
         tax: res.data.tax,
-        total_price: res.data.total_price
+        total_price: parseFloat(res.data.total_price * (1 + parseFloat(that.data.tips) / 100)).toFixed(2)
       })
     }
   })
@@ -101,29 +111,36 @@ var getCart = function(that) {
 var getAddress = function(that) {
   app.fetchApis(that, 'e/account/address', null, 'GET', function(res) {
     if (res.statusCode == 200) {
-      if(res.data.addresses){
-    console.log("====================")
-    console.log(res)
+      if (res.data.addresses) {
         let addresses = res.data.addresses
-        if (addresses.length>0){
+        if (addresses.length > 0) {
 
-          let addid = addresses[0].id
-          let addCity = addresses[0].city
-          let addState = addresses[0].state
-          let addressName = addresses[0].name
-          addresses.forEach(function(v,k){
-            if(v.is_default){
-              adid = v.id
-              addCity = v.city
-              addState = v.state
-              addressName = v.name
+          var addid = addresses[0].id
+          var addCity = addresses[0].city
+          var addState = addresses[0].state
+          var addressName = addresses[0].name
+          for (var i = 0; i < addresses.length; i++) {
+            if (that.data.addid != null && that.data.addid != '') {
+              if (addresses[i].id == that.data.addid) {
+                addid = addresses[i].id
+                addCity = addresses[i].city
+                addState = addresses[i].state
+                addressName = addresses[i].name
+              }
+            } else {
+              if (addresses[i].is_default) {
+                addid = addresses[i].id
+                addCity = addresses[i].city
+                addState = addresses[i].state
+                addressName = addresses[i].name
+              }
             }
-          })
+          }
           that.setData({
             addressName: addressName,
             city: addCity,
             state: addState,
-            addid:addid
+            addid: addid
           })
         }
       }

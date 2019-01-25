@@ -34,6 +34,14 @@ page {
   width: 100%;
 }
 
+.edit_pro .pro_cot .list picker {
+  display: block;
+  margin: 5px 0 0;
+  border-bottom: 1px solid #aeaeae;
+  padding: 2px 0 5px 0;
+  width: 100%;
+}
+
 .btn_save {
   position: fixed;
   left: 0;

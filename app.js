@@ -63,10 +63,10 @@ App({
     })
   },
   fetchApis(pageSelf = '', url, params, POST, success = (res) => {}, actionError = (res) => {}, fail = (res) => {}) {
-    // wx.showLoading({
-    //   title: '加载中',
-    //   mask:true
-    // })
+    wx.showLoading({
+      title: 'Loading···',
+      mask:true
+    })
     let self = this;
     if (!self.globalData.isConnected) {
       wx.showModal({

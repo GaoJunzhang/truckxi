@@ -1,40 +1,30 @@
 <view class="content">
   <view class="btn_round">
-    <view class="ch_d">DELIVERY</view>
-    <view class="ch_d">WILL CALL</view>
+    <block wx:for="{{delivers}}" wx:key="*this">
+
+      <view class="{{index==delivery_method?'ch_d1':'ch_d'}}" bindtap='selectDeliver' data-key='{{index}}' data-name='{{item.name}}'>{{item.name}}</view>
+    </block>
     <view class="clr"></view>
   </view>
   <view class="box_gt">
     <view class="he_t">
       <view class="l">{{content.sub_total}}</view>
-      <view class="r">$120</view>
+      <view class="r">${{total_price}}</view>
       <view class="clr"></view>
     </view>
     <view class="b_l">
-      <view class="li">
-        <view class='a'>
-          5% - $2.21
+      <block wx:for="{{tipsp}}" wx:key="*this">
+        <view class="li">
+          <view class="{{index==tip_percentage?'a1':'a'}}" bindtap='selectTips' data-key='{{index}}' data-tipspname='{{item.name}}'>
+            <label wx:if="{{index!=3}}">{{item.name}}%-${{item.value}}</label>
+            <label wx:else>{{content.no_tip}}</label>
+          </view>
         </view>
-      </view>
-      <view class="li">
-        <view class='a'>
-          10% - $4.43
-        </view>
-      </view>
-      <view class="li">
-        <view class='a'>
-          15% - $6.64
-        </view>
-      </view>
-      <view class="li">
-        <view class='a'>
-          {{content.no_tip}}
-        </view>
-      </view>
+      </block>
     </view>
     <view class="gt">
       <view class="l">{{content.grand_total}}</view>
-      <view class="r">${{total_price}}</view>
+      <view class="r">${{check_price}}</view>
     </view>
   </view>
   <view class="search">
@@ -62,14 +52,14 @@
       </block>
     </view>
     <view class="inp_ent">
-      <input type="" placeholder="{{content.coupon_tips}}"></input>
+      <input type="text" placeholder="{{content.coupon_tips}}" bindblur="inputCoupon"></input>
       <view class='a'>{{content.apply_code}}</view>
     </view>
     <view class="payo_list w_p">
       <view class="li">
         <view class='a'>
           {{content.sub_total}}
-          <view class="p">${{total_price}}</view>
+          <view class="p">${{check_price}}</view>
         </view>
       </view>
     </view>
@@ -87,11 +77,11 @@
   </view>
 </view>
 <view class="btn_save">
-  <navigator class='a' url='../mycart/mycart'>
+  <button class='a' bindtap='toCheckOut'>
     <view class="span l c">{{content.checkout}}</view>
     <view class="span r">
       {{content.apply}}
       <label></label>
     </view>
-  </navigator>
+  </button>
 </view>

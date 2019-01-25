@@ -40,14 +40,25 @@
       <form bindsubmit="formSubmit">
         <view wx:if="{{!showmore&&isAdd}}">
           <view class="list">
-            <input name="Name" type="text" placeholder="{{content.address_name}}" value='{{item.name}}' />
+            <input name="FirstName" type="text" placeholder="{{content.first_name}}" value='{{item.name}}' />
+          </view>
+          <view class="list">
+            <input name="LastName" type="text" placeholder="{{content.last_name}}" value='{{item.name}}' />
+          </view>
+          <view class="list">
+            <input name="AddressName" type="text" placeholder="{{content.address_name}}" value='{{item.name}}' />
           </view>
           <view class="list">
             <label>{{content.city}}</label>
             <input name="City" type="text" placeholder="{{content.address_example}}" value='{{item.city}}' />
           </view>
           <view class="list">
-            <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{item.state}}' />
+            <!-- <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{item.state}}' /> -->
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="picker">
+                {{array[index]}}
+              </view>
+            </picker>
           </view>
           <view class="list">
             <input name="Street" type="text" placeholder="{{content.street}}" value='{{item.street}}' />

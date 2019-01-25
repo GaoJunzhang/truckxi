@@ -134,7 +134,7 @@ var Chinese = {
   coupon_tips:"输入可用优惠码",
   apply_code: "优惠码",
   change:"修改",
-  no_tip:"无小费",
+  no_tip:"无",
   //my cart
   personal_detail: "个人资料",
   delivery_address: "送货地址",
