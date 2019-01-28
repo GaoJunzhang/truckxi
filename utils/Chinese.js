@@ -144,7 +144,13 @@ var Chinese = {
   //checkout
   track_order: "跟踪订单",
   check_word1: "恭喜！您的的订单已被接收！",
-  chekc_word2: "您的物品正在路上，应该很快就到。"
+  chekc_word2: "您的物品正在路上，应该很快就到。",
+  credit_card: "信用卡号",
+  card_tips:"请检查您的卡号",
+  yes: "确定",
+  cancel: "取消",
+  credit_reference: "卡片参考号",
+  card_reference_tips: "请检查卡片参考号",
 }
 
 module.exports = {

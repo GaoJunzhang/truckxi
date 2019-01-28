@@ -40,17 +40,17 @@
       <form bindsubmit="formSubmit">
         <view wx:if="{{!showmore&&isAdd}}">
           <view class="list">
-            <input name="FirstName" type="text" placeholder="{{content.first_name}}" value='{{item.name}}' />
+            <input name="first_name" type="text" placeholder="{{content.first_name}}" value='{{item.name}}' />
           </view>
           <view class="list">
-            <input name="LastName" type="text" placeholder="{{content.last_name}}" value='{{item.name}}' />
+            <input name="last_name" type="text" placeholder="{{content.last_name}}" value='{{item.name}}' />
           </view>
           <view class="list">
-            <input name="AddressName" type="text" placeholder="{{content.address_name}}" value='{{item.name}}' />
+            <input name="name" type="text" placeholder="{{content.address_name}}" value='{{item.name}}' />
           </view>
           <view class="list">
             <label>{{content.city}}</label>
-            <input name="City" type="text" placeholder="{{content.address_example}}" value='{{item.city}}' />
+            <input name="city" type="text" placeholder="{{content.address_example}}" value='{{item.city}}' />
           </view>
           <view class="list">
             <!-- <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{item.state}}' /> -->
@@ -61,10 +61,10 @@
             </picker>
           </view>
           <view class="list">
-            <input name="Street" type="text" placeholder="{{content.street}}" value='{{item.street}}' />
+            <input name="street" type="text" placeholder="{{content.street}}" value='{{item.street}}' />
           </view>
           <view class="list">
-            <input name="Zip" type="text" placeholder="{{content.zip_code}}" value='{{item.zipcode}}' />
+            <input name="zipcode" type="text" placeholder="{{content.zip_code}}" value='{{item.zipcode}}' />
           </view>
           <view class="list">
             <input name="telephone" type="text" placeholder="{{content.phone}}" value='{{item.telephone}}' />

@@ -144,6 +144,12 @@ var English = {
   track_order: "Track your order",
   check_word1: "Congratulations. Your order is accpeted !",
   chekc_word2: "Your items are on the way and should arrive shortly.",
+  credit_card:"Card Number",
+  card_tips:"Please check the card number.",
+  yes:"Yes",
+  cancel:"Cancel",
+  credit_reference:"Card Reference Number",
+  card_reference_tips:"Please check the Reference number."
 }
 
 module.exports = {

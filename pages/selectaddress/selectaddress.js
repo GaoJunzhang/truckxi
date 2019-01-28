@@ -31,9 +31,33 @@ Page({
   selectAdd:function(e){
     let that = this
     that.setData({
-      selectId:e.currentTarget.dataset.addid
+      selectId:e.currentTarget.dataset.addid,
+      addstate:e.currentTarget.dataset.addstate
     })
   },
+  toPayment:function(){
+    let that = this
+    var abState = that.data.addstate
+    if (abState&&abState.length>2){
+      abState = abState.substring(1,3)
+      var adjusetObj = wx.getStorageSync("tips")
+      adjusetObj.location=abState
+      app.fetchApis(that, '/e/order/adjust-cart', adjusetObj, 'POST', function (res) {
+        console.log(res)
+        if (res.statusCode == 200) {
+          wx.navigateTo({
+            url: '../mycart/mycart?addid='+that.data.selectId,
+          })
+        }
+      })
+    
+    }else{
+      wx.showModal({
+        content: 'Please choose the address.',
+        showCancel: false
+      })
+    }
+  }
 })
 var getAddress = function(that){
   app.fetchApis(that, 'e/account/address', null, 'GET', function (res) {

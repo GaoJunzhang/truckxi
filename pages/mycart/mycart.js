@@ -80,15 +80,51 @@ Page({
   },
   checkout: function(e) {
     let that = this
-    let param = {
-
+    var obj = wx.getStorageSync("tips")
+    var applied_credit_amount = that.data.applied_credit_amount
+    var card_reference = that.data.card_reference
+    if (card_reference == null || card_reference==''){
+      wx.showModal({
+        content: that.data.content.card_reference_tips,
+        showCancel: false,
+        confirmText: that.data.content.yes
+      })
     }
-    app.fetchApis(that, 'e/order', param, 'POST', function (res) {
-        if(res.statusCode==200||res.statusCode==201){
+    if (applied_credit_amount) {
+
+      let param = {
+        total_price: that.data.total_price,
+        applied_credit_amount: applied_credit_amount,
+        billing_address_id: that.data.addid,
+        id: obj.id,
+        grand_total:that.data.total_price,
+        card_reference:''
+      }
+      app.fetchApis(that, 'e/order/', param, 'POST', function(res) {
+        if (res.statusCode == 200 || res.statusCode == 201) {
           wx.navigateTo({
             url: '../checkout/checkout',
           })
         }
+      })
+    }else{
+      wx.showModal({
+        content: that.data.content.card_tips,
+        showCancel:false,
+        confirmText:that.data.content.yes
+      })
+    }
+  },
+  inputCardNum: function(e) {
+    let that = this
+    that.setData({
+      applied_credit_amount: e.detail.value
+    })
+  },
+  inputReference: function(e) {
+    let that = this
+    that.setData({
+      card_reference: e.detail.value
     })
   }
 })

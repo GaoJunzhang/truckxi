@@ -2,7 +2,7 @@
   <view class="sc_li">
     <block wx:for="{{addresses}}" wx:key="*this">
       <view class='li'>
-        <view class="a" class="{{selectId==item.id?'ch_d1':'ch_d'}}" bindtap='selectAdd' data-addid='{{item.id}}'></view>
+        <view class="a" class="{{selectId==item.id?'ch_d1':'ch_d'}}" bindtap='selectAdd' data-addid='{{item.id}}' data-addstate='{{item.state}}'></view>
         <view class="cont_t">
           <view class="tt">{{item.name}}</view>
           <view class="tt">{{item.city}}</view>
@@ -23,9 +23,9 @@
     <label></label>
     {{content.add_new_address}}
   </navigator>
-  <navigator class="a" url='../mycart/mycart?addid={{selectId}}'>
+  <button class="a" bindtap='toPayment'>
     {{content.proceed_payment}}
     <label></label>
-  </navigator>
+  </button>
   <view class="clr"></view>
 </view>

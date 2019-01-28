@@ -1,13 +1,13 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/selectaddress/selectaddress",
     "pages/mycart2/mycart2",
     "pages/addaddress/addaddress",
     "pages/search/search",
     "pages/allcategory/allcategory",
     "pages/paymentoptions/paymentoptions",
     "pages/mycart/mycart",
-    "pages/selectaddress/selectaddress",
     "pages/editaddress/editaddress",
     "pages/editprofile/editprofile",
     "pages/faq/faq",
@@ -31,7 +31,7 @@
   "window":{
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Forgot",
+    "navigationBarTitleText": "Truckxi",
     "navigationBarTextStyle": "black"
   }
 }

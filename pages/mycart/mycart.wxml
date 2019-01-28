@@ -16,6 +16,12 @@
         </navigator>
       </view>
     </view>
+    <view class="inp_ent">
+      <input type="number" placeholder="{{content.credit_card}}" bindblur="inputCardNum"></input>
+    </view>
+    <view class="inp_ent">
+      <input type="number" placeholder="{{content.credit_reference}}" bindblur="inputReference"></input>
+    </view>
     <view class="go_li">
       <block wx:for="{{cart}}" wx:key="*this">
         <view class="li">
@@ -40,7 +46,7 @@
       </block>
     </view>
     <view class="inp_ent">
-      <input type="" placeholder="{{content.coupon_tips}}"></input>
+      <input type="text" placeholder="{{content.coupon_tips}}"></input>
       <view class='a'>{{content.apply_code}}</view>
     </view>
     <view class="payo_list w_p">

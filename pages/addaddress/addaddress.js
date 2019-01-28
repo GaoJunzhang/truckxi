@@ -49,7 +49,7 @@ Page({
     let that = this
     var addressObj = e.detail.value
     var State = that.data.array[that.data.index]
-    addressObj.State = State
+    addressObj.state = State
     if (addressObj.City == '') {
       wx.showModal({
         content: that.data.content.city_err,

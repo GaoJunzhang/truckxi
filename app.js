@@ -29,6 +29,8 @@ App({
       wx.showModal({
         title: '更新提示',
         content: '新版本已经准备好，是否重启应用？',
+        confirmText: that.data.content.yes,
+        cancelText: that.data.content.cancel,
         success: function(res) {
           if (res.confirm) {
             // 新的版本已经下载好，调用 applyUpdate 应用新版本并重启
@@ -42,7 +44,8 @@ App({
       wx.showModal({
         title: '更新提示',
         content: '新版本下载失败',
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes
       })
     })
     wx.onNetworkStatusChange(function(res) {
@@ -50,7 +53,8 @@ App({
       if (!res.isConnected) {
         wx.showModal({
           content: '请检查您的网络状态',
-          showCancel: false
+          showCancel: false,
+          confirmText: that.data.content.yes
         })
       }
     })
@@ -71,7 +75,8 @@ App({
     if (!self.globalData.isConnected) {
       wx.showModal({
         content: 'Please check your network status',
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes,
       })
       wx.stopPullDownRefresh();
       return
