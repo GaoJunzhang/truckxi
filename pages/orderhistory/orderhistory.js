@@ -12,9 +12,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this
     var lastLanuage = app.globalData.lanuage
     // this.getContent(lastLanuage)
-    app.getContent(this, lastLanuage)
+    app.getContent(that, lastLanuage)
+    getOrder(that)
   },
 
   /**
@@ -31,3 +33,9 @@ Page({
 
   }
 })
+
+var getOrder= function(that){
+  app.fetchApis(that, 'e/order/', null, 'GET', function (res) {
+    console.log(res)
+  })
+}

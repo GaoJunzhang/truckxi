@@ -42,11 +42,11 @@ Page({
       abState = abState.substring(1,3)
       var adjusetObj = wx.getStorageSync("tips")
       adjusetObj.location=abState
-      app.fetchApis(that, '/e/order/adjust-cart', adjusetObj, 'POST', function (res) {
+      app.fetchApis(that, 'e/order/adjust-cart', adjusetObj, 'POST', function (res) {
         console.log(res)
         if (res.statusCode == 200) {
           wx.navigateTo({
-            url: '../mycart/mycart?addid='+that.data.selectId,
+            url: '../mycart/mycart?addid=' + that.data.selectId + '&grand_total=' + res.data.grand_total,
           })
         }
       })

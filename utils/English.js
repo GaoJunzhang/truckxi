@@ -149,7 +149,14 @@ var English = {
   yes:"Yes",
   cancel:"Cancel",
   credit_reference:"Card Reference Number",
-  card_reference_tips:"Please check the Reference number."
+  card_reference_tips:"Please check the Reference number.",
+  pay_type_tips:"Please choose the mode of payment",
+  weichar_pay:"WeChat payment",
+  credit_card:"Credit Card",
+  pay_type:'Payment',
+  exp_month:"expiry month",
+  exp_year:"expiry year",
+  select_add: 'Please add the receiving address',
 }
 
 module.exports = {

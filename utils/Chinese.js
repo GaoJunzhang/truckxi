@@ -151,6 +151,13 @@ var Chinese = {
   cancel: "取消",
   credit_reference: "卡片参考号",
   card_reference_tips: "请检查卡片参考号",
+  pay_type_tips: "请选择支付方式",
+  weichar_pay: "微信支付",
+  credit_card: "信用卡",
+  pay_type: '支付方式',
+  exp_month: "有效期年",
+  exp_year: "有效期月",
+  select_add:'请添加收货地址',
 }
 
 module.exports = {

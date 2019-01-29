@@ -24,7 +24,8 @@ Page({
     })
     if (options.addid) {
       that.setData({
-        addid: options.addid
+        addid: options.addid,
+        total_price: options.grand_total
       })
     }
     getCart(that)
@@ -80,53 +81,90 @@ Page({
   },
   checkout: function(e) {
     let that = this
-    var obj = wx.getStorageSync("tips")
-    var applied_credit_amount = that.data.applied_credit_amount
-    var card_reference = that.data.card_reference
-    if (card_reference == null || card_reference==''){
+    if (that.data.addid == null || that.data.addid == '') {
       wx.showModal({
-        content: that.data.content.card_reference_tips,
+        content: that.data.content.select_add,
         showCancel: false,
         confirmText: that.data.content.yes
       })
+      return
     }
-    if (applied_credit_amount) {
-
-      let param = {
-        total_price: that.data.total_price,
-        applied_credit_amount: applied_credit_amount,
-        billing_address_id: that.data.addid,
-        id: obj.id,
-        grand_total:that.data.total_price,
-        card_reference:''
-      }
-      app.fetchApis(that, 'e/order/', param, 'POST', function(res) {
-        if (res.statusCode == 200 || res.statusCode == 201) {
+    wx.showModal({
+      title: that.data.content.pay_type,
+      content: that.data.content.pay_type_tips,
+      cancelText: that.data.content.weichar_pay,
+      confirmText: that.data.content.credit_card,
+      cancelColor: '#37a000',
+      confirmColor: 'black',
+      success(res) {
+        if (res.confirm) {
           wx.navigateTo({
-            url: '../checkout/checkout',
+            url: '../cardinfo/cardinfo',
+          })
+        } else if (res.cancel) {
+          app.fetchApis(that, 'e/order/micropay', {
+            amount: that.data.total_price,
+            sales_order_id: that.data.id
+          }, 'POST', function(res) {
+            console.log(res)
           })
         }
-      })
-    }else{
-      wx.showModal({
-        content: that.data.content.card_tips,
-        showCancel:false,
-        confirmText:that.data.content.yes
-      })
-    }
-  },
-  inputCardNum: function(e) {
-    let that = this
-    that.setData({
-      applied_credit_amount: e.detail.value
+      }
     })
+    // var obj = wx.getStorageSync("tips")
+    // var card_num = that.data.card_num
+    // var card_reference = that.data.card_reference
+    // if (card_reference == null || card_reference==''){
+    //   wx.showModal({
+    //     content: that.data.content.card_reference_tips,
+    //     showCancel: false,
+    //     confirmText: that.data.content.yes
+    //   })
+    //   return
+    // }
+    // if (card_num) {
+
+    //   let param = {
+    //     total_price: that.data.total_price,
+    //     card_num: card_num,
+    //     billing_address_id: that.data.addid,
+    //     id: obj.id,
+    //     grand_total:that.data.total_price,
+    //     card_reference: card_reference
+    //   }
+    //   let tparam = {
+    //     number: card_num,
+    //     exp_month: that.data.exp_month,
+    //     exp_year: that.data.exp_year,
+    //     cvc:that.data.cvc
+    //   }
+    //   app.fetchApis(that, 'e/order/', param, 'POST', function(res) {
+    //     if (res.statusCode == 200 || res.statusCode == 201) {
+    //       wx.navigateTo({
+    //         url: '../checkout/checkout',
+    //       })
+    //     }
+    //   })
+    // }else{
+    //   wx.showModal({
+    //     content: that.data.content.card_tips,
+    //     showCancel:false,
+    //     confirmText:that.data.content.yes
+    //   })
+    // }
   },
-  inputReference: function(e) {
-    let that = this
-    that.setData({
-      card_reference: e.detail.value
-    })
-  }
+  // inputCardNum: function(e) {
+  //   let that = this
+  //   that.setData({
+  //     card_num: e.detail.value
+  //   })
+  // },
+  // inputReference: function(e) {
+  //   let that = this
+  //   that.setData({
+  //     card_reference: e.detail.value
+  //   })
+  // }
 })
 var getCart = function(that) {
   app.fetchApis(that, 'e/order/cart', null, 'GET', function(res) {
@@ -151,10 +189,10 @@ var getAddress = function(that) {
         let addresses = res.data.addresses
         if (addresses.length > 0) {
 
-          var addid = addresses[0].id
-          var addCity = addresses[0].city
-          var addState = addresses[0].state
-          var addressName = addresses[0].name
+          var addid = ''
+          var addCity = ''
+          var addState = ''
+          var addressName = ''
           for (var i = 0; i < addresses.length; i++) {
             if (that.data.addid != null && that.data.addid != '') {
               if (addresses[i].id == that.data.addid) {

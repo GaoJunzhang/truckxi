@@ -1,6 +1,8 @@
 {
   "pages":[
+    "pages/orderhistory/orderhistory",
     "pages/home/home",
+    "pages/cardinfo/cardinfo",
     "pages/selectaddress/selectaddress",
     "pages/mycart2/mycart2",
     "pages/addaddress/addaddress",
@@ -18,7 +20,6 @@
     "pages/addnewcard/addnewcard",
     "pages/creditcard/creditcard",
     "pages/produce/produce",
-    "pages/orderhistory/orderhistory",
     "pages/orderfilter/orderfilter",
     "pages/filter/filter",
     "pages/detail/detail",
@@ -29,9 +30,9 @@
     "pages/login/login"
   ],
   "window":{
-    "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#37a000",
     "navigationBarTitleText": "Truckxi",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   }
 }

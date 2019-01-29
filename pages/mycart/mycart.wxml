@@ -16,12 +16,12 @@
         </navigator>
       </view>
     </view>
-    <view class="inp_ent">
+    <!-- <view class="inp_ent">
       <input type="number" placeholder="{{content.credit_card}}" bindblur="inputCardNum"></input>
     </view>
     <view class="inp_ent">
       <input type="number" placeholder="{{content.credit_reference}}" bindblur="inputReference"></input>
-    </view>
+    </view> -->
     <view class="go_li">
       <block wx:for="{{cart}}" wx:key="*this">
         <view class="li">
