@@ -106,7 +106,28 @@ Page({
             amount: that.data.total_price,
             sales_order_id: that.data.id
           }, 'POST', function(res) {
-            console.log(res)
+            wx.requestPayment({
+              timeStamp: obj.timeStamp,
+              nonceStr: obj.nonceStr,
+              package: obj.wechatPackage,
+              signType: obj.signType,
+              paySign: obj.paySign,
+              success(result) {
+                wx.showToast({
+                  title: '成功',
+                  icon: 'success',
+                  duration: 2000
+                })
+                wx.navigateTo({
+                  url: '../checkout/checkout',
+                })
+              },
+              fail: function() {
+                wx.showToast({
+                  title: '支付失败',
+                })
+              }
+            })
           })
         }
       }
