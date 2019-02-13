@@ -1,7 +1,7 @@
 <view class="content">
   <view class="oh">
     <view class="li">
-      <view class='a' href="javasrcipt: void(0);">
+      <view class='a'>
         <view class="top">
           <view>{{content.order_no}} 1244676745</view>
           <view class="ts">06:15 PM 29 Sep 2018 </view>
@@ -23,7 +23,7 @@
   </view>
   <view class="oh">
     <view class="li">
-      <view class='a' href="javasrcipt: void(0);">
+      <view class='a'>
         <view class="top">
           <view>{{content.order_no}} 1244676745</view>
           <view class="ts">06:15 PM 29 Sep 2018 </view>
@@ -43,7 +43,7 @@
       </view>
     </view>
     <view class="li">
-      <view class='a' href="javasrcipt: void(0);">
+      <view class='a'>
         <view class="top">
           <view>{{content.order_no}} 1244676745</view>
           <view class="ts">06:15 PM 29 Sep 2018 </view>
@@ -63,7 +63,7 @@
       </view>
     </view>
     <view class="li">
-      <view class='a' href="javasrcipt: void(0);">
+      <view class='a'>
         <view class="top">
           <view>{{content.order_no}} 1244676745</view>
           <view class="ts">06:15 PM 29 Sep 2018 </view>
@@ -83,7 +83,7 @@
       </view>
     </view>
     <view class="li">
-      <view class='a' href="javasrcipt: void(0);">
+      <view class='a'>
         <view class="top">
           <view>{{content.order_no}} 1244676745</view>
           <view class="ts">06:15 PM 29 Sep 2018 </view>
