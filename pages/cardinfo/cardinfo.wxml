@@ -7,8 +7,8 @@
           <input name="number" type="text" placeholder="1234-1234-1234-1234"></input>
         </view>
         <view class="list">
-          <input name="exp_year" type="text" placeholder="{{content.exp_year}} (MM)" class="one"></input>
-          <input name="exp_month" type="text" placeholder="{{content.exp_month}} (YY)" class="one"></input>
+          <input name="exp_year" type="text" placeholder="{{content.exp_year}} (YY)" class="one"></input>
+          <input name="exp_month" type="text" placeholder="{{content.exp_month}} (MM)" class="one"></input>
           <input name="cvv" type="text" placeholder="cvv" class="two"></input>
           <view class="clr"></view>
         </view>

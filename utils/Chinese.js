@@ -155,8 +155,8 @@ var Chinese = {
   weichar_pay: "微信支付",
   credit_card: "信用卡",
   pay_type: '支付方式',
-  exp_month: "有效期年",
-  exp_year: "有效期月",
+  exp_month: "有效期月",
+  exp_year: "有效期年",
   select_add:'请添加收货地址',
 }
 

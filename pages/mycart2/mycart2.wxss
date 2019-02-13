@@ -201,7 +201,7 @@ page {
 }
 
 .inp_ent input {
-  width: 100%;
+  width: calc(100% - 85px);
   height: 36px;
   padding: 0 100px 0 0;
   line-height: 36px;

@@ -8,8 +8,8 @@ Page({
     tip_percentage: 0,
     delivery_method: 0,
     total_price: 0,
-    deliveryname:'DELIVERY',
-    tipspname:'5',
+    deliveryname: 'DELIVERY',
+    tipspname: '5',
     delivers: [{
         name: 'DELIVERY'
       },
@@ -109,7 +109,7 @@ Page({
     var tipsp = that.data.tipsp
     check_price = (parseFloat(tipsp[tip_percentage].value) + that.data.total_price).toFixed(2)
     var tipsname = e.currentTarget.dataset.tipspname
-    if (tip_percentage==3){
+    if (tip_percentage == 3) {
       tipsname = 0
     }
     that.setData({
@@ -124,10 +124,24 @@ Page({
       coupon: e.detail.value
     })
   },
+  applyPromo: function(e) {
+    let that = this
+    app.fetchApis(that, 'e/order/apply-promo', {
+      promo_code: that.data.coupon,
+      total_price: that.data.total_price
+    }, 'GET', function(res) {
+      wx.showModal({
+        content: res.data.message,
+      })
+      that.setData({
+        promo_code: res.data.discount_amount
+      })
+    })
+  },
   toCheckOut: function(e) {
     let that = this
     let param = {
-      promo_code: that.data.coupon,
+      promo_code: that.data.promo_code,
       delivery_method: that.data.deliveryname,
       tip_percentage: that.data.tipspname,
       id: that.data.id,
@@ -156,7 +170,7 @@ var getCart = function(that) {
           v.value = parseFloat(v.percent * res.data.total_price).toFixed(2)
         }
       })
-      var check_price = parseFloat(res.data.total_price * (1 + parseFloat(that.data.tipspname)/100)).toFixed(2)
+      var check_price = parseFloat(res.data.total_price * (1 + parseFloat(that.data.tipspname) / 100)).toFixed(2)
       that.setData({
         tipsp: tipsp,
         cart: res.data.cart,

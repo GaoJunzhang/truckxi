@@ -99,13 +99,14 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.navigateTo({
-            url: '../cardinfo/cardinfo',
+            url: '../cardinfo/cardinfo?addid='+that.data.addid,
           })
         } else if (res.cancel) {
           app.fetchApis(that, 'e/order/micropay', {
             amount: that.data.total_price,
             sales_order_id: that.data.id
           }, 'POST', function(res) {
+            var obj = JSON.parse(res.data)
             wx.requestPayment({
               timeStamp: obj.timeStamp,
               nonceStr: obj.nonceStr,

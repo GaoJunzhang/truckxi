@@ -52,8 +52,8 @@
       </block>
     </view>
     <view class="inp_ent">
-      <input type="text" placeholder="{{content.coupon_tips}}" bindblur="inputCoupon"></input>
-      <view class='a'>{{content.apply_code}}</view>
+      <input type="text" placeholder="{{content.coupon_tips}}" bindblur='inputCoupon'></input>
+      <view class='a' bindtap='applyPromo'>{{content.apply_code}}</view>
     </view>
     <view class="payo_list w_p">
       <view class="li">
