@@ -35,7 +35,7 @@ Page({
 })
 
 var getOrder= function(that){
-  app.fetchApis(that, 'e/order/', null, 'GET', function (res) {
+  app.fetchApis(that, 'e/order/history', null, 'GET', function (res) {
     console.log(res)
   })
 }
