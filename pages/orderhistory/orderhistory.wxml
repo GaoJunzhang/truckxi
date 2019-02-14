@@ -1,5 +1,5 @@
 <view class="content">
-  <view class="oh" wx:for="{{orders}}" wx:key="*this">
+  <view class="oh" wx:for="{{orders}}" wx:key="*this" bindtap='orderDetail' data-id='{{item.id}}'>
     <view class="li">
       <view class='a'>
         <view class="top">
