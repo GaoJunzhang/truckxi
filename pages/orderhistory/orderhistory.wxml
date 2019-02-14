@@ -1,11 +1,11 @@
 <view class="content">
-  <view class="oh">
+  <view class="oh" wx:for="{{orders}}" wx:key="*this">
     <view class="li">
       <view class='a'>
         <view class="top">
-          <view>{{content.order_no}} 1244676745</view>
-          <view class="ts">06:15 PM 29 Sep 2018 </view>
-          <view class="pri">$9.99</view>
+          <view>{{content.order_no}} {{item.order_num}}</view>
+          <view class="ts">{{item.post_datetime}} </view>
+          <view class="pri">${{item.grand_total}}</view>
         </view>
         <view class="bottom">
           <view class="img">
@@ -13,7 +13,7 @@
           </view>
           <view class="tx_c">
             <view class="ti">{{content.order_success}}</view>
-            <view class="p">$9.99</view>
+            <view class="p">${{item.grand_total}}</view>
             <view class="btn">{{content.repeat}}</view>
           </view>
           <view class="clr"></view>
@@ -21,7 +21,7 @@
       </view>
     </view>
   </view>
-  <view class="oh">
+  <!-- <view class="oh">
     <view class="li">
       <view class='a'>
         <view class="top">
@@ -102,5 +102,5 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
 </view>

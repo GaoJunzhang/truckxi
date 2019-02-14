@@ -37,5 +37,8 @@ Page({
 var getOrder= function(that){
   app.fetchApis(that, 'e/order/history', null, 'GET', function (res) {
     console.log(res)
+    that.setData({
+      orders:res.data
+    })
   })
 }
