@@ -1,3 +1,4 @@
+<scroll-view class="layout" bindscroll='layoutScroll' scroll-y="true" style="height: {{windowHeight}}px;">
 <view class="content">
   <view class="banner">
     <!-- <view>
@@ -19,7 +20,7 @@
       </view>
     </view>
   </view>
-  <view class="category">
+  <view class="category {{navFixed? 'positionFixed':''}}">
     <navigator url='../produce/produce?pk={{item.ProductCategory2_id}}' class='category_li' wx:for="{{categorys}}" wx:key="*this">
       <view>
         <image src='{{item.Image}}' mode='widthFix'></image>
@@ -47,7 +48,7 @@
           <view class='goods_infeed_li'>
             <navigator url='../detail/detail?pk={{itemp.Product_id}}'>
               <view class="img_g">
-                <image src='{{itemp.Thumbnail}}' style='width:368rpx;height:368rpx'></image>
+                <image src='{{itemp.Thumbnail}}' style='width:220rpx;'></image>
               </view>
               <view class="txt_g">
                 <text>{{content.login=='Login'?itemp.Name:itemp.Description}}</text>
@@ -154,3 +155,4 @@
   </view>
   <view style='height:100%;width:100%;' bindtap='hideChoose'></view>
 </view>
+</scroll-view>

@@ -30,14 +30,22 @@ Page({
     // ],
     grateGoods: [{}],
     categorys: [],
+    navFixed: false,  //导航是否固定
+    scrollTop: '',    //滑动的距离
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    var sysInfo = wx.getStorageSync("systemInfo")
     var lastLanuage = app.globalData.lanuage
     let that = this
+    that.setData({
+      pixelRatio: sysInfo.pixelRatio,
+      windowHeight: sysInfo.windowHeight,
+      windowWidth: sysInfo.windowWidth
+    })
     app.getContent(that, lastLanuage)
     getProduct(that, null)
     getCategory(that, null)
@@ -176,7 +184,36 @@ Page({
       url: '../produce/produce?pk=' + cId,
     })
   },
+  //监听滑动
+  layoutScroll: function(e) {
+    let that = this
+    that.data.scrollTop = that.data.scrollTop * 1 + e.detail.deltaY * 1;
+    console.log(that.data.scrollTop)
+    console.log(that.data.navFixed)
+    // const query = wx.createSelectorQuery();
+    // query.select('.nav').boundingClientRect();
+    // query.selectViewport().scrollOffset();
+    // query.exec(function (res) {
 
+
+    // });
+
+    /** 我这里写了固定值 如果使用rpx 可用query可以动态获取其他的高度 然后修改这里值 */
+    /** 获取方法参考文档 */
+
+    /** scrollTop 在模拟器上检测不是太灵敏 可在真机上测试 基本上不会出现延迟问题 */
+    var navtopHeight = 192;
+
+    if (that.data.scrollTop <= -navtopHeight) {
+      that.setData({
+        navFixed: true
+      })
+    } else {
+      that.setData({
+        navFixed: false
+      })
+    }
+  },
 })
 var getProduct = function(that, param) {
   wx.request({
@@ -279,8 +316,8 @@ var billbord = function(that) {
     }
   })
 }
-var getAccount = function(that){
-  app.fetchApis(that, 'e/account/', {}, 'GET', function (res) {
+var getAccount = function(that) {
+  app.fetchApis(that, 'e/account/', {}, 'GET', function(res) {
     that.setData({
       showLeft: false,
       username: res.data.first_name + " " + res.data.last_name
