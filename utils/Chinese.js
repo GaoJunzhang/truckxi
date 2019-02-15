@@ -74,7 +74,7 @@ var Chinese = {
   products: "产品",
   //detail
   add_to_cart: "加入购物车",
-  add_and_checkout: "立刻购买",
+  add_and_checkout: "加入并结算",
   //orderhistory
   order_no: "订单号",
   order_success: "订单成功",
@@ -158,6 +158,7 @@ var Chinese = {
   exp_month: "有效期月",
   exp_year: "有效期年",
   select_add:'请添加收货地址',
+  add_cart_success:"已加入购物车",
 }
 
 module.exports = {

@@ -39,7 +39,7 @@
       <view class='a gre' bindtap='addCar'>
         {{content.add_to_cart}}
       </view>
-      <view class='a gra'>
+      <view class='a gra' bindtap='toCheckout'>
         {{content.add_and_checkout}}
       </view>
     </view>

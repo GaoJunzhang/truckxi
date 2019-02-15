@@ -7,7 +7,7 @@
       <swiper style='height:225px' autoplay="{{autoplay}}" indicator-dots="true" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
         <block wx:for="{{billbords}}" wx:key="*this">
           <swiper-item>
-            <image style='width:100%' src='{{item.image}}' mode='widthFix'></image>
+            <image  src='{{item.image}}' mode='widthFix'></image>
           </swiper-item>
         </block>
       </swiper>
@@ -48,7 +48,7 @@
             <view class='goods_infeed_li'>
               <navigator url='../detail/detail?pk={{itemp.Product_id}}'>
                 <view class="img_g">
-                  <image src='{{itemp.Thumbnail}}' style='width:220rpx;'></image>
+                  <image src='{{itemp.Thumbnail}}' mode='widthFix'></image>
                 </view>
                 <view class="txt_g">
                   <text>{{content.login=='Login'?itemp.Name:itemp.Description}}</text>

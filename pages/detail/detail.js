@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    pcount: 1
+    pcount: 1,
+    addFlag: false
   },
 
   /**
@@ -19,7 +20,7 @@ Page({
     console.log("options")
     console.log(options)
     that.setData({
-      pk:options.pk
+      pk: options.pk
     })
     wx.request({
       url: app.globalData.API_URL + 'e/product/' + options.pk,
@@ -63,42 +64,40 @@ Page({
     }
   },
   addCar: function(e) {
-    // wx.request({
-    //   url: app.globalData.API_URL + 'e/order/cart',
-    //   method:'POST',
-    //   success: function(res) {
-    //     if (res.statusCode == 200) {
-    //      //调整到购物车
-    //     } else {
-    //       wx.showModal({
-    //         content: '服务器异常，请稍后再试',
-    //         showCancel: false
-    //       })
-    //     }
-    //   }
-    // })
     let that = this
-    app.fetchApis(that, 'e/order/cart', { product_id: that.data.pk, quantity: that.data.pcount}, 'POST', function(res) {
+    app.fetchApis(that, 'e/order/cart', {
+      product_id: that.data.pk,
+      quantity: that.data.pcount
+    }, 'POST', function(res) {
       console.log(res)
-      if(res.statusCode==200){
-        wx.showModal({
-          content: '加入购物车成功',
-          confirmText:"去结算",
-          cancelText:"再逛逛",
-          success(res){
-            if (res.confirm) {
-              wx.navigateTo({
-                url: '../mycart2/mycart2',
-              })
-            } else if (res.cancel) {
-              console.log('用户点击取消')
-            }
-          }
+      if (res.statusCode == 200) {
+        wx.showToast({
+          title: that.data.content.add_cart_success,
+        })
+        that.setData({
+          addFlag: true
         })
       }
     })
-    // app.fetchApis(that, 'e/order/cart', null, 'GET', function (res) {
-    //   console.log(res)
-    // })
+  },
+  toCheckout: function(e) {
+    let that = this
+    if (that.data.addFlag) {
+      wx.navigateTo({
+        url: '../mycart2/mycart2',
+      })
+    } else {
+      app.fetchApis(that, 'e/order/cart', {
+        product_id: that.data.pk,
+        quantity: that.data.pcount
+      }, 'POST', function(res) {
+        console.log(res)
+        if (res.statusCode == 200) {
+          wx.navigateTo({
+            url: '../mycart2/mycart2',
+          })
+        }
+      })
+    }
   }
 })
