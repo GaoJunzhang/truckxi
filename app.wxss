@@ -98,6 +98,52 @@ input::-ms-input-placeholder {
   width: 100%;
 }
 
-.h4{
-  font-weight: bold
+.h4 {
+  font-weight: bold;
+}
+
+.lef_btn {
+  width: 30px;
+  height: 170px;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  bottom: 50px;
+  background: #3cae01;
+  border-radius: 0 5px 5px 0;
+}
+
+.lef_btn navigator {
+  width: 30px;
+  height: 30px;
+  display: block;
+  text-align: center;
+}
+
+.lef_btn navigator.on {
+  border-bottom: 1px solid #fff;
+  padding: 9px 7px;
+}
+
+.lef_btn navigator.tw {
+  border-bottom: 1px solid #fff;
+  padding: 4px 8px;
+}
+
+.lef_btn navigator.th {
+  border-bottom: 1px solid #fff;
+  padding: 7px;
+}
+
+.lef_btn navigator.fo {
+  padding: 7px;
+}
+
+.lef_btn navigator image {
+  width: 16px;
+  display: block;
+}
+
+.lef_btn navigator.tw image {
+  width: 14px;
 }
