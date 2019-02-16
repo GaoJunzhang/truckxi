@@ -125,8 +125,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    API_URL: 'https://stage-scm.truckxi.com:443/api/',
-    IMG_URL: 'http://bluablua.com/',
+    API_URL: 'https://stage-scm.truckxi.com/api/',
+    IMG_URL: 'https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/',
     carts: [],
     coupons: [],
     maps: [],

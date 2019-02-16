@@ -9,7 +9,7 @@
         </view>
         <view class="bottom">
           <view class="img">
-            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_002.jpg' mode='widthFix'></image>
           </view>
           <view class="tx_c">
             <view class="ti">{{content.order_success}}</view>
@@ -31,7 +31,7 @@
         </view>
         <view class="bottom">
           <view class="img">
-            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_002.jpg' mode='widthFix'></image>
           </view>
           <view class="tx_c">
             <view class="ti">{{content.order_success}}</view>
@@ -51,7 +51,7 @@
         </view>
         <view class="bottom">
           <view class="img">
-            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_002.jpg' mode='widthFix'></image>
           </view>
           <view class="tx_c">
             <view class="ti">{{content.order_success}}</view>
@@ -71,7 +71,7 @@
         </view>
         <view class="bottom">
           <view class="img">
-            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_002.jpg' mode='widthFix'></image>
           </view>
           <view class="tx_c">
             <view class="ti">{{content.order_success}}</view>
@@ -91,7 +91,7 @@
         </view>
         <view class="bottom">
           <view class="img">
-            <image src='http://bluablua.com/img_p_002.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_002.jpg' mode='widthFix'></image>
           </view>
           <view class="tx_c">
             <view class="ti">{{content.order_success}}</view>

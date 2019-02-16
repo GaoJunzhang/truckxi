@@ -21,7 +21,7 @@
   position: absolute;
   top: 2px;
   right: 12px;
-  background: url(http://bluablua.com/icon_arrowdown.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_arrowdown.png) center center no-repeat;
 }
 
 .filter .blo .iu {
@@ -31,7 +31,7 @@
   position: absolute;
   top: 2px;
   right: 12px;
-  background: url(http://bluablua.com/icon_arrowup.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_arrowup.png) center center no-repeat;
 }
 
 .filter .list {
@@ -102,7 +102,7 @@
   display: inline-block;
   width: 14px;
   height: 16px;
-  background: url(http://bluablua.com/icon_reset.png);
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_reset.png);
   position: relative;
   top: 2px;
 }
@@ -126,7 +126,7 @@
   display: inline-block;
   width: 18px;
   height: 13px;
-  background: url(http://bluablua.com/icon_apply.png);
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_apply.png);
   position: relative;
   top: 2px;
 }

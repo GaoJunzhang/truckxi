@@ -6,8 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    dimg: "http://bluablua.com/icon_g_arrowd.png",
-    uimg: "http://bluablua.com/icon_g_arrowu.png",
+    dimg: "https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_g_arrowd.png",
+    uimg: "https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_g_arrowu.png",
     isDown: false
   },
 

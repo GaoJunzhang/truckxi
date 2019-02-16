@@ -22,10 +22,10 @@ Page({
     nextMargin: 0,
 
     // billbords: [{
-    //     image: 'http://bluablua.com/banner_01.jpg',
+    //     image: 'https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_01.jpg',
     //   },
     //   {
-    //     image: 'http://bluablua.com/banner_01.jpg',
+    //     image: 'https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_01.jpg',
     //   },
     // ],
     grateGoods: [{}],

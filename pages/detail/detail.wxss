@@ -38,7 +38,7 @@
 .detail .p_t .rig .reduce {
   width: 32px;
   height: 32px;
-  background: url(http://bluablua.com/icon_reduce.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_reduce.png) center center no-repeat;
   display: inline-block;
 }
 
@@ -55,7 +55,7 @@
 .detail .p_t .rig .add {
   width: 32px;
   height: 32px;
-  background: url(http://bluablua.com/icon_add.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_add.png) center center no-repeat;
   display: inline-block;
 }
 

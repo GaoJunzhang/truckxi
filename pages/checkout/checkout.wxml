@@ -1,7 +1,7 @@
 <view class="content">
     <view class="ck">
          <view class="i">
-            <image src='http://bluablua.com/icon_success.png' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_success.png' mode='widthFix'></image>
          </view>
          <view class="c">{{content.check_word1}}</view>
          <view class="y">{{content.chekc_word2}}</view>

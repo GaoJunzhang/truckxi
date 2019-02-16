@@ -1,7 +1,7 @@
 <view class="content">
   <view class="banner">
     <view class="ban">
-      <image src='http://bluablua.com/banner_02.jpg' mode='widthFix'></image>
+      <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_02.jpg' mode='widthFix'></image>
       <view class="tx_pro">The Best Produce in our ecityfresh</view>
     </view>
   </view>
@@ -13,10 +13,10 @@
   <view class="gd_h">
     <view class="tit sm">{{content.total}} {{prodeces.length}} {{content.products}}
       <navigator class="more1" url='../filter/filter'>
-        <image src='http://bluablua.com/icon_chooese.jpg' mode='widthFix' class='choose'></image>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_chooese.jpg' mode='widthFix' class='choose'></image>
       </navigator>
       <navigator class="more" url='../allcategory/allcategory'>
-        <image src='http://bluablua.com/icon_list_m.png' mode='widthFix'></image>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_list_m.png' mode='widthFix'></image>
       </navigator>
     </view>
     <view class="good_p">

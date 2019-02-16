@@ -2,14 +2,14 @@
   <view class="edit_pro">
     <navigator class="img_head" url='../editprofile/editprofile'>
       <view class='a'>
-        <image src='http://bluablua.com/icon_head_default.png' mode='widthFix'></image>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_head_default.png' mode='widthFix'></image>
       </view>
       <view class="fn">
         <label>{{content.fullname}}</label>
         <input type="text" placeholder="{{username}}" disabled/>
       </view>
       <view class="hook">
-        <image src='http://bluablua.com/icon_pro_hook.png' mode='widthFix' style='width:36rpx'></image>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_pro_hook.png' mode='widthFix' style='width:36rpx'></image>
       </view>
       <view class="clr"></view>
       <view class="down">
@@ -25,7 +25,7 @@
             <label>{{content.payment_cards}}</label>
             <view class='span'>{{content.payment_tips}}</view>
             <view class="irr">
-              <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
+              <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
           </navigator>
         </view>
@@ -34,7 +34,7 @@
             <label>{{content.address}}</label>
             <view class='span'>{{content.address_tips}}</view>
             <view class="irr">
-              <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
+              <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
           </navigator>
         </view>
@@ -43,7 +43,7 @@
             <label>{{content.phone}}</label>
             <view class='span'>9968xxxxx99</view>
             <view class="irr">
-              <image src='http://bluablua.com/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
+              <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_rightreturn.png' mode='widthFix' style='width:26rpx'></image>
             </view>
           </navigator>
         </view>

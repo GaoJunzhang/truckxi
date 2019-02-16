@@ -2,7 +2,7 @@
   <view class="content_fp" style="">
     <view class="title">
       <view class="leftarrow" bindtap='backlogin'>
-        <image mode='widthFix' src='http://bluablua.com/icon_return.png' style='width:52rpx;'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_return.png' style='width:52rpx;'></image>
       </view>
       {{content.fpwd}}?
     </view>
@@ -10,7 +10,7 @@
       <view class="t">{{content.tips}}</view>
       <view class="inp_reg">
         <view class="lef">
-          <image mode='widthFix' src='http://bluablua.com/icon_email.png'></image>
+          <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_email.png'></image>
         </view>
         <view class="rig">
           <label>{{content.email}}</label>
@@ -38,13 +38,13 @@
   <view class="content_ca" style="display: none;">
     <view class="title">
       <view class="leftarrow">
-        <image mode='widthFix' src='http://bluablua.com/icon_return.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_return.png'></image>
       </view>
       Create Account
     </view>
     <view class="inp_reg">
       <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_user.png'></image>
       </view>
       <view class="rig">
         <label>FULL NAME</label>
@@ -54,7 +54,7 @@
     </view>
     <view class="inp_reg">
       <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_user.png'></image>
       </view>
       <view class="rig">
         <label>USER NAME</label>
@@ -64,7 +64,7 @@
     </view>
     <view class="inp_reg">
       <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_email.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_email.png'></image>
       </view>
       <view class="rig">
         <label>EMAIL</label>
@@ -74,7 +74,7 @@
     </view>
     <view class="inp_reg">
       <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_password.png'></image>
       </view>
       <view class="rig">
         <label>PASSWORD</label>
@@ -98,11 +98,11 @@
   </view>
   <view class="content_log" style="display: none;">
     <view class="logo">
-      <img src="http://bluablua.com/logo.png" />
+      <img src="https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/logo.png" />
     </view>
     <view class="inp_reg">
       <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_user.png'></image>
       </view>
       <view class="rig">
         <label>USER NAME</label>
@@ -112,7 +112,7 @@
     </view>
     <view class="inp_reg">
       <view class="lef">
-        <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
+        <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_password.png'></image>
       </view>
       <view class="rig">
         <label>PASSWORD</label>

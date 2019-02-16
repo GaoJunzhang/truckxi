@@ -12,7 +12,7 @@
       </view>
       <view class="r_a">
         <view  class="det">
-          <image src='http://bluablua.com/icon_delete.png' mode='widthFix'></image>
+          <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_delete.png' mode='widthFix'></image>
         </view>
         <view  class="pn">Pay Now</view>
       </view>
@@ -30,7 +30,7 @@
       </view>
       <view class="r_a">
         <view  class="det">
-          <image src='http://bluablua.com/icon_delete.png' mode='widthFix'></image>
+          <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_delete.png' mode='widthFix'></image>
         </view>
         <view  class="pn">Pay Now</view>
       </view>

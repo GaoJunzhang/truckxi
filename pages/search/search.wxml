@@ -38,7 +38,7 @@
       <view class="li">
         <view class='a'>
           <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_001.jpg' mode='widthFix'></image>
           </view>
           <view class="txt_g">
             <view class='span'>Grape Kyoho</view>
@@ -55,7 +55,7 @@
       <view class="li">
         <view class='a'>
           <view class="img_g">
-            <image src='http://bluablua.com/img_p_001.jpg' mode='widthFix'></image>
+            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_001.jpg' mode='widthFix'></image>
           </view>
           <view class="txt_g">
             <view class='span'>Grape Kyoho</view>

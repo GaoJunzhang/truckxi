@@ -147,7 +147,7 @@
   position: absolute;
   left: -7px;
   top: 15px;
-  background: url(http://bluablua.com/icon_tips_f.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_tips_f.png) no-repeat;
 }
 
 .content .gd_s .tit, .content .gd_h .tit {

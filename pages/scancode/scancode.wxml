@@ -7,7 +7,7 @@
       and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
     </view>
     <view class="qr_code">
-      <image src='http://bluablua.com/icon_qr_code.jpg'></image>
+      <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_qr_code.jpg'></image>
     </view>
   </view>
 </view>

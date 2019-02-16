@@ -10,7 +10,7 @@ page {
   padding: 12px 0 0 40px;
   height: 40px;
   margin: 0 20px 0 0;
-  background: url(http://bluablua.com/icon_white_ch.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_white_ch.png) no-repeat;
   display: block;
   float: left;
   position: relative;
@@ -23,7 +23,7 @@ page {
   display: block;
   float: left;
   position: relative;
-  background: url(http://bluablua.com/icon_green_ch.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_green_ch.png) no-repeat;
   color: #3aa900;
 }
 
@@ -172,7 +172,7 @@ page {
 .search .go_li .li .rig .reduce {
   width: 21px;
   height: 21px;
-  background: url(http://bluablua.com/icon_reduce.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_reduce.png) center center no-repeat;
   display: inline-block;
   background-size: 100%;
 }
@@ -190,7 +190,7 @@ page {
 .search .go_li .li .rig .add {
   width: 21px;
   height: 21px;
-  background: url(http://bluablua.com/icon_add.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_add.png) center center no-repeat;
   display: inline-block;
   background-size: 100%;
 }
@@ -277,7 +277,7 @@ page {
   float: left;
   width: 23px;
   height: 17px;
-  background: url(http://bluablua.com/icon_card.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_card.png) no-repeat;
   margin: 15px 5px 15px 0;
 }
 
@@ -286,7 +286,7 @@ page {
   float: left;
   width: 23px;
   height: 17px;
-  background: url(http://bluablua.com/icon_net_b.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_net_b.png) no-repeat;
   margin: 15px 5px 15px 0;
 }
 
@@ -295,7 +295,7 @@ page {
   float: left;
   width: 23px;
   height: 18px;
-  background: url(http://bluablua.com/icon_pod.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_pod.png) no-repeat;
   margin: 14px 5px 15px 0;
 } */
 
@@ -366,7 +366,7 @@ page {
   display: inline-block;
   width: 18px;
   height: 13px;
-  background: url(http://bluablua.com/icon_apply.png);
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_apply.png);
   position: relative;
   top: 2px;
 }

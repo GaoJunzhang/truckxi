@@ -1,5 +1,5 @@
 page {
-  background: url(http://bluablua.com/bg_reg.jpg) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/bg_reg.jpg) center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -30,7 +30,7 @@ page {
 
 .register .content_log .inp_reg {
   padding: 20px 0;
-  background: url(http://bluablua.com/line_reg.png) center bottom no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/line_reg.png) center bottom no-repeat;
   background-size: 100%;
   position: relative;
 }
@@ -114,7 +114,7 @@ page {
   width: calc(100% - 30px);
   margin: 0 15px;
   padding: 20px 0;
-  background: url(http://bluablua.com/line_reg.png) center bottom no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/line_reg.png) center bottom no-repeat;
   background-size: 100%;
   position: relative;
 }
@@ -224,7 +224,7 @@ page {
 .register .content_fp .cot .inp_reg {
   padding: 20px 0;
   margin: 20px 0 0;
-  background: url(http://bluablua.com/line_reg.png) center bottom no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/line_reg.png) center bottom no-repeat;
   background-size: 100%;
   position: relative;
 }

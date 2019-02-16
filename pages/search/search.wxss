@@ -114,5 +114,5 @@ page {
   position: absolute;
   right: -7px;
   top: 15px;
-  background: url(http://bluablua.com/icon_tips.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_tips.png) no-repeat;
 }

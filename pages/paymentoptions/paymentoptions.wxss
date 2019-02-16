@@ -47,7 +47,7 @@ page {
   float: left;
   width: 23px;
   height: 17px;
-  background: url(http://bluablua.com/icon_card.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_card.png) no-repeat;
   margin: 15px 5px 15px 0;
 }
 
@@ -56,7 +56,7 @@ page {
   float: left;
   width: 23px;
   height: 17px;
-  background: url(http://bluablua.com/icon_net_b.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_net_b.png) no-repeat;
   margin: 15px 5px 15px 0;
 }
 
@@ -65,6 +65,6 @@ page {
   float: left;
   width: 23px;
   height: 18px;
-  background: url(http://bluablua.com/icon_pod.png) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_pod.png) no-repeat;
   margin: 14px 5px 15px 0;
 }

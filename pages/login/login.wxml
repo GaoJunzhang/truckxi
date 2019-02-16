@@ -2,11 +2,11 @@
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="content_log">
       <view class="logo">
-        <image src='http://bluablua.com/logo.png' mode='widthFix'></image>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/logo.png' mode='widthFix'></image>
       </view>
       <view class="inp_reg">
         <view class="lef">
-          <image mode='widthFix' src='http://bluablua.com/icon_user.png'></image>
+          <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_user.png'></image>
         </view>
         <view class="rig">
           <label>{{content.account}}</label>
@@ -16,7 +16,7 @@
       </view>
       <view class="inp_reg">
         <view class="lef">
-          <image mode='widthFix' src='http://bluablua.com/icon_password.png'></image>
+          <image mode='widthFix' src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_password.png'></image>
         </view>
         <view class="rig">
           <label>{{content.password}}</label>

@@ -63,7 +63,7 @@ page {
 
 .edit_pro .pro_cot .list .i {
   display: block;
-  background: url(http://bluablua.com/icon_arrowdown.png) center center no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_arrowdown.png) center center no-repeat;
   width: 14px;
   height: 12px;
   position: absolute;
