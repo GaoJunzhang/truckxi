@@ -116,3 +116,60 @@ page {
   top: 15px;
   background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_tips.png) no-repeat;
 }
+
+.Search_btn {
+  display: inline-block;
+  width: 130rpx;
+  height: 58rpx;
+  font-size: 30rpx;
+  color: #393939;
+  /* margin-top: 18rpx; */
+  vertical-align: middle;
+  line-height: 58rpx;
+  text-align: center;
+}
+.search_by {
+  width: calc(100% - 24px);
+  margin: 25px 12px;
+}
+
+.search_by .tx_s {
+  margin: 10px 0;
+  display: block;
+}
+
+.search_by .inp {
+  display: flex;
+}
+
+.search_by input.s {
+  flex: 1;
+  border: 1px solid #bcbcbc;
+  font-size: 12px;
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  width: 100%;
+  border-radius: 32px;
+  padding: 0 24px 0 12px;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_search.png) center right no-repeat;
+}
+
+
+.search_by input:last-child {
+  margin: 0;
+}
+
+.search_by .inp_r {
+  display: flex;
+}
+
+.search_by .inp_r .fle {
+  flex: 1;
+}
+
+.search_by .inp_r .fle input {
+  margin: 0 2px 0 0;
+  position: relative;
+  top: 2px;
+}

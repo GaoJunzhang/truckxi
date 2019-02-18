@@ -163,7 +163,7 @@
   <navigator class="tw" url='../addaddress/addaddress'>
     <image src="../../images/icon_address.png" mode='widthFix'></image>
   </navigator>
-  <navigator class="th">
+  <navigator class="th" url='../search/search'>
     <image src="../../images/icon_search_01.png" mode='widthFix'></image>
   </navigator>
   <navigator class="fo" url='../mycart2/mycart2'>

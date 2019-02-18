@@ -1,8 +1,9 @@
 <view class="content">
-  <view class='nav bg-white' style='height:{{navH}}px'>
-    <view class='nav-title'>
-      搜索
-      <!-- <image src='../../images/back.png' mode='aspectFit' class='back' bindtap='navBack'></image> -->
+  <view class="search_by">
+    <view class="tx_s">{{content.searchby}}</view>
+    <view class="inp">
+      <input type="text" placeholder="{{content.searchby_tips}}" class="s" bindinput='inputvalue' value="{{input_value}}" focus="{{name_focus}}"></input>
+    <view class="Search_btn" bindtap='search'>{{content.searchby}}</view>
     </view>
   </view>
   <view class="search">
@@ -11,11 +12,11 @@
     </view>
     <view class="rs_li">
       <view class="li">
-        <view class='a'>
-          Olive Oil
+        <view class='a' wx:for="{{listarr}}" data-text="{{item}}" wx:key="key" bindtap='this_value'>
+          {{item}}
         </view>
       </view>
-      <view class="li">
+      <!-- <view class="li">
         <view class='a'>
           Apple
         </view>
@@ -29,7 +30,7 @@
         <view class='a'>
           Mango
         </view>
-      </view>
+      </view> -->
     </view>
     <view class="rs">{{content.similar}}
       <view class='span'>{{content.products}}</view>

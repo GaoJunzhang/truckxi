@@ -105,7 +105,9 @@ Page({
   onReachBottom: function() {
 
   },
+  onShareAppMessage: function () {
 
+  },
   // 点击下拉列表
   optionTap(e) {
     const lanFlag = e.currentTarget.dataset.index
