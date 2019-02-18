@@ -6,7 +6,7 @@ Page({
    */
   data: {
     inpuVal: "", //input框内值
-    listarr: [], //创建数组
+    listarr: [], //创建数组home
     keydown_number: 0, //检测input框内是否有内容
     input_value: "", //value值
     hostarr: [], //热门搜索接收请求存储数组  

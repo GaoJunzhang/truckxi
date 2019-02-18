@@ -166,12 +166,15 @@ Page({
   showleft: function(e) {
     let that = this
     const session = Session.get()
+    that.setData({
+      navFixed:false
+    })
     if (session && session.token) {
       getAccount(that)
     } else {
       that.setData({
         showLeft: false,
-        username: "TRUCKXI"
+        username: "TRUCKXI",
       })
     }
   },
