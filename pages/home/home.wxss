@@ -247,7 +247,7 @@
   margin: 12px 6px;
   display: inline-block;
   overflow-x: auto; */
-  width: 416rpx;
+  width: 208px;
   /* height: 360rpx; */
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
