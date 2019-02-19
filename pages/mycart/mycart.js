@@ -93,7 +93,7 @@ Page({
       title: that.data.content.pay_type,
       content: that.data.content.pay_type_tips,
       cancelText: that.data.content.weichar_pay,
-      confirmText: that.data.content.credit_card,
+      confirmText: that.data.content.credit_cardp,
       cancelColor: '#37a000',
       confirmColor: 'black',
       success(res) {

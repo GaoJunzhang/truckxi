@@ -16,7 +16,7 @@
     <view class='li'>
       <navigator class='a' url='../addnewcard/addnewcard'>
         <label class="c"></label>
-        {{content.credit_card}}
+        {{content.credit_cardo}}
         <image src="https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_rightreturn.png" mode='widthFix'></image>
       </navigator>
     </view>

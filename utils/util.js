@@ -169,11 +169,11 @@ function selfLoading() {
   let available = wx.canIUse('showLoading');
   if (available) {
     wx.showLoading({
-      title: '加载中',
+      title: that.data.content.loading,
     })
   } else {
     wx.showToast({
-      title: '加载中',
+      title: that.data.content.loading,
       icon: 'loading',
       duration: 10000
     })

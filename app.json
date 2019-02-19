@@ -2,6 +2,7 @@
   "pages":[
     "pages/home/home",
     "pages/search/search",
+    "pages/register/register",
     "pages/orderhistory/orderhistory",
     "pages/cardinfo/cardinfo",
     "pages/selectaddress/selectaddress",
@@ -25,7 +26,6 @@
     "pages/detail/detail",
     "pages/profile/profile",
     "pages/test/test",
-    "pages/register/register",
     "pages/forgotpwd/forgotpwd",
     "pages/login/login"
   ],

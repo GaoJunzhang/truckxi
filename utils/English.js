@@ -122,7 +122,7 @@ var English = {
   //payment options
   amount_payable: "Amount Payable",
   save_card: "Saved Card",
-  credit_card: "Credit Card",
+  credit_cardo: "Card",
   debit_card: "Debit Card",
   net_banking: "Net Banking",
   pay_on_delivery: "Pay on Delivery",
@@ -151,13 +151,14 @@ var English = {
   credit_reference: "Card Reference Number",
   card_reference_tips: "Please check the Reference number.",
   pay_type_tips: "Please choose the mode of payment",
-  weichar_pay: "WeChat payment",
-  credit_card: "Credit Card",
+  weichar_pay: "WeChat",
+  credit_cardp: "Card",
   pay_type: 'Payment',
   exp_month: "expiry month",
   exp_year: "expiry year",
   select_add: 'Please add the receiving address',
   add_cart_success: "Success",
+  product_name:"Product Name",
 }
 
 module.exports = {

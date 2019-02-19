@@ -122,7 +122,7 @@ var Chinese = {
   //payment options
   amount_payable: "应付金额",
   save_card: "储蓄卡",
-  credit_card: "信用卡",
+  credit_cardo: "信用卡",
   debit_card: "借记卡",
   net_banking: "网上银行",
   pay_on_delivery: "货到付款",
@@ -153,12 +153,13 @@ var Chinese = {
   card_reference_tips: "请检查卡片参考号",
   pay_type_tips: "请选择支付方式",
   weichar_pay: "微信支付",
-  credit_card: "信用卡",
+  credit_cardp: "信用卡",
   pay_type: '支付方式',
   exp_month: "有效期月",
   exp_year: "有效期年",
   select_add:'请添加收货地址',
   add_cart_success:"已加入购物车",
+  product_name: "商品名称",
 }
 
 module.exports = {

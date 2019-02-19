@@ -2,8 +2,8 @@
   <view class="search_by">
     <view class="tx_s">{{content.searchby}}</view>
     <view class="inp">
-      <input type="text" placeholder="{{content.searchby_tips}}" class="s" bindinput='inputvalue' value="{{input_value}}" focus="{{name_focus}}"></input>
-    <view class="Search_btn" bindtap='search'>{{content.searchby}}</view>
+      <input type="text" placeholder="{{content.product_name}}" class="s" bindinput='inputvalue' value="{{input_value}}" focus="{{name_focus}}"></input>
+      <view class="Search_btn" bindtap='search'>{{content.searchby}}</view>
     </view>
   </view>
   <view class="search">
@@ -16,59 +16,28 @@
           {{item}}
         </view>
       </view>
-      <!-- <view class="li">
-        <view class='a'>
-          Apple
-        </view>
-      </view>
-      <view class="li">
-        <view class='a'>
-          Mustard Oil
-        </view>
-      </view>
-      <view class="li">
-        <view class='a'>
-          Mango
-        </view>
-      </view> -->
     </view>
     <view class="rs">{{content.similar}}
       <view class='span'>{{content.products}}</view>
     </view>
     <view class="goods_list">
-      <view class="li">
-        <view class='a'>
+      <view class="li" wx:for="{{productArry}}" wx:key="{{item}}">
+        <!-- <view class='a'> -->
+        <navigator url='../detail/detail?pk={{item.id}}' class='a'>
           <view class="img_g">
-            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_001.jpg' mode='widthFix'></image>
+            <image src='{{item.image_url}}' mode='widthFix'></image>
           </view>
           <view class="txt_g">
-            <view class='span'>Grape Kyoho</view>
-            <view class="pri">$9.99 </view>
+            <view class='span'>{{content.login=='Login'?item.name:item.description}}</view>
+            <view class="pri">${{item.unit_price}} </view>
             <view class="sma">{{content.box}}</view>
             <view class="btn_ad">{{content.add}}</view>
           </view>
           <view class="tip_g">
-            12 Left in Stock
+            {{item.stock_quantity}} {{content.left_in_stop}}
           </view>
           <view class="clr"></view>
-        </view>
-      </view>
-      <view class="li">
-        <view class='a'>
-          <view class="img_g">
-            <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/img_p_001.jpg' mode='widthFix'></image>
-          </view>
-          <view class="txt_g">
-            <view class='span'>Grape Kyoho</view>
-            <view class="pri">$9.99 </view>
-            <view class="sma">{{content.box}}</view>
-            <view class="btn_ad">{{content.add}}</view>
-          </view>
-          <view class="tip_g">
-            12 Left in Stock
-          </view>
-          <view class="clr"></view>
-        </view>
+        </navigator>
       </view>
     </view>
   </view>
