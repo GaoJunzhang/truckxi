@@ -77,14 +77,11 @@ Page({
     if (that.data.keydown_number == 1) {
       //把获取的input值插入数组里面
       let arr = that.data.listarr;
-      console.log(that.data.inputVal)
-      console.log(that.data.input_value)
       //判断取值是手动输入还是点击赋值
       if (that.data.input_value == "") {
         // console.log('进来第er个')
         // 判断数组中是否已存在
         let arrnum = arr.indexOf(that.data.inputVal);
-        console.log(arr.indexOf(that.data.inputVal));
         if (arrnum != -1) {
           // 删除已存在后重新插入至数组
           arr.splice(arrnum, 1)
@@ -126,6 +123,17 @@ Page({
     } else {
       console.log("取消")
     }
+  },
+  clearHistory:function(){
+    let that = this
+    wx.removeStorage({
+      key: 'list_arr',
+      success: function(res) {
+        that.setData({
+          listarr:[]
+        })
+      },
+    })
   }
 })
 
