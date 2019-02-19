@@ -1,23 +1,23 @@
 <view class="content">
   <view class="ac">
-    <block wx:for="{{isListCateGorys}}" wx:key="*this" >
+    <block wx:for="{{groups}}" wx:key="*this" >
       <view class='li' bindtap='changeMenu' data-id='{{item.id}}'>
         <view class='a'>
           <view class="prod_li">
             <view class="img">
-              <image src='{{item.Image}}' mode='widthFix'></image>
+              <image src='{{item.image_url}}' mode='widthFix'></image>
             </view>
             <view class="txt">
-              <view class='span'>{{item.Name}}</view>{{item.Description}}</view>
+              <view class='span'>{{content.login=='Login'?item.name:item.translated_name}}</view></view>
             <view class="b_a" >
               <image src="{{item.id==selectId&&isDown?uimg:dimg}}" mode='widthFix'></image>
             </view>
           </view>
           <view class="s_pr" wx:if='{{item.id==selectId&&isDown}}'>
-            <view class='li' wx:for="{{item.products}}" wx:for-item="itemp" wx:key="{{itemp}}">
-              <navigator url='../detail/detail?pk={{itemp.Product_id}}'>
-                <image src='{{itemp.Thumbnail}}' mode='widthFix'></image>
-                <view class='span'>{{content.login=='Login'?itemp.Name:itemp.Description}}</view>
+            <view class='li' wx:for="{{item.categories}}" wx:for-item="itemp" wx:key="{{itemp}}">
+              <navigator url='../produce/produce?pk={{itemp.id}}'>
+                <image src='{{item.image_url}}' mode='widthFix'></image>
+                <view class='span'>{{content.login=='Login'?itemp.name:itemp.translated_name}}</view>
               </navigator>
             </view>
             <view class="clr"></view>

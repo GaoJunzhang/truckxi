@@ -20,6 +20,7 @@ Page({
     // this.getContent(lastLanuage)
     app.getContent(that, lastLanuage)
     getCategory(that)
+    getGroup(that)
   },
   changeMenu: function(e) {
     let that = this
@@ -57,7 +58,6 @@ var getCategory = function(that, param) {
                 if (res.statusCode == 200) {
                   obj.products = res.data;
                   isListCateGorys.push(obj)
-                  console.log(isListCateGorys)
                   that.setData({
                     isListCateGorys: isListCateGorys,
                     categorys: categorys
@@ -79,6 +79,17 @@ var getCategory = function(that, param) {
           showCancel: false
         })
       }
+    }
+  })
+}
+var getGroup = function(that){
+  wx.request({
+    url: app.globalData.API_URL + 'e/app/group',
+    success:function(res){
+      console.log(res)
+      that.setData({
+        groups:res.data.groups
+      })
     }
   })
 }
