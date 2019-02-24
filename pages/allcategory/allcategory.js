@@ -19,7 +19,7 @@ Page({
     var lastLanuage = app.globalData.lanuage
     // this.getContent(lastLanuage)
     app.getContent(that, lastLanuage)
-    getCategory(that)
+    // getCategory(that)
     getGroup(that)
   },
   changeMenu: function(e) {

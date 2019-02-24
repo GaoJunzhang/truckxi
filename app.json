@@ -2,6 +2,7 @@
   "pages":[
     "pages/home/home",
     "pages/allcategory/allcategory",
+    "pages/productcate/productcate",
     "pages/search/search",
     "pages/register/register",
     "pages/orderhistory/orderhistory",

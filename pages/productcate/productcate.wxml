@@ -1,0 +1,41 @@
+<view class="content">
+  <view class="banner">
+    <view class="ban">
+      <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_02.jpg' mode='widthFix'></image>
+      <view class="tx_pro">The Best Produce in our ecityfresh</view>
+    </view>
+  </view>
+  <view class="ca">
+    <view class='ca_li' wx:for="{{categorys}}" wx:key="*this" bindtap='categoryInfo' data-pk='{{item.ProductCategory2_id}}'>
+      <view class="{{selectId==item.ProductCategory2_id?'a1':'a'}}">{{content.login=='Login'?item.Name:item.Description}}</view>
+    </view>
+  </view>
+  <view class="gd_h">
+    <view class="tit sm">{{content.total}} {{prodeces.length}} {{content.products}}
+      <!-- <navigator class="more1" url='../filter/filter'>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_chooese.jpg' mode='widthFix' class='choose'></image>
+      </navigator> -->
+      <navigator class="more" url='../allcategory/allcategory'>
+        <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_list_m.png' mode='widthFix'></image>
+      </navigator>
+    </view>
+    <view class="good_p">
+      <view class='good_p_li' wx:for="{{prodeces}}" wx:key="{{item}}">
+        <navigator class="a"  url='../detail/detail?pk={{item.id}}'>
+          <view class="img_g">
+            <image src='{{item.image_url}}' mode='aspectFill'></image>
+          </view>
+          <view class="txt_g">
+            <view class='view'>{{content.login=='Login'?item.name:item.description}}</view>
+            <view class="pri">${{item.unit_price}} </view>
+            <view class="sma">{{content.box}}</view>
+            <view class="btn_ad">{{content.add}}</view>
+          </view>
+          <view class="tip_g">
+            {{item.stock_quantity}} {{content.left_in_stop}}
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
