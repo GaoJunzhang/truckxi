@@ -170,7 +170,7 @@
     <image src="../../images/icon_shoppingcart.png" mode='widthFix'></image>
   </navigator>
 </view> -->
-<view class="fix_m">
+<view class="fix_m" hidden='{{!showLeft}}'>
     <view class="menu">
         <view class="li ho">
             <navigator  class="hover" url='../home/home'  bindtap='showleft'>
@@ -178,7 +178,7 @@
             </navigator>
         </view>
         <view class="li br">
-            <navigator url='../allcategory/allcategory'>
+            <navigator url=''  bindtap='showleft'>
                 {{content.browse}}
             </navigator>
         </view>
