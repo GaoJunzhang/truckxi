@@ -102,6 +102,7 @@ input::-ms-input-placeholder {
   font-weight: bold;
 }
 
+/* 
 .lef_btn {
   width: 30px;
   height: 170px;
@@ -146,4 +147,60 @@ input::-ms-input-placeholder {
 
 .lef_btn navigator.tw image {
   width: 14px;
+} */
+
+.fix_m {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #98979d;
+  background: #3cae01;
+}
+
+.fix_m .menu {
+  height: 56px;
+  background: #3cae01;
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  display: flex;
+}
+
+.fix_m .menu .li {
+  flex: 1;
+}
+
+.fix_m .menu .li navigator {
+  width: 48px;
+  height: 50px;
+  display: block;
+  margin: 7px auto 0;
+  color: #fff;
+  padding: 26px 0 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+.fix_m .menu .ho navigator {
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_menu_home.png) center 0 no-repeat;
+  background-size: 24px;
+}
+
+.fix_m .menu .br navigator {
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_menu_browse.png) center 0 no-repeat;
+  background-size: 24px;
+}
+
+.fix_m .menu .ad navigator {
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_address.png) center 0 no-repeat;
+  background-size: 16px;
+}
+
+.fix_m .menu .se navigator {
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_search_01.png) center 0 no-repeat;
+  background-size: 24px;
+}
+
+.fix_m .menu .mc navigator {
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_menu_cart.png) center 0 no-repeat;
+  background-size: 24px;
 }

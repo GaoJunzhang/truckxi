@@ -159,6 +159,8 @@ var English = {
   select_add: 'Please add the receiving address',
   add_cart_success: "Success",
   product_name:"Product Name",
+  home_nav:"Home",
+  browse:"Browse",
 }
 
 module.exports = {

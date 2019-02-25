@@ -160,6 +160,8 @@ var Chinese = {
   select_add:'请添加收货地址',
   add_cart_success:"已加入购物车",
   product_name: "商品名称",
+  home_nav: "首页",
+  browse: "浏览",
 }
 
 module.exports = {

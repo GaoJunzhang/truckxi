@@ -156,7 +156,7 @@
     <view style='height:100%;width:100%;' bindtap='hideChoose'></view>
   </view>
 </scroll-view>
-<view class="lef_btn">
+<!-- <view class="lef_btn">
   <navigator class="on" url=''  bindtap='showleft'>
     <image src="../../images/icon_menu.png" mode='widthFix'></image>
   </navigator>
@@ -169,4 +169,33 @@
   <navigator class="fo" url='../mycart2/mycart2'>
     <image src="../../images/icon_shoppingcart.png" mode='widthFix'></image>
   </navigator>
+</view> -->
+<view class="fix_m">
+    <view class="menu">
+        <view class="li ho">
+            <navigator  class="hover" url='../home/home'  bindtap='showleft'>
+                {{content.home_nav}}
+            </navigator>
+        </view>
+        <view class="li br">
+            <navigator url='../allcategory/allcategory'>
+                {{content.browse}}
+            </navigator>
+        </view>
+        <view class="li ad">
+            <navigator url='../addaddress/addaddress'>
+                {{content.address}}
+            </navigator>
+        </view>
+        <view class="li se">
+            <navigator url='../search/search'>
+                {{content.search}}
+            </navigator>
+        </view>
+        <view class="li mc">
+            <navigator url='../mycart2/mycart2'>
+                {{content.my_cart}}
+            </navigator>
+        </view>
+    </view>
 </view>
