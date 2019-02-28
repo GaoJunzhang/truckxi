@@ -160,7 +160,7 @@ var English = {
   add_cart_success: "Success",
   product_name:"Product Name",
   home_nav:"Home",
-  browse:"Browse",
+  browse:"Me",
 }
 
 module.exports = {
