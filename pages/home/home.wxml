@@ -7,7 +7,7 @@
       <swiper style='height:225px' autoplay="{{autoplay}}" indicator-dots="true" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
         <block wx:for="{{billbords}}" wx:key="*this">
           <swiper-item>
-            <image  src='{{item.image}}' mode='aspectFill'></image>
+            <image src='{{item.image}}' mode='aspectFill'></image>
           </swiper-item>
         </block>
       </swiper>
@@ -171,31 +171,31 @@
   </navigator>
 </view> -->
 <view class="fix_m" hidden='{{!showLeft}}'>
-    <view class="menu">
-        <view class="li ho">
-            <navigator  class="hover" url='../home/home'  bindtap='showleft'>
-                {{content.home_nav}}
-            </navigator>
-        </view>
-        <view class="li br">
-            <navigator url=''  bindtap='showleft'>
-                {{content.browse}}
-            </navigator>
-        </view>
-        <view class="li ad">
-            <navigator url='../addaddress/addaddress'>
-                {{content.address}}
-            </navigator>
-        </view>
-        <view class="li se">
-            <navigator url='../search/search'>
-                {{content.search}}
-            </navigator>
-        </view>
-        <view class="li mc">
-            <navigator url='../mycart2/mycart2'>
-                {{content.my_cart}}
-            </navigator>
-        </view>
+  <view class="menu">
+    <view class="li ho">
+      <navigator class="hover" url='../home/home' bindtap='showleft'>
+        {{content.home_nav}}
+      </navigator>
     </view>
+    <view class="li ad">
+      <navigator url='../addaddress/addaddress'>
+        {{content.address}}
+      </navigator>
+    </view>
+    <view class="li br">
+      <navigator url='' bindtap='showleft'>
+        {{content.browse}}
+      </navigator>
+    </view>
+    <view class="li se">
+      <navigator url='../search/search'>
+        {{content.search}}
+      </navigator>
+    </view>
+    <view class="li mc">
+      <navigator url='../mycart2/mycart2'>
+        {{content.my_cart}}
+      </navigator>
+    </view>
+  </view>
 </view>
