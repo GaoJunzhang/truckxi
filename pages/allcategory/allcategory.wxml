@@ -16,7 +16,7 @@
           <view class="s_pr" wx:if='{{item.id==selectId&&isDown}}'>
             <view class='li' wx:for="{{item.categories}}" wx:for-item="itemp" wx:key="{{itemp}}">
               <navigator url='../productcate/productcate?pk={{itemp.id}}'>
-                <image src='{{item.image_url}}' mode='widthFix'></image>
+                <!-- <image src='{{item.image_url}}' mode='widthFix'></image> -->
                 <view class='span'>{{content.login=='Login'?itemp.name:itemp.translated_name}}</view>
               </navigator>
             </view>

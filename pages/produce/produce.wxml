@@ -29,7 +29,7 @@
             <view class='view'>{{content.login=='Login'?item.Name:item.Description}}</view>
             <view class="pri">${{item.Price}} </view>
             <view class="sma">{{content.box}}</view>
-            <view class="btn_ad">{{content.add}}</view>
+            <!-- <view class="btn_ad">{{content.add}}</view> -->
           </view>
           <view class="tip_g">
             {{item.StockLevel}} {{content.left_in_stop}}

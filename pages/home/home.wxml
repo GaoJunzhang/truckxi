@@ -4,7 +4,7 @@
       <!-- <view>
       <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_01.jpg' mode='widthFix'></image>
     </view> -->
-      <swiper style='height:225px' autoplay="{{autoplay}}" indicator-dots="true" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+      <swiper style='height:225px' autoplay="{{autoplay}}" indicator-dots="{{circular}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
         <block wx:for="{{billbords}}" wx:key="*this">
           <swiper-item>
             <image src='{{item.image}}' mode='aspectFill'></image>
@@ -31,8 +31,8 @@
     <view class="bi">
       <view class="ban_img">
         <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_s_01.png' mode='widthFix'></image>
-        <text class="tl">{{content.new_arrivals}}</text>
-        <text class="tr">{{content.shop_now}}</text>
+        <!-- <text class="tl">{{content.new_arrivals}}</text>
+        <text class="tr">{{content.shop_now}}</text> -->
       </view>
     </view>
     <view class="gd_h">
@@ -54,7 +54,7 @@
                   <text>{{content.login=='Login'?itemp.Name:itemp.Description}}</text>
                   <text class="pri">${{itemp.Price}} </text>
                   <text class="sma">{{content.box}}</text>
-                  <text class="btn_ad">{{content.add}}</text>
+                  <!-- <text class="btn_ad">{{content.add}}</text> -->
                 </view>
                 <view class="tip_g">
                   {{itemp.StockLevel}} {{content.left_in_stop}}
@@ -172,24 +172,24 @@
 </view> -->
 <view class="fix_m" hidden='{{!showLeft}}'>
   <view class="menu">
+    <view class="li br">
+      <navigator url='' bindtap='showleft'>
+        {{content.me}}
+      </navigator>
+    </view>
+        <view class="li se">
+      <navigator url='../search/search'>
+        {{content.search}}
+      </navigator>
+    </view>
     <view class="li ho">
       <navigator class="hover" url='../home/home' bindtap='showleft'>
         {{content.home_nav}}
       </navigator>
     </view>
     <view class="li ad">
-      <navigator url='../addaddress/addaddress'>
-        {{content.address}}
-      </navigator>
-    </view>
-    <view class="li br">
-      <navigator url='' bindtap='showleft'>
+      <navigator url='../allcategory/allcategory'>
         {{content.browse}}
-      </navigator>
-    </view>
-    <view class="li se">
-      <navigator url='../search/search'>
-        {{content.search}}
       </navigator>
     </view>
     <view class="li mc">

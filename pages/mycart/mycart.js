@@ -44,9 +44,11 @@ Page({
         }, 'PUT', function(res) {
           if (res.statusCode == 200) {
             v.quantity = v.quantity + 1
+            getCart(that)
           }
           that.setData({
-            cart: carts
+            cart: carts,
+            // total_price: parseFloat(res.data.total_price * (1 + parseFloat(that.data.tipspname) / 100)).toFixed
           })
         })
       }
@@ -66,6 +68,7 @@ Page({
           }, 'PUT', function(res) {
             if (res.statusCode == 200) {
               v.quantity = v.quantity - 1
+              getCart(that)
               if (v.quantity == 0) {
                 carts.splice(k, 1)
               }

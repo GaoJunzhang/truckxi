@@ -65,14 +65,14 @@
     </view>
   </view>
   <view class="pay_i">
-    <view class="img">
+    <!-- <view class="img">
       <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_visa.png' mode='widthFix'></image>
     </view>
     <view class="tx_con">
       <view class="span">Pay via Credit card</view>
       <view class="span s">4566xxxxxxxxx1234</view>
     </view>
-    <view class="ch">{{content.change}}</view>
+    <view class="ch">{{content.change}}</view> -->
     <view class="clr"></view>
   </view>
 </view>

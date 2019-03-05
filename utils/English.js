@@ -36,7 +36,7 @@ var English = {
   my_rofile: "My Profile",
   my_address: "My Address",
   my_order: "My Order",
-  my_cart: "My Cart",
+  my_cart: "Cart",
   other: "Other",
   need_help: "Need Help",
   share: "Share",
@@ -50,7 +50,7 @@ var English = {
   shop_now: "Shop Now",
   great: "Great",
   deals: "deals",
-  left_in_stop: "Left in Shop",
+  left_in_stop: "Left in Stock",
   add: "Add",
   box: "Box",
   meet_our: "Meet Our",
@@ -160,7 +160,8 @@ var English = {
   add_cart_success: "Success",
   product_name:"Product Name",
   home_nav:"Home",
-  browse:"Me",
+  me:"Me",
+  browse:"Browse",
 }
 
 module.exports = {

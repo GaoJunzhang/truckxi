@@ -35,6 +35,7 @@ page {
 .ac .li .a .prod_li .img image {
   width: 204rpx;
   display: block;
+  height: 244rpx;
 }
 
 .ac .li .a .prod_li .txt {

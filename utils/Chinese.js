@@ -161,7 +161,8 @@ var Chinese = {
   add_cart_success:"已加入购物车",
   product_name: "商品名称",
   home_nav: "首页",
-  browse: "我的",
+  me: "我的",
+  browse: "浏览",
 }
 
 module.exports = {

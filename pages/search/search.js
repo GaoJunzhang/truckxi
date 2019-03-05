@@ -22,7 +22,7 @@ Page({
     // this.getContent(lastLanuage)
     app.getContent(that, lastLanuage)
     //读取缓存历史搜索记录
-    getProducts(that)
+    // getProducts(that)
     wx.getStorage({
       key: 'list_arr',
       success: function(res) {

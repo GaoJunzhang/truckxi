@@ -59,7 +59,7 @@
     </view>
   </view>
   <view class="pay_i">
-    <view class="img">
+    <!-- <view class="img">
       <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_visa.png' mode='widthFix'></image>
     </view>
     <view class="tx_con">
@@ -67,7 +67,7 @@
       <view class="span s">4566xxxxxxxxx1234</view>
     </view>
     <navigator class="ch" url='../paymentoptions/paymentoptions'>{{content.change}}</navigator>
-    <view class="clr"></view>
+    <view class="clr"></view> -->
   </view>
 </view>
 
