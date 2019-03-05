@@ -11,14 +11,6 @@
           </swiper-item>
         </block>
       </swiper>
-      <view class="round">
-        <view class="hover">
-        </view>
-        <view>
-        </view>
-        <view>
-        </view>
-      </view>
     </view>
     <view class="category {{navFixed? 'positionFixed':''}}">
       <navigator url='../produce/produce?pk={{item.ProductCategory2_id}}' class='category_li' wx:for="{{categorys}}" wx:key="*this">
@@ -32,7 +24,6 @@
       <view class="ban_img">
         <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/banner_s_01.png' mode='widthFix'></image>
         <text class="tl">{{content.new_arrivals}}</text>
-        <text class="tr">{{content.shop_now}}</text>
       </view>
     </view>
     <view class="gd_h">

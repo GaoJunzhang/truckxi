@@ -241,19 +241,12 @@
 }
 
 .content .gd_h .goods_infeed .goods_infeed_li {
-  /* width: 208px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 12px 6px;
-  display: inline-block;
-  overflow-x: auto; */
-  width: 208px;
-  /* height: 360rpx; */
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  margin: 12px 4px;
-  display: inline-block;
-  overflow-x: auto;
+    width:calc(50% - 12px);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    margin: 12px 4px;
+    display: inline-block;
+    overflow-x: auto;
 }
 
 .positionFixed {
