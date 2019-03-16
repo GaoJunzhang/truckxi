@@ -11,6 +11,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+  toHome: function () {
+    wx.reLaunch({
+      url: '../home/home',
+    })
+  },
   onLoad: function (options) {
     let that = this
     var lastLanuage = app.globalData.lanuage

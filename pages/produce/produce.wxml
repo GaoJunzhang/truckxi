@@ -39,3 +39,27 @@
     </view>
   </view>
 </view>
+<view class="fix_m">
+  <view class="menu">
+        <view class="li se">
+      <navigator url='../search/search'>
+        {{content.search}}
+      </navigator>
+    </view>
+    <view class="li ho">
+      <navigator class="hover" url='' bindtap='toHome'>
+        {{content.home_nav}}
+      </navigator>
+    </view>
+    <view class="li ad">
+      <navigator url='../allcategory/allcategory'>
+        {{content.browse}}
+      </navigator>
+    </view>
+    <view class="li mc">
+      <navigator url='../mycart2/mycart2'>
+        {{content.my_cart}}
+      </navigator>
+    </view>
+  </view>
+</view>
