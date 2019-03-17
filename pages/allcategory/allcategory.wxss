@@ -71,7 +71,7 @@ page {
 }
 
 .ac .li .a .s_pr .li {
-  width: calc(33.3% - 20px);
+  width: calc(31.3% - 20px);
   float: left;
   border: 1px solid #e0e0e0;
   flex: 1;

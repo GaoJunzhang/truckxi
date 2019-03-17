@@ -41,7 +41,7 @@
                   <image src='{{itemp.Thumbnail}}' mode='widthFix'></image>
                 </view>
                 <view class="txt_g">
-                  <text>{{content.login=='Login'?itemp.Name:itemp.Description}}</text>
+                  <text class='name'>{{content.login=='Login'?itemp.Name:itemp.Description}}</text>
                   <text class="pri">${{itemp.Price}} </text>
                   <text class="sma">{{content.box}}</text>
                   <!-- <text class="btn_ad">{{content.add}}</text> -->
@@ -173,7 +173,7 @@
       </navigator>
     </view>
     <view class="li ho">
-      <navigator class="hover" url='../home/home' bindtap='showleft'>
+      <navigator class="hover">
         {{content.home_nav}}
       </navigator>
     </view>

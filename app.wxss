@@ -96,6 +96,7 @@ input::-ms-input-placeholder {
 
 .content {
   width: 100%;
+  margin-bottom: 142rpx;
 }
 
 .h4 {
@@ -185,12 +186,12 @@ input::-ms-input-placeholder {
   background-size: 24px;
 }
 
-.fix_m .menu .br navigator {
+.fix_m .menu .ad navigator {
   background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_menu_browse.png) center 0 no-repeat;
   background-size: 24px;
 }
 
-.fix_m .menu .ad navigator {
+.fix_m .menu .br navigator {
   background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_address.png) center 0 no-repeat;
   background-size: 16px;
 }

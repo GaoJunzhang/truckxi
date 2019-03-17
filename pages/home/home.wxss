@@ -63,6 +63,7 @@
 .content .category .category_li view image {
   display: block;
   width: calc(100% - 30px);
+  height: 130rpx;
   margin: 0 15px;
 }
 
@@ -79,6 +80,7 @@
 .content view .ban_img {
   width: calc(100% - 20px);
   margin: 0 10px 15px;
+  height: 290rpx;
   position: relative;
 }
 
@@ -241,12 +243,13 @@
 }
 
 .content .gd_h .goods_infeed .goods_infeed_li {
-    width:calc(50% - 12px);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    margin: 12px 4px;
-    display: inline-block;
-    overflow-x: auto;
+  width: calc(35% - 12px);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 12px 4px;
+  display: inline-block;
+  overflow-x: auto;
+  height: 420rpx;
 }
 
 .positionFixed {
@@ -280,6 +283,13 @@
   display: block;
   color: #333;
   margin: 2px 0;
+}
+
+.content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g text.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 200rpx;
 }
 
 .content .gd_h .goods_infeed .goods_infeed_li navigator .txt_g text.pri {

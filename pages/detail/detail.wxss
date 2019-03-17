@@ -89,6 +89,7 @@
 .content .banner .ban {
   width: 100%;
   position: relative;
+  height: 620rpx;
 }
 
 .content .banner .ban .tips {
