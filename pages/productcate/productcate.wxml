@@ -16,7 +16,7 @@
         <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_list_m.png' mode='widthFix'></image>
       </navigator>
     </view>
-    <view class="good_p">
+    <view class="good_p" wx:if="{{isCustom}}">
       <view class='good_p_li' wx:for="{{prodeces}}" wx:key="{{item}}">
         <navigator class="a" url='../detail/detail?pk={{item.id}}'>
           <view class="img_g">
@@ -34,6 +34,24 @@
         </navigator>
       </view>
     </view>
+    <view class="good_p" wx:else>
+      <view class='good_p_li' wx:for="{{prodeces}}" wx:key="{{item}}">
+        <navigator class="a" url='../detail/detail?pk={{item.Product_id}}'>
+          <view class="img_g">
+            <image src='{{item.Thumbnail}}' mode='widthFix'></image>
+          </view>
+          <view class="txt_g">
+            <view class='view'>{{content.login=='Login'?item.Name:item.Description}}</view>
+            <view class="pri">${{item.Price}} </view>
+            <view class="sma">{{content.box}}</view>
+            <!-- <view class="btn_ad">{{content.add}}</view> -->
+          </view>
+          <view class="tip_g">
+            {{item.StockLevel}} {{content.left_in_stop}}
+          </view>
+        </navigator>
+      </view>
+    </view>
   </view>
 </view>
 <view class="fix_m">
@@ -44,7 +62,7 @@
       </navigator>
     </view>
     <view class="li ho">
-      <navigator class="hover" url='../home/home'>
+      <navigator class="hover" url='' bindtap='toHome'>
         {{content.home_nav}}
       </navigator>
     </view>
