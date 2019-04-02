@@ -53,18 +53,24 @@ Page({
     if (addressObj.City == '') {
       wx.showModal({
         content: that.data.content.city_err,
+        confirmText: that.data.content.yes,
+        showCancel: false,
       })
       return
     }
     if (addressObj.Street == '') {
       wx.showModal({
         content: that.data.content.street_err,
+        confirmText: that.data.content.yes,
+        showCancel: false,
       })
       return
     }
     if (addressObj.Zip == '') {
       wx.showModal({
         content: that.data.content.zipcode_err,
+        confirmText: that.data.content.yes,
+        showCancel: false,
       })
       return
     }

@@ -132,6 +132,8 @@ Page({
     }, 'GET', function(res) {
       wx.showModal({
         content: res.data.message,
+        confirmText: that.data.content.yes,
+        cancelText: that.data.content.cancel
       })
       that.setData({
         promo_code: res.data.discount_amount

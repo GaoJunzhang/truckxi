@@ -69,8 +69,9 @@ var getCategory = function(that, param) {
                   })
                 } else {
                   wx.showModal({
-                    content: '服务器异常，请稍后再试',
-                    showCancel: false
+                    content: 'Server exception, please try again later',
+                    confirmText: that.data.content.yes,
+                    showCancel: false,
                   })
                 }
               }
@@ -80,8 +81,9 @@ var getCategory = function(that, param) {
 
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later',
+          confirmText: that.data.content.yes,
+          showCancel: false,
         })
       }
     }

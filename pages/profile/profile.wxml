@@ -30,7 +30,7 @@
           </navigator>
         </view>
         <view class="li">
-          <navigator class='a' url='../addaddress/addaddress'>
+          <navigator class='a' url='../selectaddress/selectaddress?viewAdd=1'>
             <label>{{content.address}}</label>
             <view class='span'>{{content.address_tips}}</view>
             <view class="irr">

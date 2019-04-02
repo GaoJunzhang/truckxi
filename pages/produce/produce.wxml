@@ -38,6 +38,7 @@
       </view>
     </view>
   </view>
+  <view style='width:100%;height:100px;float:left;'></view>
 </view>
 <view class="fix_m">
   <view class="menu">

@@ -43,6 +43,8 @@ Page({
         app.fetchApis(that, 'e/order/', param, 'POST', function(res) {
             wx.showModal({
               content: res.data.message,
+              confirmText: that.data.content.yes,
+              cancelText: that.data.content.cancel
             })
             wx.removeStorageSync("tips")
             wx.navigateTo({

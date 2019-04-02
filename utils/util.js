@@ -139,7 +139,9 @@ function showSelfModal(self, msg, t = 2000) {
   //   url:'/pages/error/error?msg='+msg
   // })
   wx.showModal({
-    content: msg
+    content: msg,
+    confirmText: that.data.content.yes,
+    cancelText: that.data.content.cancel
   })
   self.setData({
     showSelfModal: true,

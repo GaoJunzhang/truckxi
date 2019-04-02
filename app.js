@@ -27,8 +27,8 @@ App({
     })
     updateManager.onUpdateReady(function() {
       wx.showModal({
-        title: '更新提示',
-        content: '新版本已经准备好，是否重启应用？',
+        title: 'Update hints',
+        content: 'New version is ready. Do you want to restart the application?？',
         confirmText: that.data.content.yes,
         cancelText: that.data.content.cancel,
         success: function(res) {
@@ -42,8 +42,8 @@ App({
     updateManager.onUpdateFailed(function() {
       // 新的版本下载失败
       wx.showModal({
-        title: '更新提示',
-        content: '新版本下载失败',
+        title: 'Update hints',
+        content: 'New version download failed',
         showCancel: false,
         confirmText: that.data.content.yes
       })
@@ -52,7 +52,7 @@ App({
       that.globalData.isConnected = res.isConnected
       if (!res.isConnected) {
         wx.showModal({
-          content: '请检查您的网络状态',
+          content: 'Please check your network status',
           showCancel: false,
           confirmText: that.data.content.yes
         })

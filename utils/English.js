@@ -162,6 +162,8 @@ var English = {
   home_nav:"Home",
   me:"Me",
   browse:"Browse",
+  success: "Success",
+  fail:"Failure",
 }
 
 module.exports = {

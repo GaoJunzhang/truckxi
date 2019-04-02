@@ -128,7 +128,7 @@ Page({
               },
               fail: function() {
                 wx.showToast({
-                  title: '支付失败',
+                  title: that.data.content.fail,
                 })
               }
             })

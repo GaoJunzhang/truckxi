@@ -163,6 +163,8 @@ var Chinese = {
   home_nav: "首页",
   me: "我的",
   browse: "浏览",
+  success:"成功",
+  fail:"失败",
 }
 
 module.exports = {

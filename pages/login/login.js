@@ -23,6 +23,8 @@ Page({
     if (obj.username == "" || obj.username == null || obj.password == "" || obj.password==null){
       wx.showModal({
         content: that.data.content.loginError,
+        confirmText: that.data.content.yes,
+        cancelText: that.data.content.cancel
       })
       return
     }
@@ -39,6 +41,8 @@ Page({
         }else{
           wx.showModal({
             content: that.data.content.loginError,
+            confirmText: that.data.content.yes,
+            cancelText: that.data.content.cancel
           })
         }
       },

@@ -5,20 +5,31 @@
       <form bindsubmit="formSubmit">
         <view>
           <view class="list">
-            <input name="Name" type="text" placeholder="{{content.address_name}}" value='{{addObj.name}}' />
+            <input name="name" type="text" placeholder="{{content.address_name}}" value='{{addObj.name}}' />
+          </view>
+          <view class="list">
+            <input name="first_name" type="text" placeholder="{{content.first_name}}" value='{{addObj.first_name}}' />
+          </view>
+          <view class="list">
+            <input name="last_name" type="text" placeholder="{{content.last_name}}" value='{{addObj.last_name}}' />
           </view>
           <view class="list">
             <label>{{content.city}}</label>
-            <input name="City" type="text" placeholder="{{content.address_example}}" value='{{addObj.city}}' />
+            <input name="city" type="text" placeholder="{{content.address_example}}" value='{{addObj.city}}' />
           </view>
           <view class="list">
-            <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{addObj.state}}' />
+            <!-- <input name="State" type="text" placeholder="{{content.address_tips}}" value='{{addObj.state}}' /> -->
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+              <view class="picker">
+                {{array[index]}}
+              </view>
+            </picker>
           </view>
           <view class="list">
-            <input name="Street" type="text" placeholder="{{content.street}}" value='{{addObj.street}}' />
+            <input name="street" type="text" placeholder="{{content.street}}" value='{{addObj.street}}' />
           </view>
           <view class="list">
-            <input name="Zip" type="text" placeholder="{{content.zip_code}}" value='{{addObj.zipcode}}' />
+            <input name="zipcode" type="text" placeholder="{{content.zip_code}}" value='{{addObj.zipcode}}' />
           </view>
           <view class="list">
             <input name="telephone" type="text" placeholder="{{content.phone}}" value='{{addObj.telephone}}' />

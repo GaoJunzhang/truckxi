@@ -36,35 +36,40 @@ Page({
     if (userObj.first_name == "" || userObj.first_name == null) {
       wx.showModal({
         content: that.data.content.firstname_err,
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes,
       })
       return
     }
     if (userObj.last_name == "" || userObj.last_name == null) {
       wx.showModal({
         content: that.data.content.lastname_err,
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes,
       })
       return
     }
     if (userObj.username == "" || userObj.username == null) {
       wx.showModal({
         content: that.data.content.username_err,
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes,
       })
       return
     }
     if (userObj.email == "" || userObj.email == null || !util.checkEmail(userObj.email)) {
       wx.showModal({
         content: that.data.content.email_err,
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes,
       })
       return
     }
     if (userObj.password == "" || userObj.password == null) {
       wx.showModal({
         title: that.data.content.password_err,
-        showCancel: false
+        showCancel: false,
+        confirmText: that.data.content.yes,
       })
       return
     }
@@ -82,7 +87,8 @@ Page({
         } else {
           wx.showModal({
             content: that.data.content.username_err,
-            showCancel: false
+            showCancel: false,
+            confirmText: that.data.content.yes,
           })
           return
         }
@@ -101,7 +107,8 @@ Page({
         } else {
           wx.showModal({
             content: that.data.content.email_err,
-            showCancel: false
+            showCancel: false,
+            confirmText: that.data.content.yes,
           })
           return
         }
@@ -149,6 +156,8 @@ Page({
                     } else {
                       wx.showModal({
                         content: that.data.content.loginError,
+                        confirmText: that.data.content.yes,
+                        cancelText: that.data.content.cancel
                       })
                     }
                   },
@@ -158,8 +167,9 @@ Page({
                 })
               } else {
                 wx.showModal({
-                  content: '微信登录失败',
-                  showCancel: false
+                  content: 'Wechat login failed',
+                  showCancel: false,
+                  confirmText: that.data.content.yes,
                 })
               }
             }
@@ -167,6 +177,8 @@ Page({
         } else {
           wx.showModal({
             content: that.data.content.username_ck,
+            confirmText: that.data.content.yes,
+            cancelText: that.data.content.cancel
           })
         }
       }

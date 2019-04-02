@@ -229,8 +229,9 @@ var getProduct = function(that, param) {
         var data = res.data.products
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later',
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }
@@ -266,8 +267,9 @@ var getCategory = function(that, param) {
                   })
                 } else {
                   wx.showModal({
-                    content: '服务器异常，请稍后再试',
-                    showCancel: false
+                    content: 'Server exception, please try again later.',
+                    showCancel: false,
+                    confirmText: that.data.content.yes,
                   })
                 }
               }
@@ -277,8 +279,9 @@ var getCategory = function(that, param) {
 
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later.',
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }
@@ -294,8 +297,9 @@ function getCustomProductByPk(that, pk) {
         products = res.data
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later.',
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }
@@ -314,8 +318,9 @@ var billbord = function(that) {
         })
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later.',
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }

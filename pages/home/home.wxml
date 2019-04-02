@@ -84,7 +84,7 @@
           </navigator>
         </view>
         <view class='link_of_li'>
-          <navigator url='../addaddress/addaddress'>
+          <navigator url='../selectaddress/selectaddress?viewAdd=1'>
             <image src='https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_my_address.png' mode='widthFix'></image>
             <text>{{content.my_address}}</text>
           </navigator>

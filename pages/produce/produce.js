@@ -45,7 +45,8 @@ var getProduce = function(that,pk){
       } else {
         wx.showModal({
           content: '服务器异常，请稍后再试',
-          showCancel: false
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }

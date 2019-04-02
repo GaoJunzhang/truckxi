@@ -1,15 +1,15 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/selectaddress/selectaddress",
+    "pages/addaddress/addaddress",
     "pages/allcategory/allcategory",
     "pages/productcate/productcate",
     "pages/search/search",
     "pages/register/register",
     "pages/orderhistory/orderhistory",
     "pages/cardinfo/cardinfo",
-    "pages/selectaddress/selectaddress",
     "pages/mycart2/mycart2",
-    "pages/addaddress/addaddress",
     "pages/paymentoptions/paymentoptions",
     "pages/mycart/mycart",
     "pages/editaddress/editaddress",

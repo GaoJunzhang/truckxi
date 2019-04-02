@@ -23,14 +23,18 @@ Page({
     var accountObj = e.detail.value
     if (accountObj.first_name==''){
       wx.showModal({
-        content: that.data.content.first_name_tips
+        content: that.data.content.first_name_tips,
+        confirmText: that.data.content.yes,
+        cancelText: that.data.content.cancel
       })
       return
     }
     
     if (accountObj.last_name==''){
       wx.showModal({
-        content: that.data.content.last_name_tips
+        content: that.data.content.last_name_tips,
+        confirmText: that.data.content.yes,
+        cancelText: that.data.content.cancel
       })
       return
     }

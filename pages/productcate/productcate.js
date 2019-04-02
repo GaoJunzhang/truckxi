@@ -45,8 +45,9 @@ var getProduce = function(that, pk) {
         })
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later',
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }
@@ -83,8 +84,9 @@ var getCustomProduce = function(that, pk) {
         })
       } else {
         wx.showModal({
-          content: '服务器异常，请稍后再试',
-          showCancel: false
+          content: 'Server exception, please try again later',
+          showCancel: false,
+          confirmText: that.data.content.yes,
         })
       }
     }
