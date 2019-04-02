@@ -164,6 +164,7 @@ var English = {
   browse:"Browse",
   success: "Success",
   fail:"Failure",
+  delete_add: "Delete address",
 }
 
 module.exports = {

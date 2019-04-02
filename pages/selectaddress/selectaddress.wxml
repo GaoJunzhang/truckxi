@@ -29,7 +29,7 @@
   </button>
   <button class="a" bindtap='deleteAdd' wx:else>
     <image src='../../images/delete.png' style='width:30rpx;position: relative; top: 4rpx;' mode='widthFix'></image>
-    删除
+    {{content.delete_add}}
   </button>
   <view class="clr"></view>
 </view>

@@ -165,6 +165,7 @@ var Chinese = {
   browse: "浏览",
   success:"成功",
   fail:"失败",
+  delete_add:"删除地址",
 }
 
 module.exports = {
