@@ -102,7 +102,7 @@ Page({
       success(res) {
         if (res.confirm) {
           wx.navigateTo({
-            url: '../cardinfo/cardinfo?addid='+that.data.addid,
+            url: '../cardinfo/cardinfo?addid=' + that.data.addid +"&sales_order_id="+that.data.id,
           })
         } else if (res.cancel) {
           app.fetchApis(that, 'e/order/micropay', {

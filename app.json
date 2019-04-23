@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/home/home",
+    "pages/cardinfo/cardinfo",
     "pages/selectaddress/selectaddress",
     "pages/addaddress/addaddress",
     "pages/allcategory/allcategory",
@@ -8,7 +9,6 @@
     "pages/search/search",
     "pages/register/register",
     "pages/orderhistory/orderhistory",
-    "pages/cardinfo/cardinfo",
     "pages/mycart2/mycart2",
     "pages/paymentoptions/paymentoptions",
     "pages/mycart/mycart",

@@ -192,8 +192,8 @@ input::-ms-input-placeholder {
 }
 
 .fix_m .menu .br navigator {
-  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_address.png) center 0 no-repeat;
-  background-size: 16px;
+  background: url(https://s3-us-west-1.amazonaws.com/scmteambucket/media/wechat/icon_menu_me.png) center 0 no-repeat;
+  background-size: 24px;
 }
 
 .fix_m .menu .se navigator {

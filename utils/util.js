@@ -134,14 +134,20 @@ function getTime2(timestamp) {
 // 显示自定义警告
 function showSelfModal(self, msg, t = 2000) {
   console.log("显示自定义警告框");
-  // console.log(self)
+  console.log(msg)
+  var message = ""
+  if(msg.message){
+    message = msg.message
+  }else{
+    message=msg
+  }
   // wx.navigateTo({
   //   url:'/pages/error/error?msg='+msg
   // })
   wx.showModal({
-    content: msg,
-    confirmText: that.data.content.yes,
-    cancelText: that.data.content.cancel
+    content: message,
+    confirmText: self.data.content.yes,
+    cancelText: self.data.content.cancel
   })
   self.setData({
     showSelfModal: true,

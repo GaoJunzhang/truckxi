@@ -3,13 +3,28 @@
     <view class="edit_pro">
       <view class="pro_cot">
         <view class="list">
-          <label>{{content.card_num}}</label>
-          <input name="number" type="text" placeholder="1234-1234-1234-1234"></input>
+          <!-- <label>{{content.card_num}}</label> -->
+          <input name="card_holder_name" type="text" placeholder="Name on card"></input>
         </view>
         <view class="list">
-          <input name="exp_year" type="text" placeholder="{{content.exp_year}} (YY)" class="one"></input>
-          <input name="exp_month" type="text" placeholder="{{content.exp_month}} (MM)" class="one"></input>
-          <input name="cvv" type="text" placeholder="cvv" class="two"></input>
+          <input name="card_number" type="text" placeholder="Card Number"></input>
+        </view>
+        <view class="list">
+          <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+              {{array[index]}}
+            </view>
+          </picker>
+        </view>
+        <view class="list">
+          <!-- <input name="exp_year" type="text" placeholder="{{content.exp_year}} (YY)" class="one"></input>
+          <input name="exp_month" type="text" placeholder="{{content.exp_month}} (MM)" class="one"></input> -->
+          <picker mode="date" value="{{date}}" start="2016-01-01" end="2099-12-31" bindchange="bindDateChange" style='width:100px;float:left;' fields="month">
+            <view class="picker">
+              {{date}}
+            </view>
+          </picker>
+          <input name="card_cvv" type="text" placeholder="cvv" class="two"></input>
           <view class="clr"></view>
         </view>
         <!-- <view class="list">

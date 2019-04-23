@@ -79,8 +79,10 @@ page {
 
 .edit_pro .pro_cot .list input.two {
   width: calc(20% - 10px);
-  margin: 5px 0 0 10px;
+  margin: 0 0 0 50rpx;
   float: left;
+  border:1px solid #a6a6a6;
+  border-radius:5px;
 }
 
 .edit_pro .pro_cot .list input.sa {
@@ -97,4 +99,9 @@ page {
   float: left;
   font-size: 12px;
   color: #a6a6a6;
+}
+.picker{
+  line-height: 70rpx;
+  border:1px solid #a6a6a6;
+  border-radius:5px;
 }
