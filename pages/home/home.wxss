@@ -139,6 +139,7 @@
 .content .gd_h .tit navigator.more image {
   display: block;
   width: 20px;
+  height: 36rpx;
 }
 
 .content .gd_s .goods_list {
