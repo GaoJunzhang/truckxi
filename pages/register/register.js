@@ -114,16 +114,23 @@ Page({
         }
       }
     })
+    
     wx.request({
       url: app.globalData.API_URL + 'e/account/register/',
       method: 'POST',
       data: userObj,
       success: function(res) {
         console.log(res)
+        console.log("准备登录" + app.globalData.API_URL + 'e/app/session')
         if (res.statusCode == 201) {
+        wx.showLoading({
+          title: 'loading',
+        })
           wx.login({
             success(res) {
               if (res.code) {
+                console.log('code='+res.code)
+                console.log(userObj)
                 wx.request({
                   url: app.globalData.API_URL + 'e/app/session',
                   data: {
@@ -136,6 +143,7 @@ Page({
                   },
                   method: "POST",
                   success: function(result) {
+                    console.log("登录成功")
                     console.log(result)
                     let data = {
                       js_code: res.code,
@@ -150,7 +158,7 @@ Page({
                       }
                       Session.set(session)
                       //back to parent page
-                      wx.navigateTo({
+                      wx.redirectTo({
                         url: '../home/home',
                       })
                     } else {
@@ -162,7 +170,7 @@ Page({
                     }
                   },
                   fail: function(e) {
-                    console.log("失败")
+                    console.log("失败111")
                   }
                 })
               } else {
