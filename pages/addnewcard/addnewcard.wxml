@@ -14,7 +14,7 @@
       </view>
       <view class="list">
         <input type="text" placeholder="{{content.expiry_date}} (MM/YY)" class="one"></input>
-        <input type="text" placeholder="cvv" class="two"></input>
+        <input type="text" placeholder="cvc" class="two"></input>
         <view class="clr"></view>
       </view>
       <view class="list">

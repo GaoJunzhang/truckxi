@@ -91,6 +91,18 @@ Page({
         })
       }
     })
+  },
+  focusInput:function(e){
+    let that = this
+    that.setData({
+      targetInput: e.currentTarget.dataset.key
+    })
+  },
+  blurInput:function(e){
+    let that = this
+    that.setData({
+      targetInput: ''
+    })
   }
 
 })

@@ -6,7 +6,7 @@
         <view class="tt">HDFC Bank</view>
         <view class="tt">5434 XXXX XXXX 5433</view>
         <view class="ti">
-          <view class="span">cvv</view>
+          <view class="span">cvc</view>
           <input type="" name=""></input>
         </view>
       </view>
@@ -24,7 +24,7 @@
         <view class="tt">HDFC Bank</view>
         <view class="tt">5434 XXXX XXXX 5433</view>
         <view class="ti">
-          <view class="span">cvv</view>
+          <view class="span">cvc</view>
           <input type="" name=""></input>
         </view>
       </view>

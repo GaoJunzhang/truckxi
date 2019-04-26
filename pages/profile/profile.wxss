@@ -69,6 +69,7 @@ page {
 
 .edit_pro .img_head .down .r {
   float: right;
+  margin-right: 30rpx;
   font-size: 16px;
   color: #f50000;
 }

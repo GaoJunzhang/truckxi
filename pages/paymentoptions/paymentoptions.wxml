@@ -3,7 +3,7 @@
     <view class='li'>
       <view class='a' style='display:flex'>
         {{content.amount_payable}}<view class="s">({{content.taxes}})</view>
-        <view class="p">$1,220</view>
+        <view class="p">$0.00</view>
       </view>
     </view>
     <view class='li'>

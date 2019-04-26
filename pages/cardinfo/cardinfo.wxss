@@ -26,12 +26,24 @@ page {
   display: block;
 }
 
-.edit_pro .pro_cot .list input {
+.inputPad {
+  border: 1px solid #d82323;
   display: block;
-  margin: 5px 0 0;
-  border-bottom: 1px solid #aeaeae;
-  padding: 2px 0 5px 0;
+  border-bottom: 1px solid #d82323;
   width: 100%;
+  height: 70rpx;
+  border-radius: 5px;
+  line-height: 70rpx;
+}
+
+.inputNoPad {
+  display: block;
+  border-bottom: 1px solid #aeaeae;
+  width: 100%;
+  height: 70rpx;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+  line-height: 70rpx;
 }
 
 .btn_save {
@@ -81,8 +93,20 @@ page {
   width: calc(20% - 10px);
   margin: 0 0 0 50rpx;
   float: left;
-  border:1px solid #a6a6a6;
-  border-radius:5px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+
+.edit_pro .pro_cot .list input.twoPad {
+  width: calc(20% - 10px);
+  margin: 0 0 0 50rpx;
+  float: left;
+  border: 1px solid #d82323;
+  border-radius: 5px;
+  height: 70rpx;
+  line-height: 70rpx;
 }
 
 .edit_pro .pro_cot .list input.sa {
@@ -100,8 +124,9 @@ page {
   font-size: 12px;
   color: #a6a6a6;
 }
-.picker{
+
+.picker {
   line-height: 70rpx;
-  border:1px solid #a6a6a6;
-  border-radius:5px;
+  border: 1px solid #a6a6a6;
+  border-radius: 5px;
 }

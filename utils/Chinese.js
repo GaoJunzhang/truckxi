@@ -139,8 +139,8 @@ var Chinese = {
   personal_detail: "个人资料",
   delivery_address: "送货地址",
   place_order: "下单",
-  cvv: "下一步输入信用卡cvv代码",
-  cvv: "ENTER CVV ON NEXT STEP",
+  cvv: "下一步输入信用卡cvc代码",
+  cvv: "ENTER CVC ON NEXT STEP",
   //checkout
   track_order: "跟踪订单",
   check_word1: "恭喜！您的的订单已被接收！",
