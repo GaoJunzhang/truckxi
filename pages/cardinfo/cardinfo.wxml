@@ -7,7 +7,7 @@
           <input name="card_holder_name" type="text" placeholder="Name on card" bindfocus='focusInput' data-key='1' bindblur="blurInput" class="{{targetInput==1?'inputPad':'inputNoPad'}}"></input>
         </view>
         <view class="list">
-          <input name="card_number" type="text" placeholder="Card Number" bindfocus='focusInput' data-key='2'  bindblur="blurInput" class="{{targetInput==2?'inputPad':'inputNoPad'}}"></input>
+          <input name="card_number" type="number" placeholder="Card Number" bindfocus='focusInput' data-key='2'  bindblur="blurInput" class="{{targetInput==2?'inputPad':'inputNoPad'}}"></input>
         </view>
         <view class="list">
           <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
@@ -24,7 +24,7 @@
               {{date}}
             </view>
           </picker>
-          <input name="card_cvv" type="text" placeholder="cvc" bindfocus='focusInput' data-key='3'  bindblur="blurInput"  class="{{targetInput==3?'twoPad':'two'}}"></input>
+          <input name="card_cvv" type="number" placeholder="cvc" bindfocus='focusInput' data-key='3'  bindblur="blurInput"  class="{{targetInput==3?'twoPad':'two'}}"></input>
           <view class="clr"></view>
         </view>
         <!-- <view class="list">
